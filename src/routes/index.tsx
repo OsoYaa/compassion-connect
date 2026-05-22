@@ -156,7 +156,7 @@ function Index() {
       <section className="relative overflow-hidden min-h-screen px-4 pt-20 pb-12 sm:px-6 sm:pt-28 sm:pb-24">
         <Link
           to="/"
-          className="absolute left-4 top-4 z-20 flex items-center justify-center transition duration-300 hover:scale-[1.03] md:left-[46px] md:top-[40px]"
+          className="absolute left-4 top-20 z-20 flex items-center justify-center transition duration-300 hover:scale-[1.03] sm:top-24 md:left-[46px] md:top-[40px]"
           aria-label="Home"
         >
           <img
@@ -177,7 +177,7 @@ function Index() {
         <div className="relative z-10 mx-auto flex min-h-[calc(100vh-6rem)] w-full max-w-6xl flex-col justify-center md:grid md:grid-cols-2 md:items-center md:gap-14">
           {/* LEFT: text content */}
           <div className="animate-fade-up order-1 flex flex-col text-center md:text-left text-white">
-            <h1 className="mt-24 font-serif text-3xl font-bold leading-[1.1] text-white sm:mt-12 sm:text-5xl md:mt-6 md:text-6xl">
+            <h1 className="mt-44 font-serif text-3xl font-bold leading-[1.1] text-white sm:mt-56 sm:text-5xl md:mt-6 md:text-6xl">
               {t("hero.title")}
             </h1>
             <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-white/85 sm:mt-5 sm:text-base md:mx-0 md:mt-6 md:text-lg">
@@ -211,6 +211,31 @@ function Index() {
               </a>
             </div>
           </div>
+
+          {/* RIGHT: pillar grid */}
+          <ul className="order-2 mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mt-0">
+            {[
+              { Icon: Heart, title: t("involve.i1.title"), text: t("involve.i1.text"), href: "#involve" },
+              { Icon: Gift, title: t("involve.i2.title"), text: t("involve.i2.text"), href: "#donate" },
+              { Icon: Share2, title: t("involve.i3.title"), text: t("involve.i3.text"), href: "#contact" },
+              { Icon: TrendingUp, title: t("involve.i4.title"), text: t("involve.i4.text"), href: "#involve" },
+            ].map(({ Icon, title, text, href }, i) => (
+              <li key={i}>
+                <a
+                  href={href}
+                  className="flex h-full items-start gap-3 rounded-2xl border border-white/15 bg-[#0b2545]/85 p-5 text-white shadow-[var(--shadow-elevated)] backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-white/40"
+                >
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10">
+                    <Icon className="h-5 w-5" strokeWidth={1.75} />
+                  </span>
+                  <div>
+                    <h3 className="text-sm font-bold uppercase tracking-wider">{title}</h3>
+                    <p className="mt-1 text-xs leading-relaxed text-white/80">{text}</p>
+                  </div>
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

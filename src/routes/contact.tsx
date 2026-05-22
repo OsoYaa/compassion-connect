@@ -39,34 +39,44 @@ function ContactPage() {
 
   const RECIPIENT = "brandonforever22legacy@gmail.com";
 
-  const onSubmit = (formType: "need" | "vol") => (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = (formType: "need" | "vol") => async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
     const fd = new FormData(form);
     const isNeed = formType === "need";
     const subject = isNeed
-      ? `[People in Need] Request from ${fd.get(`${formType}-name`) || ""}`
-      : `[Volunteer] ${fd.get(`${formType}-name`) || ""}`;
-    const lines = isNeed
-      ? [
-          `Name: ${fd.get("need-name") || ""}`,
-          `Phone: ${fd.get("need-phone") || ""}`,
-          ``,
-          `Message:`,
-          `${fd.get("need-msg") || ""}`,
-        ]
-      : [
-          `Name: ${fd.get("vol-name") || ""}`,
-          `Email: ${fd.get("vol-email") || ""}`,
-          ``,
-          `How they can help:`,
-          `${fd.get("vol-help") || ""}`,
-        ];
-    const mailto = `mailto:${RECIPIENT}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
-    window.location.href = mailto;
-    toast.success(t("form.thanks"));
-    form.reset();
+      ? `[People in Need] Request from ${fd.get("need-name") || ""}`
+      : `[Volunteer] ${fd.get("vol-name") || ""}`;
+
+    const payload: Record<string, string> = {
+      _subject: subject,
+      _template: "table",
+      _captcha: "false",
+    };
+    if (isNeed) {
+      payload.Name = String(fd.get("need-name") || "");
+      payload.Phone = String(fd.get("need-phone") || "");
+      payload.Message = String(fd.get("need-msg") || "");
+    } else {
+      payload.Name = String(fd.get("vol-name") || "");
+      payload.Email = String(fd.get("vol-email") || "");
+      payload["How they can help"] = String(fd.get("vol-help") || "");
+    }
+
+    try {
+      const res = await fetch(`https://formsubmit.co/ajax/${RECIPIENT}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error("Send failed");
+      toast.success(t("form.thanks"));
+      form.reset();
+    } catch {
+      toast.error("Could not send. Please try again.");
+    }
   };
+
 
   return (
     <main className="min-h-screen bg-background text-foreground">

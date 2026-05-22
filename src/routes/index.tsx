@@ -8,6 +8,7 @@ import {
 import { toast } from "sonner";
 import logo from "@/assets/logo.png";
 import brandonPortrait from "@/assets/unnamed.jpg";
+import brandonPortraitMobile from "@/assets/brandon-portrait-mobile.jpg";
 import googleLogo from "@/assets/google transparent.png";
 import { Toaster } from "@/components/ui/sonner";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
@@ -213,11 +214,14 @@ function Index() {
           />
         </Link>
         <div className="pointer-events-none absolute inset-0">
-          <img
-            src={brandonPortrait}
-            alt=""
-            className="absolute inset-0 h-full w-full object-cover object-center"
-          />
+          <picture>
+            <source media="(max-width: 767px)" srcSet={brandonPortraitMobile} />
+            <img
+              src={brandonPortrait}
+              alt=""
+              className="absolute inset-0 h-full w-full object-cover object-center"
+            />
+          </picture>
           <div className="absolute inset-0 bg-slate-950/55" />
         </div>
 

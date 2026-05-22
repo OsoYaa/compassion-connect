@@ -219,7 +219,7 @@ function Index() {
             <img
               src={brandonPortrait}
               alt=""
-              className="absolute inset-0 h-full w-full object-cover object-center"
+              className="absolute inset-0 h-full w-full object-cover object-left md:object-center"
             />
           </picture>
           <div className="absolute inset-0 bg-slate-950/55" />

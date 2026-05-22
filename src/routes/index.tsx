@@ -145,7 +145,6 @@ function CaseCard({ item }: { item: CaseItem }) {
 
 function Index() {
   const { t } = useT();
-  const [flipped, setFlipped] = useState<Record<number, boolean>>({});
 
   return (
     <main className="min-h-screen bg-background text-foreground">

@@ -8,6 +8,7 @@ import {
 import { toast } from "sonner";
 import logo from "@/assets/logo.png";
 import brandonPortrait from "@/assets/unnamed.jpg";
+import brandonPortraitMobile from "@/assets/brandon-portrait-mobile.jpg";
 import googleLogo from "@/assets/google transparent.png";
 import { Toaster } from "@/components/ui/sonner";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";

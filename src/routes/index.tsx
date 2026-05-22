@@ -3,6 +3,7 @@ import { useState } from "react";
 import {
   Copy, Check, PlayCircle, ArrowRight, Megaphone, BookHeart, HandHeart,
   GraduationCap, Phone, Mail, Facebook, Instagram, Heart, Gift, Share2, TrendingUp, ImageIcon,
+  Calendar, MapPin, Clock,
 } from "lucide-react";
 import { toast } from "sonner";
 import logo from "@/assets/logo.png";

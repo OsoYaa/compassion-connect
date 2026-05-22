@@ -228,7 +228,7 @@ function Index() {
         <div className="relative z-10 mx-auto flex min-h-[calc(100vh-6rem)] w-full max-w-4xl flex-col justify-center md:mx-0 md:ml-[2%] md:max-w-[65%] md:justify-start md:pt-[11rem] lg:pt-[13rem] md:pr-8">
           {/* LEFT: text content */}
           <div className="animate-fade-up flex flex-col text-center md:text-left text-white">
-            <h1 className="mt-[10rem] font-serif text-3xl font-bold leading-[1.1] text-white sm:mt-[13rem] sm:text-5xl md:mt-0 md:text-6xl">
+            <h1 className="mt-[12.5rem] font-serif text-3xl font-bold leading-[1.1] text-white sm:mt-[15.5rem] sm:text-5xl md:mt-0 md:text-6xl">
               {t("hero.title")}
             </h1>
             <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-white/85 sm:mt-5 sm:text-base md:mx-0 md:mt-6 md:text-lg">

@@ -210,7 +210,7 @@ function Index() {
           <img
             src={logo}
             alt="Logo"
-            className="h-52 w-auto object-contain sm:h-60 md:h-64 lg:h-80"
+            className="h-52 w-auto object-contain sm:h-56 md:h-48 lg:h-56"
           />
         </Link>
         <div className="pointer-events-none absolute inset-0">

@@ -204,13 +204,13 @@ function Index() {
       <section className="relative overflow-hidden min-h-screen px-4 pt-20 pb-12 sm:px-6 sm:pt-28 sm:pb-24">
         <Link
           to="/"
-          className="absolute left-4 top-20 z-20 flex items-center justify-center transition duration-300 hover:scale-[1.03] sm:top-24 md:left-[46px] md:top-[32px]"
+          className="absolute left-1/2 top-20 z-20 flex -translate-x-1/2 items-center justify-center transition duration-300 hover:scale-[1.03] md:left-[46px] md:top-3 md:translate-x-0"
           aria-label="Home"
         >
           <img
             src={logo}
             alt="Logo"
-            className="h-20 w-auto object-contain sm:h-28 md:h-64 lg:h-80"
+            className="h-44 w-auto object-contain sm:h-52 md:h-64 lg:h-80"
           />
         </Link>
         <div className="pointer-events-none absolute inset-0">
@@ -225,10 +225,10 @@ function Index() {
           <div className="absolute inset-0 bg-slate-950/55" />
         </div>
 
-        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-6rem)] w-full max-w-4xl flex-col justify-center md:mx-0 md:ml-[5%] md:max-w-[65%] md:pr-8">
+        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-6rem)] w-full max-w-4xl flex-col justify-center md:mx-0 md:ml-[25%] md:max-w-[45%] md:pr-8">
           {/* LEFT: text content */}
           <div className="animate-fade-up flex flex-col text-center md:text-left text-white">
-            <h1 className="mt-32 font-serif text-3xl font-bold leading-[1.1] text-white sm:mt-44 sm:text-5xl md:mt-72 md:text-6xl">
+            <h1 className="mt-64 font-serif text-3xl font-bold leading-[1.1] text-white sm:mt-72 sm:text-5xl md:mt-12 md:text-6xl">
               {t("hero.title")}
             </h1>
             <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-white/85 sm:mt-5 sm:text-base md:mx-0 md:mt-6 md:text-lg">

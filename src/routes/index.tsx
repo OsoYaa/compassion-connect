@@ -225,7 +225,7 @@ function Index() {
           <div className="absolute inset-0 bg-slate-950/55" />
         </div>
 
-        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-6rem)] w-full max-w-4xl flex-col justify-center">
+        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-6rem)] w-full max-w-4xl flex-col justify-center md:mx-0 md:max-w-[70%] md:pr-8">
           {/* LEFT: text content */}
           <div className="animate-fade-up flex flex-col text-center md:text-left text-white">
             <h1 className="mt-44 font-serif text-3xl font-bold leading-[1.1] text-white sm:mt-56 sm:text-5xl md:mt-6 md:text-6xl">

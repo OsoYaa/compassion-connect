@@ -214,11 +214,14 @@ function Index() {
           />
         </Link>
         <div className="pointer-events-none absolute inset-0">
-          <img
-            src={brandonPortrait}
-            alt=""
-            className="absolute inset-0 h-full w-full object-cover object-center"
-          />
+          <picture>
+            <source media="(max-width: 767px)" srcSet={brandonPortraitMobile} />
+            <img
+              src={brandonPortrait}
+              alt=""
+              className="absolute inset-0 h-full w-full object-cover object-center"
+            />
+          </picture>
           <div className="absolute inset-0 bg-slate-950/55" />
         </div>
 

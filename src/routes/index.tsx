@@ -412,25 +412,6 @@ function Index() {
             </div>
           </article>
 
-          {/* Upcoming list */}
-          <h3 className="mt-16 text-center text-2xl font-bold sm:text-3xl">{t("events.upcoming")}</h3>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[1, 2, 3].map((n) => (
-              <article
-                key={n}
-                className="flex flex-col rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-elevated)]"
-              >
-                <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-wider text-primary">
-                  <Calendar className="h-4 w-4" /> {t(`events.e${n}.date`)}
-                </div>
-                <h4 className="mt-3 text-xl font-semibold text-foreground">{t(`events.e${n}.title`)}</h4>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{t(`events.e${n}.desc`)}</p>
-                <div className="mt-4 inline-flex items-center gap-2 text-sm text-muted-foreground">
-                  <MapPin className="h-4 w-4 text-primary" /> {t(`events.e${n}.location`)}
-                </div>
-              </article>
-            ))}
-          </div>
         </div>
       </section>
 

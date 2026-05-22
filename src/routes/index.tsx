@@ -422,6 +422,56 @@ function Index() {
         </div>
       </section>
 
+      {/* EVENTS */}
+      <section id="events" className="border-t border-border bg-secondary/30 py-24 sm:py-32">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl">{t("events.headline")}</h2>
+            <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground sm:text-lg">{t("events.subheading")}</p>
+          </div>
+
+          {/* Featured event */}
+          <article className="mt-14 overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-elevated)] md:grid md:grid-cols-5">
+            <div className="relative flex aspect-[16/10] items-center justify-center bg-secondary/60 md:col-span-2 md:aspect-auto">
+              <ImageIcon className="h-12 w-12 text-muted-foreground/60" strokeWidth={1.5} />
+            </div>
+            <div className="flex flex-col justify-center gap-4 p-7 sm:p-10 md:col-span-3">
+              <span className="inline-flex w-fit items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
+                {t("events.featuredTag")}
+              </span>
+              <h3 className="text-2xl font-bold text-foreground sm:text-3xl md:text-4xl">{t("events.featured.title")}</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">{t("events.featured.desc")}</p>
+              <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
+                <span className="inline-flex items-center gap-2"><Calendar className="h-4 w-4 text-primary" /> {t("events.featured.date")}</span>
+                <span className="inline-flex items-center gap-2"><Clock className="h-4 w-4 text-primary" /> {t("events.featured.time")}</span>
+                <span className="inline-flex items-center gap-2"><MapPin className="h-4 w-4 text-primary" /> {t("events.featured.location")}</span>
+              </div>
+            </div>
+          </article>
+
+          {/* Upcoming list */}
+          <h3 className="mt-16 text-center text-2xl font-bold sm:text-3xl">{t("events.upcoming")}</h3>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[1, 2, 3].map((n) => (
+              <article
+                key={n}
+                className="flex flex-col rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-elevated)]"
+              >
+                <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-wider text-primary">
+                  <Calendar className="h-4 w-4" /> {t(`events.e${n}.date`)}
+                </div>
+                <h4 className="mt-3 text-xl font-semibold text-foreground">{t(`events.e${n}.title`)}</h4>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{t(`events.e${n}.desc`)}</p>
+                <div className="mt-4 inline-flex items-center gap-2 text-sm text-muted-foreground">
+                  <MapPin className="h-4 w-4 text-primary" /> {t(`events.e${n}.location`)}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
       {/* OUR PARTNERS */}
       <section id="partners" className="border-t border-border py-24 sm:py-32">
         <div className="mx-auto max-w-6xl px-6">

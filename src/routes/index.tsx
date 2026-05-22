@@ -19,13 +19,8 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const WAVE_COLOR = "#0b2545";
-
-// Single, centralized bank card data
 const bankAccount = { bankName: "Bank Name", holder: "Account Holder", iban: "IBAN", swift: "SWIFT / BIC" };
 
-// Future-proof resolved cases. Add/edit/remove items here.
-// youtubeId: paste the YouTube video id (e.g. "dQw4w9WgXcQ"). Leave empty to keep placeholder.
 type CaseItem = { key: string; youtubeId: string; image?: string };
 const RESOLVED_CASES: CaseItem[] = [
   { key: "article1", youtubeId: "" },
@@ -33,22 +28,26 @@ const RESOLVED_CASES: CaseItem[] = [
   { key: "article3", youtubeId: "" },
 ];
 
+// Tiny shared atoms ----------------------------------------------------------
 
-
-
-function WaveUp({ className = "" }: { className?: string }) {
+function Eyebrow({ children, light = false }: { children: React.ReactNode; light?: boolean }) {
   return (
-    <svg
-      className={`block h-20 min-h-[64px] w-full sm:h-28 md:h-32 ${className}`}
-      viewBox="0 0 1440 120"
-      preserveAspectRatio="none"
-      aria-hidden="true"
+    <span
+      className={`inline-block text-[11px] font-semibold uppercase tracking-[0.32em] ${
+        light ? "text-white/60" : "text-teal-deep"
+      }`}
     >
-      <path
-        d="M0,80 C240,0 480,120 720,80 C960,40 1200,0 1440,80 L1440,0 L0,0 Z"
-        fill={WAVE_COLOR}
-      />
-    </svg>
+      {children}
+    </span>
+  );
+}
+
+function Rule({ light = false }: { light?: boolean }) {
+  return (
+    <span
+      aria-hidden="true"
+      className={`block h-px w-12 ${light ? "bg-white/30" : "bg-teal/40"}`}
+    />
   );
 }
 
@@ -65,25 +64,25 @@ function CopyIban({ iban }: { iban: string }) {
     <button
       onClick={onCopy}
       aria-label="Copy IBAN"
-      className="inline-flex h-8 w-8 items-center justify-center rounded-md border border-border text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+      className="inline-flex h-8 w-8 items-center justify-center rounded-sm border border-border text-navy transition-colors hover:border-teal hover:text-teal"
     >
       {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
     </button>
   );
 }
 
-function VideoPlaceholder({ label }: { label: string }) {
+function VideoFrame({ label }: { label: string }) {
   return (
-    <div className="relative flex aspect-video w-full items-center justify-center overflow-hidden rounded-2xl border border-white/15 bg-white/5 shadow-[var(--shadow-elevated)]">
-      <div className="flex flex-col items-center gap-3 text-white/80">
-        <PlayCircle className="h-14 w-14 text-white" strokeWidth={1.5} />
-        <span className="text-sm font-medium">{label}</span>
+    <div className="relative flex aspect-video w-full items-center justify-center overflow-hidden border border-white/15 bg-white/[0.04]">
+      <div className="flex flex-col items-center gap-3 text-white/75">
+        <PlayCircle className="h-12 w-12" strokeWidth={1.25} />
+        <span className="text-xs font-medium uppercase tracking-[0.24em]">{label}</span>
       </div>
     </div>
   );
 }
 
-function CaseCard({ item }: { item: CaseItem }) {
+function CaseCard({ item, index }: { item: CaseItem; index: number }) {
   const { t } = useT();
   const [open, setOpen] = useState(false);
   const title = t(`cases.${item.key}.title`);
@@ -92,38 +91,39 @@ function CaseCard({ item }: { item: CaseItem }) {
 
   return (
     <>
-      <article className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-elevated)]">
+      <article className="group flex flex-col border-t border-border pt-8">
+        <span className="font-mono text-xs tracking-widest text-teal">
+          {String(index + 1).padStart(2, "0")}
+        </span>
         <button
           type="button"
           onClick={() => setOpen(true)}
-          className="relative flex aspect-[16/10] w-full items-center justify-center bg-secondary/60"
+          className="mt-4 relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden bg-secondary"
           aria-label={title}
         >
           {item.image ? (
-            <img src={item.image} alt={title} className="h-full w-full object-cover" />
+            <img src={item.image} alt={title} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
           ) : (
-            <ImageIcon className="h-10 w-10 text-muted-foreground/60" strokeWidth={1.5} />
+            <ImageIcon className="h-10 w-10 text-muted-foreground/50" strokeWidth={1.25} />
           )}
         </button>
-        <div className="flex flex-1 flex-col p-6">
-          <h3 className="text-xl font-semibold text-foreground sm:text-2xl">{title}</h3>
-          <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{excerpt}</p>
-          <button
-            type="button"
-            onClick={() => setOpen(true)}
-            className="mt-4 inline-flex items-center gap-1.5 self-start text-sm font-medium text-primary hover:underline"
-          >
-            {t("cases.readMore")} <ArrowRight className="h-4 w-4" />
-          </button>
-        </div>
+        <h3 className="mt-6 font-serif text-2xl font-semibold text-navy">{title}</h3>
+        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{excerpt}</p>
+        <button
+          type="button"
+          onClick={() => setOpen(true)}
+          className="mt-5 inline-flex items-center gap-1.5 self-start text-xs font-semibold uppercase tracking-[0.2em] text-teal-deep hover:text-navy"
+        >
+          {t("cases.readMore")} <ArrowRight className="h-3.5 w-3.5" />
+        </button>
       </article>
 
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="max-w-3xl">
           <DialogHeader>
-            <DialogTitle className="text-2xl sm:text-3xl">{title}</DialogTitle>
+            <DialogTitle className="font-serif text-2xl sm:text-3xl">{title}</DialogTitle>
           </DialogHeader>
-          <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-secondary/60">
+          <div className="relative aspect-video w-full overflow-hidden bg-secondary">
             {item.youtubeId ? (
               <iframe
                 src={`https://www.youtube.com/embed/${item.youtubeId}`}
@@ -134,7 +134,7 @@ function CaseCard({ item }: { item: CaseItem }) {
               />
             ) : (
               <div className="flex h-full w-full items-center justify-center">
-                <PlayCircle className="h-14 w-14 text-primary/70" strokeWidth={1.5} />
+                <PlayCircle className="h-14 w-14 text-teal/70" strokeWidth={1.25} />
               </div>
             )}
           </div>
@@ -163,18 +163,18 @@ function PillarTile({
         type="button"
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
-        className="group flex w-full items-center gap-3 rounded-2xl border border-white/15 bg-[#0b2545]/85 p-4 text-left text-white shadow-[var(--shadow-elevated)] backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-white/40"
+        className="group flex w-full items-start gap-3 border border-white/15 bg-navy/60 p-4 text-left text-white backdrop-blur-sm transition-colors hover:border-teal"
         style={{ animationDelay: `${index * 80}ms` }}
       >
-        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10">
-          <Icon className="h-5 w-5" strokeWidth={1.75} />
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center border border-white/20 text-teal">
+          <Icon className="h-4 w-4" strokeWidth={1.75} />
         </span>
         <div className="min-w-0 flex-1">
           <div className="flex items-center justify-between gap-2">
-            <h3 className="text-sm font-bold uppercase tracking-wider">{title}</h3>
+            <h3 className="text-[11px] font-semibold uppercase tracking-[0.22em]">{title}</h3>
             <span
               aria-hidden="true"
-              className={`text-white/70 transition-transform duration-300 ${open ? "rotate-45" : ""}`}
+              className={`text-teal transition-transform duration-300 ${open ? "rotate-45" : ""}`}
             >
               +
             </span>
@@ -184,7 +184,7 @@ function PillarTile({
               open ? "mt-2 grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
             }`}
           >
-            <p className="overflow-hidden text-xs leading-relaxed text-white/85">{text}</p>
+            <p className="overflow-hidden text-xs leading-relaxed text-white/80">{text}</p>
           </div>
         </div>
       </button>
@@ -200,7 +200,7 @@ function Index() {
       <Toaster position="top-center" />
       <SiteHeader />
 
-      {/* HERO — split layout */}
+      {/* ============ HERO ============ */}
       <section className="relative overflow-hidden min-h-screen px-4 pt-20 pb-12 sm:px-6 sm:pt-28 sm:pb-24">
         <Link
           to="/"
@@ -213,6 +213,8 @@ function Index() {
             className="h-[17rem] w-auto object-contain sm:h-[20rem] md:h-72 lg:h-80"
           />
         </Link>
+
+        {/* Background image + gradient fade (replaces wavy divider) */}
         <div className="pointer-events-none absolute inset-0">
           <picture>
             <source media="(max-width: 767px)" srcSet={brandonPortraitMobile} />
@@ -222,48 +224,44 @@ function Index() {
               className="absolute inset-0 h-full w-full object-cover object-right md:object-center"
             />
           </picture>
-          <div className="absolute inset-0 bg-slate-950/55" />
+          {/* Navy wash for contrast */}
+          <div className="absolute inset-0 bg-navy/65" />
+          {/* Smooth fade into next (navy) section */}
+          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[var(--navy)]" />
         </div>
 
         <div className="relative z-10 mx-auto flex min-h-[calc(100vh-6rem)] w-full max-w-4xl flex-col justify-center md:mx-0 md:ml-[2%] md:max-w-[65%] md:justify-start md:pt-[11rem] lg:pt-[13rem] md:pr-8">
-          {/* LEFT: text content */}
           <div className="animate-fade-up flex flex-col text-center md:text-left text-white">
-            <h1 className="mt-[12.5rem] font-serif text-3xl font-bold leading-[1.1] text-white sm:mt-[15.5rem] sm:text-5xl md:mt-0 md:text-6xl">
+            <h1 className="mt-[12.5rem] font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:mt-[15.5rem] sm:text-6xl md:mt-0 md:text-7xl">
               {t("hero.title")}
             </h1>
-            <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-white/85 sm:mt-5 sm:text-base md:mx-0 md:mt-6 md:text-lg">
+            <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-white/80 sm:text-base md:mx-0 md:text-lg">
               <span dangerouslySetInnerHTML={{ __html: t("hero.subtitle") }} />
             </p>
-            <p className="mt-6 font-serif text-xl font-semibold uppercase tracking-[0.18em] text-white sm:mt-8 sm:text-3xl md:text-4xl">
+            <p className="mt-8 font-serif text-lg italic tracking-[0.04em] text-white/90 sm:text-2xl md:text-3xl">
               {t("hero.slogan")}
             </p>
-            <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:justify-center md:justify-start">
+
+            {/* Two-button layout: teal primary + white outline ghost */}
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center md:justify-start">
               <a
                 href="https://gofundme.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-w-[11rem] items-center justify-center gap-2 rounded-md px-6 py-3.5 text-sm font-semibold tracking-wider text-white shadow-[var(--shadow-elevated)] transition-all hover:-translate-y-0.5 hover:brightness-110 whitespace-nowrap"
-                style={{ backgroundColor: "#c8102e" }}
+                className="inline-flex min-w-[12rem] items-center justify-center gap-2 bg-teal px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.22em] text-white transition-colors hover:bg-teal-deep whitespace-nowrap"
               >
                 <Heart className="h-4 w-4" fill="currentColor" /> {t("hero.donate")}
               </a>
               <a
                 href="#about"
-                className="inline-flex min-w-[11rem] items-center justify-center gap-2 rounded-md px-6 py-3.5 text-sm font-semibold tracking-wider text-white transition-all hover:-translate-y-0.5 hover:brightness-110 whitespace-nowrap"
-                style={{ backgroundColor: "#0e6b66" }}
+                className="inline-flex min-w-[12rem] items-center justify-center gap-2 border border-white/80 bg-transparent px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.22em] text-white transition-colors hover:bg-white hover:text-navy whitespace-nowrap"
               >
                 {t("hero.learn")}
               </a>
-              <a
-                href="#partners"
-                className="inline-flex min-w-[11rem] items-center justify-center gap-2 rounded-md border-2 border-white bg-transparent px-6 py-3.5 text-sm font-semibold tracking-wider text-white transition-all hover:-translate-y-0.5 hover:bg-white/10 whitespace-nowrap"
-              >
-                {t("hero.partners")}
-              </a>
             </div>
 
-            {/* Expandable pillar grid — titles only, click to reveal */}
-            <ul className="mt-8 grid w-full grid-cols-1 gap-3 sm:mt-10 sm:grid-cols-2 md:max-w-2xl">
+            {/* Expandable pillar grid — titles only */}
+            <ul className="mt-10 grid w-full grid-cols-1 gap-3 sm:grid-cols-2 md:max-w-2xl">
               {[
                 { Icon: Heart, title: t("involve.i1.title"), text: t("involve.i1.text") },
                 { Icon: Gift, title: t("involve.i2.title"), text: t("involve.i2.text") },
@@ -277,261 +275,287 @@ function Index() {
         </div>
       </section>
 
-      {/* ABOUT (dark blue band) */}
-      <section id="about" style={{ backgroundColor: WAVE_COLOR }} className="text-white py-24 sm:py-32">
+      {/* ============ ABOUT (Navy band, no cards) ============ */}
+      <section id="about" className="bg-navy text-white py-28 sm:py-36">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="text-center">
-            <p className="mt-4 text-4xl font-bold leading-tight sm:text-5xl md:text-6xl text-white">{t("about.kicker")}</p>
-            <h2 className="mt-2 text-2xl font-bold leading-tight sm:text-3xl md:text-4xl text-white/70">
-              {t("about.headline")}
-            </h2>
-            <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/85 sm:text-lg">
-              <span dangerouslySetInnerHTML={{ __html: t("about.p1") }} />
-            </p>
+          <div className="grid gap-12 md:grid-cols-12">
+            <div className="md:col-span-4 flex flex-col gap-5">
+              <Eyebrow light>{t("about.kicker")}</Eyebrow>
+              <Rule light />
+              <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
+                {t("about.headline")}
+              </h2>
+            </div>
+            <div className="md:col-span-8 md:border-l md:border-white/15 md:pl-12">
+              <p className="text-base leading-relaxed text-white/80 sm:text-lg">
+                <span dangerouslySetInnerHTML={{ __html: t("about.p1") }} />
+              </p>
+            </div>
           </div>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-2 md:gap-8">
-            <VideoPlaceholder label={t("about.video1")} />
-            <VideoPlaceholder label={t("about.video2")} />
+          <div className="mt-20 grid gap-6 md:grid-cols-2 md:gap-10">
+            <VideoFrame label={t("about.video1")} />
+            <VideoFrame label={t("about.video2")} />
           </div>
         </div>
       </section>
 
-      {/* Wave transition out of dark blue band */}
-      <div className="bg-secondary/40 leading-[0]">
-        <WaveUp />
-      </div>
-
-      {/* PROGRAMS */}
-      <section id="programs" className="bg-secondary/40 py-24 sm:py-32">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="text-center">
-            <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl">{t("programs.headline")}</h2>
-            <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground sm:text-lg">{t("programs.subheading")}</p>
+      {/* ============ PROGRAMS (alternating editorial list) ============ */}
+      <section id="programs" className="bg-background py-28 sm:py-36">
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="flex flex-col items-center gap-5 text-center">
+            <Eyebrow>{t("programs.subheading")}</Eyebrow>
+            <Rule />
+            <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-navy sm:text-5xl md:text-6xl">
+              {t("programs.headline")}
+            </h2>
           </div>
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 md:gap-8">
+
+          <ol className="mt-20 flex flex-col">
             {[
               { Icon: BookHeart, title: t("programs.p1.title"), text: t("programs.p1.text") },
               { Icon: HandHeart, title: t("programs.p2.title"), text: t("programs.p2.text") },
               { Icon: GraduationCap, title: t("programs.p3.title"), text: t("programs.p3.text") },
               { Icon: Megaphone, title: t("programs.p4.title"), text: t("programs.p4.text") },
-            ].map(({ Icon, title, text }, i) => (
-              <article
-                key={i}
-                className="group rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-elevated)] sm:p-8"
-              >
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                  <Icon className="h-5 w-5" strokeWidth={1.75} />
-                </span>
-                <h3 className="mt-5 text-2xl font-semibold text-foreground">{title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{text}</p>
-              </article>
-            ))}
-          </div>
+            ].map(({ Icon, title, text }, i) => {
+              const reverse = i % 2 === 1;
+              return (
+                <li
+                  key={i}
+                  className={`group grid items-start gap-6 border-t border-border py-12 md:grid-cols-12 md:gap-12 ${
+                    reverse ? "md:[&>*:first-child]:order-2" : ""
+                  }`}
+                >
+                  <div className="md:col-span-4 flex items-center gap-4">
+                    <span className="font-mono text-xs tracking-widest text-teal">
+                      0{i + 1}
+                    </span>
+                    <span className="h-px flex-1 bg-teal/40" />
+                    <Icon className="h-6 w-6 text-teal-deep" strokeWidth={1.5} />
+                  </div>
+                  <div className="md:col-span-8">
+                    <h3 className="font-serif text-3xl font-semibold leading-tight text-navy sm:text-4xl">
+                      {title}
+                    </h3>
+                    <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+                      {text}
+                    </p>
+                  </div>
+                </li>
+              );
+            })}
+            <li className="border-t border-border" />
+          </ol>
         </div>
       </section>
 
-      {/* INVOLVEMENT PILLARS */}
-      <section id="involve" className="border-t border-border py-24 sm:py-32">
-        <div className="mx-auto max-w-5xl px-6">
-          <div className="text-center">
-            <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl">{t("involve.headline")}</h2>
+      {/* ============ INVOLVEMENT — full-width teal wash chapter ============ */}
+      <section id="involve" className="bg-teal-wash py-28 sm:py-36">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="flex flex-col items-center gap-5 text-center">
+            <Eyebrow>{t("involve.headline")}</Eyebrow>
+            <Rule />
+            <h2 className="max-w-3xl font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-navy sm:text-5xl md:text-6xl">
+              {t("involve.headline")}
+            </h2>
           </div>
 
-          <ul className="mt-14 grid gap-5 sm:grid-cols-2">
+          <ul className="mt-20 grid gap-x-12 gap-y-14 sm:grid-cols-2">
             {[
               { Icon: Heart, title: t("involve.i1.title"), text: t("involve.i1.text") },
               { Icon: Gift, title: t("involve.i2.title"), text: t("involve.i2.text") },
               { Icon: Share2, title: t("involve.i3.title"), text: t("involve.i3.text") },
               { Icon: TrendingUp, title: t("involve.i4.title"), text: t("involve.i4.text") },
             ].map(({ Icon, title, text }, i) => (
-              <li
-                key={i}
-                className="flex items-start gap-4 rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)]"
-              >
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                  <Icon className="h-5 w-5" strokeWidth={1.75} />
-                </span>
+              <li key={i} className="flex gap-5 border-l border-teal/40 pl-6">
                 <div>
-                  <h3 className="text-base font-bold uppercase tracking-wider text-foreground">{title}</h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{text}</p>
+                  <Icon className="h-7 w-7 text-teal-deep" strokeWidth={1.5} />
+                  <h3 className="mt-5 font-serif text-2xl font-semibold text-navy">
+                    {title}
+                  </h3>
+                  <p className="mt-3 text-base leading-relaxed text-navy/75">{text}</p>
                 </div>
               </li>
             ))}
           </ul>
 
-          {/* Notebook-style callout */}
-          <div className="relative mx-auto mt-14 max-w-3xl overflow-hidden rounded-xl border-l-4 border-primary bg-[repeating-linear-gradient(transparent,transparent_31px,hsl(var(--border))_31px,hsl(var(--border))_32px)] bg-card p-8 shadow-[var(--shadow-card)] sm:p-10">
-            <p className="font-serif text-lg italic leading-loose text-foreground sm:text-xl">
-              {t("involve.callout")}
-            </p>
-          </div>
+          <blockquote className="mx-auto mt-20 max-w-3xl text-center font-serif text-2xl italic leading-snug text-navy sm:text-3xl">
+            "{t("involve.callout")}"
+          </blockquote>
         </div>
       </section>
 
-      {/* RESOLVED CASES */}
-      <section id="cases" className="border-t border-border py-24 sm:py-32">
+      {/* ============ RESOLVED CASES ============ */}
+      <section id="cases" className="bg-background py-28 sm:py-36">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="text-center">
-            <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl">{t("cases.headline")}</h2>
-            <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground sm:text-lg">{t("cases.subheading")}</p>
+          <div className="flex flex-col items-center gap-5 text-center">
+            <Eyebrow>{t("cases.subheading")}</Eyebrow>
+            <Rule />
+            <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-navy sm:text-5xl md:text-6xl">
+              {t("cases.headline")}
+            </h2>
           </div>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-3 md:gap-8">
-            {RESOLVED_CASES.map((item) => (
-              <CaseCard key={item.key} item={item} />
+          <div className="mt-20 grid gap-12 md:grid-cols-3">
+            {RESOLVED_CASES.map((item, i) => (
+              <CaseCard key={item.key} item={item} index={i} />
             ))}
           </div>
         </div>
       </section>
 
-      {/* EVENTS */}
-      <section id="events" className="border-t border-border bg-secondary/30 py-24 sm:py-32">
+      {/* ============ EVENTS ============ */}
+      <section id="events" className="bg-navy text-white py-28 sm:py-36">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="text-center">
-            <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl">{t("events.headline")}</h2>
-            <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground sm:text-lg">{t("events.subheading")}</p>
+          <div className="flex flex-col items-center gap-5 text-center">
+            <Eyebrow light>{t("events.subheading")}</Eyebrow>
+            <Rule light />
+            <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
+              {t("events.headline")}
+            </h2>
           </div>
 
-          {/* Featured event */}
-          <article className="mt-14 overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-elevated)] md:grid md:grid-cols-5">
-            <div className="relative flex aspect-[16/10] items-center justify-center bg-secondary/60 md:col-span-2 md:aspect-auto">
-              <ImageIcon className="h-12 w-12 text-muted-foreground/60" strokeWidth={1.5} />
+          <article className="mt-20 grid border border-white/15 md:grid-cols-5">
+            <div className="relative flex aspect-[16/10] items-center justify-center bg-white/5 md:col-span-2 md:aspect-auto">
+              <ImageIcon className="h-12 w-12 text-white/40" strokeWidth={1.25} />
             </div>
-            <div className="flex flex-col justify-center gap-4 p-7 sm:p-10 md:col-span-3">
-              <span className="inline-flex w-fit items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
+            <div className="flex flex-col justify-center gap-5 p-8 sm:p-12 md:col-span-3">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-teal">
                 {t("events.featuredTag")}
               </span>
-              <h3 className="text-2xl font-bold text-foreground sm:text-3xl md:text-4xl">{t("events.featured.title")}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">{t("events.featured.desc")}</p>
-              <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
-                <span className="inline-flex items-center gap-2"><Calendar className="h-4 w-4 text-primary" /> {t("events.featured.date")}</span>
-                <span className="inline-flex items-center gap-2"><Clock className="h-4 w-4 text-primary" /> {t("events.featured.time")}</span>
-                <span className="inline-flex items-center gap-2"><MapPin className="h-4 w-4 text-primary" /> {t("events.featured.location")}</span>
+              <h3 className="font-serif text-3xl font-semibold leading-tight sm:text-4xl">
+                {t("events.featured.title")}
+              </h3>
+              <p className="text-base leading-relaxed text-white/75">{t("events.featured.desc")}</p>
+              <div className="flex flex-wrap gap-x-8 gap-y-2 text-sm text-white/70">
+                <span className="inline-flex items-center gap-2"><Calendar className="h-4 w-4 text-teal" /> {t("events.featured.date")}</span>
+                <span className="inline-flex items-center gap-2"><Clock className="h-4 w-4 text-teal" /> {t("events.featured.time")}</span>
+                <span className="inline-flex items-center gap-2"><MapPin className="h-4 w-4 text-teal" /> {t("events.featured.location")}</span>
               </div>
             </div>
           </article>
-
         </div>
       </section>
 
-      {/* DONATE */}
-      <section id="donate" className="border-t border-border bg-secondary/40 py-24 sm:py-32">
+      {/* ============ DONATE — Red reserved for final CTA ============ */}
+      <section id="donate" className="bg-background py-28 sm:py-36">
         <div className="mx-auto max-w-3xl px-6">
-          <div className="text-center">
-            <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl">{t("donate.headline")}</h2>
+          <div className="flex flex-col items-center gap-5 text-center">
+            <Eyebrow>{t("donate.bankName")}</Eyebrow>
+            <Rule />
+            <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-navy sm:text-5xl md:text-6xl">
+              {t("donate.headline")}
+            </h2>
             <a
               href="https://gofundme.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-flex items-center justify-center gap-2 rounded-md bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-elevated)] transition-all hover:-translate-y-0.5 hover:bg-primary/90"
+              className="mt-6 inline-flex items-center justify-center gap-2 bg-accent-red px-8 py-4 text-xs font-semibold uppercase tracking-[0.24em] text-white transition-all hover:-translate-y-0.5 hover:brightness-110"
             >
-              <Heart className="h-4 w-4" /> {t("donate.gofundme")}
+              <Heart className="h-4 w-4" fill="currentColor" /> {t("donate.gofundme")}
             </a>
           </div>
 
-          {/* Single, centralized bank card */}
-          <article className="group relative mx-auto mt-12 overflow-hidden rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)] sm:p-10">
-            <div className="absolute inset-x-0 top-0 h-1" style={{ background: "var(--gradient-primary)" }} />
-            <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">{t("donate.bankName")}</p>
-            <h3 className="mt-1 text-2xl font-semibold text-foreground sm:text-3xl">{bankAccount.bankName}</h3>
+          {/* Flat bank panel */}
+          <article className="mt-16 border border-border p-8 sm:p-12">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-teal-deep">{t("donate.bankName")}</p>
+            <h3 className="mt-2 font-serif text-3xl font-semibold text-navy">{bankAccount.bankName}</h3>
 
-            <dl className="mt-6 space-y-5 text-sm">
+            <dl className="mt-8 grid gap-6 sm:grid-cols-2">
               <div>
-                <dt className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">{t("donate.holder")}</dt>
-                <dd className="mt-1 text-base text-foreground">{bankAccount.holder}</dd>
+                <dt className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">{t("donate.holder")}</dt>
+                <dd className="mt-2 text-base text-navy">{bankAccount.holder}</dd>
               </div>
               <div>
-                <dt className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">{t("donate.iban")}</dt>
-                <dd className="mt-1 flex flex-wrap items-center gap-3">
-                  <code className="rounded-md bg-secondary px-2.5 py-1.5 font-mono text-sm tracking-wide text-foreground">
+                <dt className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">{t("donate.swift")}</dt>
+                <dd className="mt-2 font-mono text-base text-navy">{bankAccount.swift}</dd>
+              </div>
+              <div className="sm:col-span-2">
+                <dt className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">{t("donate.iban")}</dt>
+                <dd className="mt-2 flex flex-wrap items-center gap-3">
+                  <code className="border border-border bg-secondary px-3 py-1.5 font-mono text-sm tracking-wide text-navy">
                     {bankAccount.iban}
                   </code>
                   <CopyIban iban={bankAccount.iban} />
                 </dd>
-              </div>
-              <div>
-                <dt className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">{t("donate.swift")}</dt>
-                <dd className="mt-1 font-mono text-base text-foreground">{bankAccount.swift}</dd>
               </div>
             </dl>
           </article>
         </div>
       </section>
 
-      {/* CONTACT */}
-      <section id="contact" className="border-t border-border bg-secondary/40 py-24 sm:py-32">
+      {/* ============ CONTACT ============ */}
+      <section id="contact" className="bg-teal-wash py-28 sm:py-36">
         <div className="mx-auto max-w-4xl px-6">
-          <div className="text-center">
-            <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl">{t("contact.headline")}</h2>
+          <div className="flex flex-col items-center gap-5 text-center">
+            <Eyebrow>{t("contact.headline")}</Eyebrow>
+            <Rule />
+            <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-navy sm:text-5xl md:text-6xl">
+              {t("contact.headline")}
+            </h2>
           </div>
 
-          <div className="mx-auto mt-12 rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)] sm:p-10">
-            <div className="grid gap-6 sm:grid-cols-2">
-              <div className="flex items-start gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <Phone className="h-5 w-5" />
-                </span>
-                <div>
-                  <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">{t("contact.phoneLabel")}</p>
-                  <p className="mt-1 text-base text-muted-foreground">—</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <Mail className="h-5 w-5" />
-                </span>
-                <div>
-                  <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">{t("contact.emailLabel")}</p>
-                  <a href="mailto:brandonforever22legacy@gmail.com" className="mt-1 block break-all text-base text-foreground hover:text-primary">
-                    brandonforever22legacy@gmail.com
-                  </a>
-                </div>
+          <div className="mt-16 grid gap-10 sm:grid-cols-2">
+            <div className="flex items-start gap-4 border-l border-teal/40 pl-5">
+              <Phone className="h-5 w-5 text-teal-deep" strokeWidth={1.5} />
+              <div>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">{t("contact.phoneLabel")}</p>
+                <p className="mt-2 text-base text-navy">—</p>
               </div>
             </div>
-
-            <div className="mt-8 flex flex-col items-center justify-between gap-6 border-t border-border pt-6 sm:flex-row">
-              <div className="flex items-center gap-3">
-                <span className="text-sm text-muted-foreground">{t("contact.socialLabel")}:</span>
-                <a href="#" aria-label="Facebook" className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-primary hover:text-primary">
-                  <Facebook className="h-4 w-4" />
-                </a>
-                <a href="#" aria-label="Instagram" className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-primary hover:text-primary">
-                  <Instagram className="h-4 w-4" />
+            <div className="flex items-start gap-4 border-l border-teal/40 pl-5">
+              <Mail className="h-5 w-5 text-teal-deep" strokeWidth={1.5} />
+              <div>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">{t("contact.emailLabel")}</p>
+                <a href="mailto:brandonforever22legacy@gmail.com" className="mt-2 block break-all text-base text-navy hover:text-teal-deep">
+                  brandonforever22legacy@gmail.com
                 </a>
               </div>
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-              >
-                {t("contact.cta")} <ArrowRight className="h-4 w-4" />
-              </Link>
             </div>
           </div>
 
-          <blockquote className="mx-auto mt-10 max-w-2xl text-center font-serif text-lg italic text-primary sm:text-xl">
+          <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-teal/30 pt-8 sm:flex-row">
+            <div className="flex items-center gap-3">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">{t("contact.socialLabel")}</span>
+              <a href="#" aria-label="Facebook" className="flex h-10 w-10 items-center justify-center border border-teal/40 text-navy transition-colors hover:bg-teal hover:text-white">
+                <Facebook className="h-4 w-4" />
+              </a>
+              <a href="#" aria-label="Instagram" className="flex h-10 w-10 items-center justify-center border border-teal/40 text-navy transition-colors hover:bg-teal hover:text-white">
+                <Instagram className="h-4 w-4" />
+              </a>
+            </div>
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center gap-2 bg-teal px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.22em] text-white transition-colors hover:bg-teal-deep"
+            >
+              {t("contact.cta")} <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+
+          <blockquote className="mx-auto mt-16 max-w-2xl text-center font-serif text-xl italic text-navy sm:text-2xl">
             "{t("contact.calloutQuote")}"
           </blockquote>
         </div>
       </section>
 
-
-
-      {/* OUR PARTNERS */}
-      <section id="partners" className="border-t border-border py-24 sm:py-32">
+      {/* ============ OUR PARTNERS ============ */}
+      <section id="partners" className="bg-background py-28 sm:py-36">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="text-center">
-            <h2 className="text-4xl font-bold sm:text-5xl md:text-6xl">{t("partners.headline")}</h2>
-            <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground sm:text-lg">{t("partners.subheading")}</p>
+          <div className="flex flex-col items-center gap-5 text-center">
+            <Eyebrow>{t("partners.subheading")}</Eyebrow>
+            <Rule />
+            <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-navy sm:text-5xl md:text-6xl">
+              {t("partners.headline")}
+            </h2>
           </div>
-          <div className="mt-14 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 md:gap-8">
+          <div className="mt-16 grid grid-cols-2 border-l border-t border-border sm:grid-cols-3 md:grid-cols-4">
             {[{ src: googleLogo, alt: "Google" }, ...Array.from({ length: 7 }, () => null)].map((partner, i) => (
               <div
                 key={i}
-                className="flex aspect-[3/2] items-center justify-center rounded-2xl border border-border bg-card text-sm text-muted-foreground shadow-[var(--shadow-card)] transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-elevated)]"
+                className="flex aspect-[3/2] items-center justify-center border-b border-r border-border bg-background text-xs uppercase tracking-[0.2em] text-muted-foreground transition-colors hover:bg-teal-wash"
               >
                 {partner ? (
-                  <img src={partner.src} alt={partner.alt} className="h-3/4 w-auto object-contain" />
+                  <img src={partner.src} alt={partner.alt} className="h-2/3 w-auto object-contain opacity-80 grayscale transition hover:opacity-100 hover:grayscale-0" />
                 ) : (
                   t("partners.placeholder")
                 )}

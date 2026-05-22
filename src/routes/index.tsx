@@ -144,6 +144,53 @@ function CaseCard({ item }: { item: CaseItem }) {
   );
 }
 
+function PillarTile({
+  index,
+  Icon,
+  title,
+  text,
+}: {
+  index: number;
+  Icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
+  title: string;
+  text: string;
+}) {
+  const [open, setOpen] = useState(false);
+  return (
+    <li>
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        aria-expanded={open}
+        className="group flex w-full items-center gap-3 rounded-2xl border border-white/15 bg-[#0b2545]/85 p-4 text-left text-white shadow-[var(--shadow-elevated)] backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-white/40"
+        style={{ animationDelay: `${index * 80}ms` }}
+      >
+        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10">
+          <Icon className="h-5 w-5" strokeWidth={1.75} />
+        </span>
+        <div className="min-w-0 flex-1">
+          <div className="flex items-center justify-between gap-2">
+            <h3 className="text-sm font-bold uppercase tracking-wider">{title}</h3>
+            <span
+              aria-hidden="true"
+              className={`text-white/70 transition-transform duration-300 ${open ? "rotate-45" : ""}`}
+            >
+              +
+            </span>
+          </div>
+          <div
+            className={`grid transition-all duration-300 ease-out ${
+              open ? "mt-2 grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+            }`}
+          >
+            <p className="overflow-hidden text-xs leading-relaxed text-white/85">{text}</p>
+          </div>
+        </div>
+      </button>
+    </li>
+  );
+}
+
 function Index() {
   const { t } = useT();
 
@@ -174,9 +221,9 @@ function Index() {
           <div className="absolute inset-0 bg-slate-950/55" />
         </div>
 
-        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-6rem)] w-full max-w-6xl flex-col justify-center md:grid md:grid-cols-2 md:items-center md:gap-14">
+        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-6rem)] w-full max-w-4xl flex-col justify-center">
           {/* LEFT: text content */}
-          <div className="animate-fade-up order-1 flex flex-col text-center md:text-left text-white">
+          <div className="animate-fade-up flex flex-col text-center md:text-left text-white">
             <h1 className="mt-44 font-serif text-3xl font-bold leading-[1.1] text-white sm:mt-56 sm:text-5xl md:mt-6 md:text-6xl">
               {t("hero.title")}
             </h1>
@@ -210,32 +257,19 @@ function Index() {
                 {t("hero.partners")}
               </a>
             </div>
-          </div>
 
-          {/* RIGHT: pillar grid */}
-          <ul className="order-2 mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mt-0">
-            {[
-              { Icon: Heart, title: t("involve.i1.title"), text: t("involve.i1.text"), href: "#involve" },
-              { Icon: Gift, title: t("involve.i2.title"), text: t("involve.i2.text"), href: "#donate" },
-              { Icon: Share2, title: t("involve.i3.title"), text: t("involve.i3.text"), href: "#contact" },
-              { Icon: TrendingUp, title: t("involve.i4.title"), text: t("involve.i4.text"), href: "#involve" },
-            ].map(({ Icon, title, text, href }, i) => (
-              <li key={i}>
-                <a
-                  href={href}
-                  className="flex h-full items-start gap-3 rounded-2xl border border-white/15 bg-[#0b2545]/85 p-5 text-white shadow-[var(--shadow-elevated)] backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-white/40"
-                >
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10">
-                    <Icon className="h-5 w-5" strokeWidth={1.75} />
-                  </span>
-                  <div>
-                    <h3 className="text-sm font-bold uppercase tracking-wider">{title}</h3>
-                    <p className="mt-1 text-xs leading-relaxed text-white/80">{text}</p>
-                  </div>
-                </a>
-              </li>
-            ))}
-          </ul>
+            {/* Expandable pillar grid — titles only, click to reveal */}
+            <ul className="mt-8 grid w-full grid-cols-1 gap-3 sm:mt-10 sm:grid-cols-2 md:max-w-2xl">
+              {[
+                { Icon: Heart, title: t("involve.i1.title"), text: t("involve.i1.text") },
+                { Icon: Gift, title: t("involve.i2.title"), text: t("involve.i2.text") },
+                { Icon: Share2, title: t("involve.i3.title"), text: t("involve.i3.text") },
+                { Icon: TrendingUp, title: t("involve.i4.title"), text: t("involve.i4.text") },
+              ].map((p, i) => (
+                <PillarTile key={i} index={i} Icon={p.Icon} title={p.title} text={p.text} />
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 

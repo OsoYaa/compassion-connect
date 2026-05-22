@@ -204,7 +204,7 @@ function Index() {
       <section className="relative overflow-hidden min-h-screen px-4 pt-20 pb-12 sm:px-6 sm:pt-28 sm:pb-24">
         <Link
           to="/"
-          className="absolute left-1/2 top-20 z-20 flex -translate-x-1/2 items-center justify-center transition duration-300 hover:scale-[1.03] md:left-[46px] md:top-20 md:translate-x-0"
+          className="absolute left-1/2 top-20 z-20 flex -translate-x-1/2 items-center justify-center transition duration-300 hover:scale-[1.03] md:left-[5%] md:top-20 md:translate-x-0"
           aria-label="Home"
         >
           <img

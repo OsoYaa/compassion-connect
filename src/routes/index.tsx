@@ -153,96 +153,64 @@ function Index() {
       <SiteHeader />
 
       {/* HERO — split layout */}
-      <section className="relative overflow-hidden min-h-screen px-6 pt-24 pb-16 sm:pt-28 sm:pb-24">
+      <section className="relative overflow-hidden min-h-screen px-4 pt-20 pb-12 sm:px-6 sm:pt-28 sm:pb-24">
         <Link
           to="/"
-          className="absolute left-[14px] top-[18px] z-20 hidden items-center justify-center transition duration-300 hover:scale-[1.03] md:flex md:left-[46px] md:top-[56px]"
+          className="absolute left-4 top-4 z-20 flex items-center justify-center transition duration-300 hover:scale-[1.03] md:left-[46px] md:top-[40px]"
           aria-label="Home"
         >
-          <img src={logo} alt="Logo" className="h-[360px] w-auto object-contain" />
+          <img
+            src={logo}
+            alt="Logo"
+            className="h-20 w-auto object-contain sm:h-32 md:h-[260px] lg:h-[320px]"
+          />
         </Link>
-        <div className="pointer-events-none absolute inset-x-0 top-16 bottom-0">
+        <div className="pointer-events-none absolute inset-0">
           <img
             src={brandonPortrait}
             alt=""
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-slate-950/40" />
+          <div className="absolute inset-0 bg-slate-950/55" />
         </div>
 
-        <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-10 md:grid-cols-2 md:gap-14">
+        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-6rem)] w-full max-w-6xl flex-col justify-center md:grid md:grid-cols-2 md:items-center md:gap-14">
           {/* LEFT: text content */}
           <div className="animate-fade-up order-1 flex flex-col text-center md:text-left text-white">
-            <h1 className="mt-6 font-serif text-4xl font-bold leading-[1.1] text-white sm:text-5xl md:text-6xl">
+            <h1 className="mt-24 font-serif text-3xl font-bold leading-[1.1] text-white sm:mt-12 sm:text-5xl md:mt-6 md:text-6xl">
               {t("hero.title")}
             </h1>
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 sm:text-lg md:mt-6">
+            <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-white/85 sm:mt-5 sm:text-base md:mx-0 md:mt-6 md:text-lg">
               <span dangerouslySetInnerHTML={{ __html: t("hero.subtitle") }} />
             </p>
-            <p className="mt-8 font-serif text-2xl font-semibold uppercase tracking-[0.18em] text-white sm:text-3xl md:text-4xl">
+            <p className="mt-6 font-serif text-xl font-semibold uppercase tracking-[0.18em] text-white sm:mt-8 sm:text-3xl md:text-4xl">
               {t("hero.slogan")}
             </p>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center md:justify-start">
+            <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:justify-center md:justify-start">
               <a
                 href="https://gofundme.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-w-[12rem] items-center justify-center gap-2 rounded-md px-7 py-4 text-sm font-semibold tracking-wider text-white shadow-[var(--shadow-elevated)] transition-all hover:-translate-y-0.5 hover:brightness-110 whitespace-nowrap"
+                className="inline-flex min-w-[11rem] items-center justify-center gap-2 rounded-md px-6 py-3.5 text-sm font-semibold tracking-wider text-white shadow-[var(--shadow-elevated)] transition-all hover:-translate-y-0.5 hover:brightness-110 whitespace-nowrap"
                 style={{ backgroundColor: "#c8102e" }}
               >
                 <Heart className="h-4 w-4" fill="currentColor" /> {t("hero.donate")}
               </a>
               <a
                 href="#about"
-                className="inline-flex min-w-[12rem] items-center justify-center gap-2 rounded-md px-7 py-4 text-sm font-semibold tracking-wider text-white transition-all hover:-translate-y-0.5 hover:brightness-110 whitespace-nowrap"
+                className="inline-flex min-w-[11rem] items-center justify-center gap-2 rounded-md px-6 py-3.5 text-sm font-semibold tracking-wider text-white transition-all hover:-translate-y-0.5 hover:brightness-110 whitespace-nowrap"
                 style={{ backgroundColor: "#0e6b66" }}
               >
                 {t("hero.learn")}
               </a>
               <a
                 href="#partners"
-                className="inline-flex min-w-[12rem] items-center justify-center gap-2 rounded-md border-2 border-white bg-transparent px-7 py-4 text-sm font-semibold tracking-wider text-white transition-all hover:-translate-y-0.5 hover:bg-white/10 whitespace-nowrap"
+                className="inline-flex min-w-[11rem] items-center justify-center gap-2 rounded-md border-2 border-white bg-transparent px-6 py-3.5 text-sm font-semibold tracking-wider text-white transition-all hover:-translate-y-0.5 hover:bg-white/10 whitespace-nowrap"
               >
                 {t("hero.partners")}
               </a>
             </div>
-
-            <div className="mt-12 grid gap-4 grid-cols-1 sm:grid-cols-2">
-              {[
-                { Icon: Heart, title: t("involve.i1.title"), text: t("involve.i1.text") },
-                { Icon: Gift, title: t("involve.i2.title"), text: t("involve.i2.text") },
-                { Icon: Share2, title: t("involve.i3.title"), text: t("involve.i3.text") },
-                { Icon: TrendingUp, title: t("involve.i4.title"), text: t("involve.i4.text") },
-              ].map(({ Icon, title, text }, i) => {
-                const isFlipped = !!flipped[i];
-                const toggle = () => setFlipped((s) => ({ ...s, [i]: !s[i] }));
-                return (
-                  <article
-                    key={i}
-                    role="button"
-                    tabIndex={0}
-                    onClick={toggle}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter" || e.key === " ") toggle();
-                    }}
-                    className="cursor-pointer select-none flex min-h-[2rem] min-w-[13rem] flex-col items-center justify-center rounded-2xl bg-[#0b2545] px-6 py-2 text-center text-white shadow-[var(--shadow-elevated)] ring-1 ring-white/15"
-                    aria-pressed={isFlipped}
-                  >
-                    <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-white/15 text-white">
-                      <Icon className="h-3 w-3" strokeWidth={1.75} />
-                    </span>
-                    {isFlipped ? (
-                      <p className="mt-3 max-w-xs text-sm leading-relaxed text-white/85">{text}</p>
-                    ) : (
-                      <h3 className="mt-3 whitespace-nowrap text-base font-bold uppercase tracking-wide text-white">{title}</h3>
-                    )}
-                  </article>
-                );
-              })}
-            </div>
           </div>
-
-          {/* RIGHT: portrait (mobile only) */}
         </div>
       </section>
 

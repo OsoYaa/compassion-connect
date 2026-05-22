@@ -144,6 +144,53 @@ function CaseCard({ item }: { item: CaseItem }) {
   );
 }
 
+function PillarTile({
+  index,
+  Icon,
+  title,
+  text,
+}: {
+  index: number;
+  Icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
+  title: string;
+  text: string;
+}) {
+  const [open, setOpen] = useState(false);
+  return (
+    <li>
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        aria-expanded={open}
+        className="group flex w-full items-center gap-3 rounded-2xl border border-white/15 bg-[#0b2545]/85 p-4 text-left text-white shadow-[var(--shadow-elevated)] backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-white/40"
+        style={{ animationDelay: `${index * 80}ms` }}
+      >
+        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10">
+          <Icon className="h-5 w-5" strokeWidth={1.75} />
+        </span>
+        <div className="min-w-0 flex-1">
+          <div className="flex items-center justify-between gap-2">
+            <h3 className="text-sm font-bold uppercase tracking-wider">{title}</h3>
+            <span
+              aria-hidden="true"
+              className={`text-white/70 transition-transform duration-300 ${open ? "rotate-45" : ""}`}
+            >
+              +
+            </span>
+          </div>
+          <div
+            className={`grid transition-all duration-300 ease-out ${
+              open ? "mt-2 grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+            }`}
+          >
+            <p className="overflow-hidden text-xs leading-relaxed text-white/85">{text}</p>
+          </div>
+        </div>
+      </button>
+    </li>
+  );
+}
+
 function Index() {
   const { t } = useT();
 

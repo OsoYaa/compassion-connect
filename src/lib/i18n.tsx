@@ -129,7 +129,11 @@ const en: Dict = {
 const sq: Dict = {
   "nav.contact": "Kontakt",
   "nav.home": "Ballina",
-  "nav.donate": "Dhuro",
+  "nav.donate": "Dhuro Tani",
+  "nav.about": "Rreth Nesh",
+  "nav.programs": "Programet",
+  "nav.events": "Eventet",
+  "nav.partners": "Partnerët",
   "nav.lang": "EN",
 
   "hero.slogan": "Sllogani",

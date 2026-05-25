@@ -121,7 +121,10 @@ function ContactPage() {
 
             {/* Volunteers */}
             <form onSubmit={onSubmit("vol")} className="rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)] sm:p-9">
-              <div className="flex items-center gap-3">
+              <p className="text-base leading-relaxed text-foreground">
+                {t("volunteer.intro.join")}
+              </p>
+              <div className="mt-6 flex items-center gap-3">
                 <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
                   <Mail className="h-5 w-5" />
                 </span>

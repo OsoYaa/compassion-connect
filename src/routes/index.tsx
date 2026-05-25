@@ -340,6 +340,12 @@ function Index() {
             <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-5xl md:text-6xl">
               {t("cases.headline")}
             </h2>
+            <p className="mt-4 font-serif text-xl italic text-white/90 sm:text-2xl">
+              {t("cases.tagline")}
+            </p>
+            <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg">
+              {t("cases.intro")}
+            </p>
           </div>
 
           <div className="mt-20 grid gap-12 md:grid-cols-3">
@@ -392,6 +398,15 @@ function Index() {
             <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-5xl md:text-6xl">
               {t("donate.headline")}
             </h2>
+            <p className="mt-4 font-serif text-xl italic text-white/90 sm:text-2xl">
+              {t("donate.tagline")}
+            </p>
+            <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg">
+              {t("donate.intro")}
+            </p>
+            <blockquote className="mt-2 font-serif text-lg italic text-white sm:text-xl">
+              "{t("donate.quote")}"
+            </blockquote>
             <a
               href="https://gofundme.com"
               target="_blank"

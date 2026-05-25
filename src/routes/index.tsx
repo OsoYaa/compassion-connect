@@ -357,12 +357,12 @@ function Index() {
       </section>
 
       {/* ============ INVOLVEMENT — full-width teal wash chapter ============ */}
-      <section id="involve" className="bg-teal-wash py-28 sm:py-36">
+      <section id="involve" className="bg-teal py-28 sm:py-36 text-white">
         <div className="mx-auto max-w-6xl px-6">
           <div className="flex flex-col items-center gap-5 text-center">
-            <Eyebrow>{t("involve.headline")}</Eyebrow>
-            <Rule />
-            <h2 className="max-w-3xl font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-navy sm:text-5xl md:text-6xl">
+            <Eyebrow light>{t("involve.headline")}</Eyebrow>
+            <Rule light />
+            <h2 className="max-w-3xl font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-5xl md:text-6xl">
               {t("involve.headline")}
             </h2>
           </div>
@@ -374,19 +374,19 @@ function Index() {
               { Icon: Share2, title: t("involve.i3.title"), text: t("involve.i3.text") },
               { Icon: TrendingUp, title: t("involve.i4.title"), text: t("involve.i4.text") },
             ].map(({ Icon, title, text }, i) => (
-              <li key={i} className="flex gap-5 border-l border-border pl-6">
+              <li key={i} className="flex gap-5 border-l border-white/30 pl-6">
                 <div>
-                  <Icon className="h-7 w-7 text-navy" strokeWidth={1.5} />
-                  <h3 className="mt-5 font-serif text-2xl font-semibold text-navy">
+                  <Icon className="h-7 w-7 text-white" strokeWidth={1.5} />
+                  <h3 className="mt-5 font-serif text-2xl font-semibold text-white">
                     {title}
                   </h3>
-                  <p className="mt-3 text-base leading-relaxed text-navy/75">{text}</p>
+                  <p className="mt-3 text-base leading-relaxed text-white/80">{text}</p>
                 </div>
               </li>
             ))}
           </ul>
 
-          <blockquote className="mx-auto mt-20 max-w-3xl text-center font-serif text-2xl italic leading-snug text-navy sm:text-3xl">
+          <blockquote className="mx-auto mt-20 max-w-3xl text-center font-serif text-2xl italic leading-snug text-white sm:text-3xl">
             "{t("involve.callout")}"
           </blockquote>
         </div>

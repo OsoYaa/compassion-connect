@@ -91,28 +91,28 @@ function CaseCard({ item, index }: { item: CaseItem; index: number }) {
 
   return (
     <>
-      <article className="group flex flex-col border-t border-border pt-8">
-        <span className="font-mono text-xs tracking-widest text-navy">
+      <article className="group flex flex-col border-t border-white/30 pt-8">
+        <span className="font-mono text-xs tracking-widest text-white/70">
           {String(index + 1).padStart(2, "0")}
         </span>
         <button
           type="button"
           onClick={() => setOpen(true)}
-          className="mt-4 relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden bg-secondary"
+          className="mt-4 relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden bg-white/10"
           aria-label={title}
         >
           {item.image ? (
             <img src={item.image} alt={title} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
           ) : (
-            <ImageIcon className="h-10 w-10 text-muted-foreground/70" strokeWidth={1.25} />
+            <ImageIcon className="h-10 w-10 text-white/70" strokeWidth={1.25} />
           )}
         </button>
-        <h3 className="mt-6 font-serif text-2xl font-semibold text-navy">{title}</h3>
-        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{excerpt}</p>
+        <h3 className="mt-6 font-serif text-2xl font-semibold text-white">{title}</h3>
+        <p className="mt-3 text-sm leading-relaxed text-white/85">{excerpt}</p>
         <button
           type="button"
           onClick={() => setOpen(true)}
-          className="mt-5 inline-flex items-center gap-1.5 self-start text-xs font-semibold uppercase tracking-[0.2em] text-navy hover:text-navy"
+          className="mt-5 inline-flex items-center gap-1.5 self-start text-xs font-semibold uppercase tracking-[0.2em] text-white hover:text-white/80"
         >
           {t("cases.readMore")} <ArrowRight className="h-3.5 w-3.5" />
         </button>

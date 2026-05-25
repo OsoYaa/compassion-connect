@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Heart, Mail } from "lucide-react";
+import { Heart, Mail, Phone } from "lucide-react";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
 import { SiteHeader, SiteFooter, SOCIAL_LINKS } from "@/components/site-chrome";
@@ -139,6 +139,29 @@ function ContactPage() {
             <blockquote className="font-serif text-lg italic text-primary sm:text-xl">
               “{t("contact.calloutQuote")}”
             </blockquote>
+          </div>
+
+          <div className="mx-auto mt-12 grid max-w-3xl gap-6 sm:grid-cols-2">
+            <div className="flex items-start gap-4 rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)]">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <Phone className="h-5 w-5" />
+              </span>
+              <div>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">{t("contact.phoneLabel")}</p>
+                <p className="mt-2 text-base text-foreground">—</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4 rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)]">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <Mail className="h-5 w-5" />
+              </span>
+              <div>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">{t("contact.emailLabel")}</p>
+                <a href="mailto:brandonforever22legacy@gmail.com" className="mt-2 block break-all text-base text-foreground hover:text-primary">
+                  brandonforever22legacy@gmail.com
+                </a>
+              </div>
+            </div>
           </div>
 
           <div className="mt-12 flex flex-col items-center gap-4">

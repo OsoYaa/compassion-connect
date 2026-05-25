@@ -76,10 +76,11 @@
   /* Brand palette */
   --navy: oklch(0.25 0.07 258);            /* #0b2545 Deep Navy */
   --navy-soft: oklch(0.32 0.06 258);
-  --teal: oklch(0.55 0.085 220);           /* Bektashi Teal */
-  --teal-deep: oklch(0.45 0.09 220);
-  --teal-wash: oklch(0.965 0.018 215);     /* soft desaturated tint */
+  --teal: oklch(0.58 0.09 195);            /* Bektashi Teal — green-cyan */
+  --teal-deep: oklch(0.48 0.095 195);
+  --teal-wash: oklch(0.965 0.022 195);     /* soft desaturated tint */
   --accent-red: oklch(0.55 0.22 25);       /* #c8102e – rare accent */
+
 
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.22 0.05 255);

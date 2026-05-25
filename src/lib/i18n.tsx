@@ -248,7 +248,7 @@ const sq: Dict = {
   "volunteer.intro.b1Text": "Ndihmoni drejtpërdrejt ata që kanë më shumë nevojë dhe bëhuni pjesë e një ndryshimi real.",
   "volunteer.intro.b2Title": "Rritje Personale dhe Profesionale",
   "volunteer.intro.b2Text": "Zhvilloni aftësi të reja bashkëpunimi, lidershipi dhe përjetoni ndjesinë e plotësimit shpirtëror.",
-  "volunteer.intro.join": "Bashkohu me ne: Plotësoni formularin e mëposhtëm dhe një nga anëtarët e ekipit tonë do t'ju kontaktojë së shpejti për hapat e mëtejshëm.",
+  "volunteer.intro.join": "Plotësoni formularin e mëposhtëm dhe një nga anëtarët e ekipit tonë do t'ju kontaktojë së shpejti për hapat e mëtejshëm.",
 
   "involve.headline": "Si mund të bëhemi pjesë e ndryshimit - mund te zhvendoset ne fillim?",
   "involve.i1.title": "BËHU VULLNETAR",

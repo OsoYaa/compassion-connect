@@ -12,7 +12,6 @@ export const SOCIAL_LINKS = [
 const SECTION_LINKS: { id: string; tKey: string }[] = [
   { id: "about", tKey: "nav.about" },
   { id: "programs", tKey: "nav.programs" },
-  { id: "involve", tKey: "nav.involve" },
   { id: "cases", tKey: "nav.cases" },
   { id: "events", tKey: "nav.events" },
   { id: "partners", tKey: "nav.partners" },

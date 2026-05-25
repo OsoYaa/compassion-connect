@@ -3,7 +3,7 @@ import { useState } from "react";
 import {
   Copy, Check, PlayCircle, ArrowRight, Megaphone, BookHeart, HandHeart,
   GraduationCap, Phone, Mail, Facebook, Instagram, Heart, Gift, Share2, TrendingUp, ImageIcon,
-  Calendar, MapPin, Clock,
+  Calendar, MapPin, Clock, ChevronDown,
 } from "lucide-react";
 import { toast } from "sonner";
 import logo from "@/assets/logo.png";
@@ -189,6 +189,36 @@ function PillarTile({
         </div>
       </button>
     </li>
+  );
+}
+
+function AboutMore() {
+  const { t } = useT();
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="mt-6">
+      <div
+        className={`grid transition-all duration-500 ease-out ${
+          open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+        }`}
+      >
+        <div className="overflow-hidden">
+          <div
+            className="text-base leading-relaxed text-white/80 sm:text-lg"
+            dangerouslySetInnerHTML={{ __html: t("about.more") }}
+          />
+        </div>
+      </div>
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        aria-expanded={open}
+        className="mt-6 inline-flex items-center gap-2 border-b border-white/40 pb-1 text-xs font-semibold uppercase tracking-[0.22em] text-white transition-colors hover:border-white"
+      >
+        {open ? t("about.readLess") : t("about.readMore")}
+        <ChevronDown className={`h-3.5 w-3.5 transition-transform ${open ? "rotate-180" : ""}`} />
+      </button>
+    </div>
   );
 }
 

@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Heart, Mail } from "lucide-react";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
-import { SiteHeader, SiteFooter } from "@/components/site-chrome";
+import { SiteHeader, SiteFooter, SOCIAL_LINKS } from "@/components/site-chrome";
 import { useT } from "@/lib/i18n";
 
 export const Route = createFileRoute("/contact")({
@@ -139,6 +139,24 @@ function ContactPage() {
             <blockquote className="font-serif text-lg italic text-primary sm:text-xl">
               “{t("contact.calloutQuote")}”
             </blockquote>
+          </div>
+
+          <div className="mt-12 flex flex-col items-center gap-4">
+            <p className="text-sm font-medium text-foreground">{t("contact.followUs") ?? "Follow us"}</p>
+            <div className="flex items-center gap-3">
+              {SOCIAL_LINKS.map(({ Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+                >
+                  <Icon className="h-5 w-5" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>

@@ -1,13 +1,20 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Facebook, Instagram, Twitter, Youtube, Languages, Home, Heart } from "lucide-react";
+import { Facebook, Instagram, Youtube, Languages, Home, Heart } from "lucide-react";
 import { useT } from "@/lib/i18n";
 
+const TikTok = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+    <path d="M16.6 5.82a4.28 4.28 0 0 1-3.77-4.32h-3.2v13.36a2.6 2.6 0 1 1-2.6-2.6c.27 0 .53.04.78.12v-3.27a5.83 5.83 0 0 0-.78-.05 5.85 5.85 0 1 0 5.85 5.85V9.4a7.45 7.45 0 0 0 4.36 1.4V7.6a4.3 4.3 0 0 1-.64-.04 4.28 4.28 0 0 1-.0-1.74Z"/>
+  </svg>
+);
+
 export const SOCIAL_LINKS = [
-  { Icon: Facebook, href: "#", label: "Facebook" },
-  { Icon: Instagram, href: "#", label: "Instagram" },
-  { Icon: Twitter, href: "#", label: "Twitter" },
-  { Icon: Youtube, href: "#", label: "YouTube" },
+  { Icon: Facebook, href: "https://www.facebook.com/", label: "Facebook" },
+  { Icon: Instagram, href: "https://www.instagram.com/", label: "Instagram" },
+  { Icon: TikTok, href: "https://www.tiktok.com/", label: "TikTok" },
+  { Icon: Youtube, href: "https://www.youtube.com/", label: "YouTube" },
 ];
+
 
 const SECTION_LINKS: { id: string; tKey: string }[] = [
   { id: "about", tKey: "nav.about" },
@@ -81,6 +88,8 @@ export function SiteHeader() {
               <a
                 key={label}
                 href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={label}
                 className="flex h-9 w-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-secondary hover:text-primary"
               >
@@ -130,6 +139,8 @@ export function SiteFooter() {
             <a
               key={label}
               href={href}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label={label}
               className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-primary hover:text-primary"
             >

@@ -18,6 +18,8 @@ const en: Dict = {
 
   "hero.slogan": "Slogan",
   "hero.title": "Brandon Forever 22 Legacy",
+  "hero.title.l1": "Brandon Forever 22 Legacy",
+  "hero.title.l2": "",
   "hero.subtitle": "It is a non-profit organization established in memory of <strong>Brandon</strong>, with the mission to build a better world through human solidarity.",
   "hero.donate": "DONATE NOW",
   "hero.learn": "LEARN MORE",

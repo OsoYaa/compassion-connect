@@ -105,7 +105,7 @@ const en: Dict = {
   "volunteer.intro.b1Text": "Help directly those who need it most and become part of real change.",
   "volunteer.intro.b2Title": "Personal & Professional Growth",
   "volunteer.intro.b2Text": "Develop new collaboration and leadership skills and experience deep personal fulfillment.",
-  "volunteer.intro.join": "Join us: Fill out the form below and a member of our team will contact you soon with next steps.",
+  "volunteer.intro.join": "Fill out the form below and a member of our team will contact you soon with next steps.",
 
   "involve.headline": "How we can become part of the change",
   "involve.i1.title": "VOLUNTEER",

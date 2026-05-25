@@ -492,54 +492,54 @@ function Index() {
       </section>
 
       {/* ============ CONTACT ============ */}
-      <section id="contact" className="bg-teal-wash py-28 sm:py-36">
+      <section id="contact" className="bg-teal py-28 sm:py-36 text-white">
         <div className="mx-auto max-w-4xl px-6">
           <div className="flex flex-col items-center gap-5 text-center">
-            <Eyebrow>{t("contact.headline")}</Eyebrow>
-            <Rule />
-            <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-navy sm:text-5xl md:text-6xl">
+            <Eyebrow light>{t("contact.headline")}</Eyebrow>
+            <Rule light />
+            <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-5xl md:text-6xl">
               {t("contact.headline")}
             </h2>
           </div>
 
           <div className="mt-16 grid gap-10 sm:grid-cols-2">
-            <div className="flex items-start gap-4 border-l border-border pl-5">
-              <Phone className="h-5 w-5 text-navy" strokeWidth={1.5} />
+            <div className="flex items-start gap-4 border-l border-white/30 pl-5">
+              <Phone className="h-5 w-5 text-white" strokeWidth={1.5} />
               <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">{t("contact.phoneLabel")}</p>
-                <p className="mt-2 text-base text-navy">—</p>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/60">{t("contact.phoneLabel")}</p>
+                <p className="mt-2 text-base text-white">—</p>
               </div>
             </div>
-            <div className="flex items-start gap-4 border-l border-border pl-5">
-              <Mail className="h-5 w-5 text-navy" strokeWidth={1.5} />
+            <div className="flex items-start gap-4 border-l border-white/30 pl-5">
+              <Mail className="h-5 w-5 text-white" strokeWidth={1.5} />
               <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">{t("contact.emailLabel")}</p>
-                <a href="mailto:brandonforever22legacy@gmail.com" className="mt-2 block break-all text-base text-navy hover:text-navy">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/60">{t("contact.emailLabel")}</p>
+                <a href="mailto:brandonforever22legacy@gmail.com" className="mt-2 block break-all text-base text-white hover:text-white/80">
                   brandonforever22legacy@gmail.com
                 </a>
               </div>
             </div>
           </div>
 
-          <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-border pt-8 sm:flex-row">
+          <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-white/30 pt-8 sm:flex-row">
             <div className="flex items-center gap-3">
-              <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">{t("contact.socialLabel")}</span>
-              <a href="#" aria-label="Facebook" className="flex h-10 w-10 items-center justify-center border border-border text-navy transition-colors hover:bg-teal hover:text-white">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/60">{t("contact.socialLabel")}</span>
+              <a href="#" aria-label="Facebook" className="flex h-10 w-10 items-center justify-center border border-white/40 text-white transition-colors hover:bg-white hover:text-navy">
                 <Facebook className="h-4 w-4" />
               </a>
-              <a href="#" aria-label="Instagram" className="flex h-10 w-10 items-center justify-center border border-border text-navy transition-colors hover:bg-teal hover:text-white">
+              <a href="#" aria-label="Instagram" className="flex h-10 w-10 items-center justify-center border border-white/40 text-white transition-colors hover:bg-white hover:text-navy">
                 <Instagram className="h-4 w-4" />
               </a>
             </div>
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-teal px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.22em] text-white transition-colors hover:bg-teal-deep"
+              className="inline-flex items-center justify-center gap-2 bg-white px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.22em] text-navy transition-colors hover:bg-white/90"
             >
               {t("contact.cta")} <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
 
-          <blockquote className="mx-auto mt-16 max-w-2xl text-center font-serif text-xl italic text-navy sm:text-2xl">
+          <blockquote className="mx-auto mt-16 max-w-2xl text-center font-serif text-xl italic text-white sm:text-2xl">
             "{t("contact.calloutQuote")}"
           </blockquote>
         </div>

@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
-import { SiteHeader, SiteFooter } from "@/components/site-chrome";
+import { SiteHeader, SiteFooter, SOCIAL_LINKS } from "@/components/site-chrome";
 import { useT } from "@/lib/i18n";
 
 export const Route = createFileRoute("/contact")({
@@ -38,6 +38,7 @@ function ContactPage() {
   const { t } = useT();
 
   const RECIPIENT = "brandonforever22legacy@gmail.com";
+  const PHONE = "+355 69 000 0000";
 
   const onSubmit = (formType: "need" | "vol") => async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -88,61 +89,95 @@ function ContactPage() {
           <div className="text-center">
             <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">{t("contact.headline")}</h1>
             <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">{t("contact.intro")}</p>
+
+            {/* Contact details */}
+            <div className="mx-auto mt-8 flex max-w-2xl flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-8">
+              <a href={`tel:${PHONE.replace(/\s+/g, "")}`} className="inline-flex items-center gap-2 text-sm text-foreground transition-colors hover:text-primary sm:text-base">
+                <Phone className="h-4 w-4 text-primary" />
+                <span>{PHONE}</span>
+              </a>
+              <a href={`mailto:${RECIPIENT}`} className="inline-flex items-center gap-2 text-sm text-foreground transition-colors hover:text-primary sm:text-base">
+                <Mail className="h-4 w-4 text-primary" />
+                <span>{RECIPIENT}</span>
+              </a>
+              <div className="flex items-center gap-2">
+                {SOCIAL_LINKS.map(({ Icon, href, label }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+                  >
+                    <Icon className="h-4 w-4" />
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Divider */}
+            <div className="mx-auto mt-10 h-px w-24 bg-border" />
           </div>
 
-          <div className="mx-auto mt-14 max-w-3xl rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)] sm:p-10">
-            <p className="text-base leading-relaxed text-foreground sm:text-lg">
-              {t("volunteer.intro.p1")}
-            </p>
-            <h2 className="mt-6 text-lg font-semibold text-foreground sm:text-xl">
-              {t("volunteer.intro.benefitsTitle")}
-            </h2>
-            <ul className="mt-4 space-y-3 text-base leading-relaxed text-muted-foreground">
-              <li className="flex gap-3">
-                <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                <span>
-                  <strong className="text-foreground">{t("volunteer.intro.b1Title")}: </strong>
-                  {t("volunteer.intro.b1Text")}
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                <span>
-                  <strong className="text-foreground">{t("volunteer.intro.b2Title")}: </strong>
-                  {t("volunteer.intro.b2Text")}
-                </span>
-              </li>
-            </ul>
-          </div>
+          <div className="mt-14 mx-auto max-w-3xl">
+            {/* Bëhu vullnetar — big outer box */}
+            <div className="rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)] sm:p-10">
+              <h2 className="text-xl font-semibold leading-snug text-foreground sm:text-2xl">
+                {t("volunteer.intro.p1")}
+              </h2>
 
+              <h3 className="mt-6 text-lg font-semibold text-foreground sm:text-xl">
+                {t("volunteer.intro.benefitsTitle")}
+              </h3>
+              <ul className="mt-4 space-y-3 text-base leading-relaxed text-muted-foreground">
+                <li className="flex gap-3">
+                  <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                  <span>
+                    <strong className="text-foreground">{t("volunteer.intro.b1Title")}: </strong>
+                    {t("volunteer.intro.b1Text")}
+                  </span>
+                </li>
+                <li className="flex gap-3">
+                  <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                  <span>
+                    <strong className="text-foreground">{t("volunteer.intro.b2Title")}: </strong>
+                    {t("volunteer.intro.b2Text")}
+                  </span>
+                </li>
+              </ul>
 
-          <div className="mt-14 mx-auto max-w-2xl">
-
-
-            {/* Volunteers */}
-            <form onSubmit={onSubmit("vol")} className="rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)] sm:p-9">
-              <p className="text-base leading-relaxed text-foreground">
+              <p className="mt-8 text-base leading-relaxed text-foreground">
                 {t("volunteer.intro.join")}
               </p>
-              <div className="mt-6 flex items-center gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <Mail className="h-5 w-5" />
-                </span>
-                <h2 className="text-xl font-semibold text-foreground sm:text-2xl">{t("contact.volTitle")}</h2>
-              </div>
-              <p className="mt-2 text-sm text-muted-foreground">{t("contact.volDesc")}</p>
-              <div className="mt-6 space-y-4">
-                <Field id="vol-name" label={t("form.fullName")} required />
-                <Field id="vol-email" label={t("form.email")} type="email" required />
-                <Field id="vol-help" label={t("form.howHelp")} as="textarea" required />
-              </div>
-              <button
-                type="submit"
-                className="mt-6 inline-flex w-full items-center justify-center rounded-md bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+
+              {/* Inner smaller box with the form */}
+              <form
+                onSubmit={onSubmit("vol")}
+                className="mt-5 rounded-xl border border-border bg-background p-6 shadow-sm sm:p-7"
               >
-                {t("form.submit")}
-              </button>
-            </form>
+                <div className="flex items-center gap-3">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+                    <Mail className="h-5 w-5" />
+                  </span>
+                  <h3 className="text-lg font-semibold text-foreground sm:text-xl">{t("contact.volTitle")}</h3>
+                </div>
+                {t("contact.volDesc") && (
+                  <p className="mt-2 text-sm text-muted-foreground">{t("contact.volDesc")}</p>
+                )}
+                <div className="mt-5 space-y-4">
+                  <Field id="vol-name" label={t("form.fullName")} required />
+                  <Field id="vol-email" label={t("form.email")} type="email" required />
+                  <Field id="vol-help" label={t("form.howHelp")} as="textarea" required />
+                </div>
+                <button
+                  type="submit"
+                  className="mt-6 inline-flex w-full items-center justify-center rounded-md bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+                >
+                  {t("form.submit")}
+                </button>
+              </form>
+            </div>
           </div>
 
           <div className="mx-auto mt-16 max-w-3xl rounded-2xl border border-border bg-card p-8 text-center shadow-[var(--shadow-card)] sm:p-10">

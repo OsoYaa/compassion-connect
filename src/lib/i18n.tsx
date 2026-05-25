@@ -74,6 +74,8 @@ const en: Dict = {
 
   "cases.headline": "Multimedia",
   "cases.subheading": "Stories of events and humanitarian cases we've helped resolve through community action.",
+  "cases.tagline": "Moments that speak louder than words.",
+  "cases.intro": "A collection of memories in photos and videos from our initiatives. Every image bears witness to our projects on the ground and reminds us that every small action can change someone's life.",
   "cases.readMore": "Read more",
   "cases.close": "Close",
   "cases.article1.title": "Article title placeholder",
@@ -87,12 +89,23 @@ const en: Dict = {
   "cases.article3.body": "The full article text about this resolved case will appear here. Replace with the real story, outcomes, and impact details.",
 
   "donate.headline": "Donate",
+  "donate.tagline": "Be part of a change that continues.",
+  "donate.intro": "Your contribution protects and supports our education, mentorship, and social aid programs. Every donation, large or small, is a step toward creating more opportunities and hope for those in need.",
+  "donate.quote": "From love, change is born.",
   "donate.bankName": "Bank Name",
   "donate.holder": "Account Holder",
   "donate.iban": "IBAN",
   "donate.swift": "SWIFT / BIC",
   "donate.copy": "Copied",
   "donate.gofundme": "Donate on GoFundMe",
+
+  "volunteer.intro.p1": "Becoming a volunteer with Brandon Forever 22 Legacy is a unique opportunity to contribute to a movement of solidarity that reaches across Albania.",
+  "volunteer.intro.benefitsTitle": "Benefits of Volunteering:",
+  "volunteer.intro.b1Title": "Great Impact",
+  "volunteer.intro.b1Text": "Help directly those who need it most and become part of real change.",
+  "volunteer.intro.b2Title": "Personal & Professional Growth",
+  "volunteer.intro.b2Text": "Develop new collaboration and leadership skills and experience deep personal fulfillment.",
+  "volunteer.intro.join": "Join us: Fill out the form below and a member of our team will contact you soon with next steps.",
 
   "involve.headline": "How we can become part of the change",
   "involve.i1.title": "VOLUNTEER",

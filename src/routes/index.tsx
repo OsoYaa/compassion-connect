@@ -315,15 +315,15 @@ function Index() {
       {/* ============ ABOUT (Navy band, no cards) ============ */}
       <section id="about" className="bg-navy text-white py-28 sm:py-36">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="grid gap-12 md:grid-cols-12">
-            <div className="md:col-span-4 flex flex-col gap-5">
+          <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-5">
               <Eyebrow light>{t("about.kicker")}</Eyebrow>
               <Rule light />
               <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
                 {t("about.headline")}
               </h2>
             </div>
-            <div className="md:col-span-8 md:border-l md:border-white/15 md:pl-12">
+            <div className="max-w-4xl">
               <p className="text-base leading-relaxed text-white/80 sm:text-lg">
                 <span dangerouslySetInnerHTML={{ __html: t("about.p1") }} />
               </p>

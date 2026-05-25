@@ -562,7 +562,7 @@ function Index() {
                 className="flex aspect-[3/2] items-center justify-center border-b border-r border-border bg-background text-xs uppercase tracking-[0.2em] text-muted-foreground transition-colors hover:bg-teal-wash"
               >
                 {partner ? (
-                  <img src={partner.src} alt={partner.alt} className="h-2/3 w-auto object-contain opacity-80 grayscale transition hover:opacity-100 hover:grayscale-0" />
+                  <img src={partner.src} alt={partner.alt} className="h-2/3 w-auto object-contain opacity-100 transition md:opacity-80 md:grayscale md:hover:opacity-100 md:hover:grayscale-0" />
                 ) : (
                   t("partners.placeholder")
                 )}

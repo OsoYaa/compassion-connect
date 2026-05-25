@@ -248,17 +248,24 @@ function Index() {
                 href="https://gofundme.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-w-[12rem] items-center justify-center gap-2 bg-teal px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.22em] text-white transition-colors hover:bg-teal-deep whitespace-nowrap"
+                className="inline-flex min-w-[12rem] items-center justify-center gap-2 bg-accent-red px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.22em] text-white transition-all hover:-translate-y-0.5 hover:brightness-110 whitespace-nowrap"
               >
                 <Heart className="h-4 w-4" fill="currentColor" /> {t("hero.donate")}
               </a>
               <a
                 href="#about"
-                className="inline-flex min-w-[12rem] items-center justify-center gap-2 border border-white/80 bg-transparent px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.22em] text-white transition-colors hover:bg-white hover:text-navy whitespace-nowrap"
+                className="inline-flex min-w-[12rem] items-center justify-center gap-2 bg-teal px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.22em] text-white transition-colors hover:bg-teal-deep whitespace-nowrap"
               >
                 {t("hero.learn")}
               </a>
+              <a
+                href="#partners"
+                className="inline-flex min-w-[12rem] items-center justify-center gap-2 border border-white/80 bg-transparent px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.22em] text-white transition-colors hover:bg-white hover:text-navy whitespace-nowrap"
+              >
+                {t("hero.partners")}
+              </a>
             </div>
+
 
             {/* Expandable pillar grid — titles only */}
             <ul className="mt-10 grid w-full grid-cols-1 gap-3 sm:grid-cols-2 md:max-w-2xl">

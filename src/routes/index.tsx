@@ -145,52 +145,6 @@ function CaseCard({ item, index }: { item: CaseItem; index: number }) {
   );
 }
 
-function PillarTile({
-  index,
-  Icon,
-  title,
-  text,
-}: {
-  index: number;
-  Icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
-  title: string;
-  text: string;
-}) {
-  const [open, setOpen] = useState(false);
-  return (
-    <li>
-      <button
-        type="button"
-        onClick={() => setOpen((o) => !o)}
-        aria-expanded={open}
-        className="group flex w-full items-start gap-3 border border-white/15 bg-navy/60 p-4 text-left text-white backdrop-blur-sm transition-colors hover:border-white/50"
-        style={{ animationDelay: `${index * 80}ms` }}
-      >
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center border border-white/30 text-white">
-          <Icon className="h-4 w-4" strokeWidth={1.75} />
-        </span>
-        <div className="min-w-0 flex-1">
-          <div className="flex items-center justify-between gap-2">
-            <h3 className="text-[11px] font-semibold uppercase tracking-[0.22em]">{title}</h3>
-            <span
-              aria-hidden="true"
-              className={`text-white/80 transition-transform duration-300 ${open ? "rotate-45" : ""}`}
-            >
-              +
-            </span>
-          </div>
-          <div
-            className={`grid transition-all duration-300 ease-out ${
-              open ? "mt-2 grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-            }`}
-          >
-            <p className="overflow-hidden text-xs leading-relaxed text-white/80">{text}</p>
-          </div>
-        </div>
-      </button>
-    </li>
-  );
-}
 
 function AboutMore() {
   const { t } = useT();

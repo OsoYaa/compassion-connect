@@ -217,6 +217,8 @@ const sq: Dict = {
 
   "cases.headline": "Multimedia",
   "cases.subheading": "Histori të eventeve dhe rasteve humanitare që kemi ndihmuar t'i zgjidhim përmes veprimit të komunitetit.",
+  "cases.tagline": "Momente që flasin më shumë se fjalët.",
+  "cases.intro": "Një koleksion kujtimesh në foto dhe video nga nismat tona. Çdo imazh dëshmon projektet tona në terren dhe na kujton se çdo veprim i vogël mund të ndryshojë jetën e dikujt.",
   "cases.readMore": "Lexo më shumë",
   "cases.close": "Mbyll",
   "cases.article1.title": "Titulli i artikullit",
@@ -230,12 +232,23 @@ const sq: Dict = {
   "cases.article3.body": "Teksti i plotë i artikullit për këtë rast të zgjidhur do të shfaqet këtu. Zëvendësojeni me historinë reale, rezultatet dhe detajet e ndikimit.",
 
   "donate.headline": "Dhuro",
+  "donate.tagline": "Bëhu pjesë e një ndryshimi që vazhdon.",
+  "donate.intro": "Kontributi juaj mbron dhe mbështet programet tona të edukimit, mentorimit dhe ndihmës sociale. Çdo dhurim, i madh apo i vogël, është një hap drejt krijimit të më shumë mundësive dhe shpresës për ata që kanë nevojë.",
+  "donate.quote": "Nga dashuria lind ndryshimi.",
   "donate.bankName": "Emri i Bankës",
   "donate.holder": "Mbajtësi i Llogarisë",
   "donate.iban": "IBAN",
   "donate.swift": "SWIFT / BIC",
   "donate.copy": "U kopjua",
   "donate.gofundme": "Dhuro në GoFundMe",
+
+  "volunteer.intro.p1": "Të bëhesh vullnetar me Brandon Forever 22 Legacy është një mundësi unike për të kontribuar në një lëvizje solidariteti që shtrihet në të gjithë Shqipërinë.",
+  "volunteer.intro.benefitsTitle": "Përfitimet e Vullnetarizmit:",
+  "volunteer.intro.b1Title": "Ndikim i Madh",
+  "volunteer.intro.b1Text": "Ndihmoni drejtpërdrejt ata që kanë më shumë nevojë dhe bëhuni pjesë e një ndryshimi real.",
+  "volunteer.intro.b2Title": "Rritje Personale dhe Profesionale",
+  "volunteer.intro.b2Text": "Zhvilloni aftësi të reja bashkëpunimi, lidershipi dhe përjetoni ndjesinë e plotësimit shpirtëror.",
+  "volunteer.intro.join": "Bashkohu me ne: Plotësoni formularin e mëposhtëm dhe një nga anëtarët e ekipit tonë do t'ju kontaktojë së shpejti për hapat e mëtejshëm.",
 
   "involve.headline": "Si mund të bëhemi pjesë e ndryshimit - mund te zhvendoset ne fillim?",
   "involve.i1.title": "BËHU VULLNETAR",

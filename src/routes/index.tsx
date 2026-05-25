@@ -34,7 +34,7 @@ function Eyebrow({ children, light = false }: { children: React.ReactNode; light
   return (
     <span
       className={`inline-block text-[11px] font-semibold uppercase tracking-[0.32em] ${
-        light ? "text-white/60" : "text-teal-deep"
+        light ? "text-white/60" : "text-navy"
       }`}
     >
       {children}
@@ -46,7 +46,7 @@ function Rule({ light = false }: { light?: boolean }) {
   return (
     <span
       aria-hidden="true"
-      className={`block h-px w-12 ${light ? "bg-white/30" : "bg-teal/40"}`}
+      className={`block h-px w-12 ${light ? "bg-white/30" : "bg-border"}`}
     />
   );
 }
@@ -64,7 +64,7 @@ function CopyIban({ iban }: { iban: string }) {
     <button
       onClick={onCopy}
       aria-label="Copy IBAN"
-      className="inline-flex h-8 w-8 items-center justify-center rounded-sm border border-border text-navy transition-colors hover:border-teal hover:text-teal"
+      className="inline-flex h-8 w-8 items-center justify-center rounded-sm border border-border text-navy transition-colors hover:border-navy hover:text-navy"
     >
       {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
     </button>
@@ -92,7 +92,7 @@ function CaseCard({ item, index }: { item: CaseItem; index: number }) {
   return (
     <>
       <article className="group flex flex-col border-t border-border pt-8">
-        <span className="font-mono text-xs tracking-widest text-teal">
+        <span className="font-mono text-xs tracking-widest text-navy">
           {String(index + 1).padStart(2, "0")}
         </span>
         <button
@@ -112,7 +112,7 @@ function CaseCard({ item, index }: { item: CaseItem; index: number }) {
         <button
           type="button"
           onClick={() => setOpen(true)}
-          className="mt-5 inline-flex items-center gap-1.5 self-start text-xs font-semibold uppercase tracking-[0.2em] text-teal-deep hover:text-navy"
+          className="mt-5 inline-flex items-center gap-1.5 self-start text-xs font-semibold uppercase tracking-[0.2em] text-navy hover:text-navy"
         >
           {t("cases.readMore")} <ArrowRight className="h-3.5 w-3.5" />
         </button>
@@ -134,7 +134,7 @@ function CaseCard({ item, index }: { item: CaseItem; index: number }) {
               />
             ) : (
               <div className="flex h-full w-full items-center justify-center">
-                <PlayCircle className="h-14 w-14 text-teal/70" strokeWidth={1.25} />
+                <PlayCircle className="h-14 w-14 text-navy/60" strokeWidth={1.25} />
               </div>
             )}
           </div>
@@ -163,10 +163,10 @@ function PillarTile({
         type="button"
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
-        className="group flex w-full items-start gap-3 border border-white/15 bg-navy/60 p-4 text-left text-white backdrop-blur-sm transition-colors hover:border-teal"
+        className="group flex w-full items-start gap-3 border border-white/15 bg-navy/60 p-4 text-left text-white backdrop-blur-sm transition-colors hover:border-navy"
         style={{ animationDelay: `${index * 80}ms` }}
       >
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center border border-white/20 text-teal">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center border border-white/20 text-navy">
           <Icon className="h-4 w-4" strokeWidth={1.75} />
         </span>
         <div className="min-w-0 flex-1">
@@ -174,7 +174,7 @@ function PillarTile({
             <h3 className="text-[11px] font-semibold uppercase tracking-[0.22em]">{title}</h3>
             <span
               aria-hidden="true"
-              className={`text-teal transition-transform duration-300 ${open ? "rotate-45" : ""}`}
+              className={`text-navy transition-transform duration-300 ${open ? "rotate-45" : ""}`}
             >
               +
             </span>
@@ -334,11 +334,11 @@ function Index() {
                   }`}
                 >
                   <div className="md:col-span-4 flex items-center gap-4">
-                    <span className="font-mono text-xs tracking-widest text-teal">
+                    <span className="font-mono text-xs tracking-widest text-navy">
                       0{i + 1}
                     </span>
-                    <span className="h-px flex-1 bg-teal/40" />
-                    <Icon className="h-6 w-6 text-teal-deep" strokeWidth={1.5} />
+                    <span className="h-px flex-1 bg-border" />
+                    <Icon className="h-6 w-6 text-navy" strokeWidth={1.5} />
                   </div>
                   <div className="md:col-span-8">
                     <h3 className="font-serif text-3xl font-semibold leading-tight text-navy sm:text-4xl">
@@ -374,9 +374,9 @@ function Index() {
               { Icon: Share2, title: t("involve.i3.title"), text: t("involve.i3.text") },
               { Icon: TrendingUp, title: t("involve.i4.title"), text: t("involve.i4.text") },
             ].map(({ Icon, title, text }, i) => (
-              <li key={i} className="flex gap-5 border-l border-teal/40 pl-6">
+              <li key={i} className="flex gap-5 border-l border-border pl-6">
                 <div>
-                  <Icon className="h-7 w-7 text-teal-deep" strokeWidth={1.5} />
+                  <Icon className="h-7 w-7 text-navy" strokeWidth={1.5} />
                   <h3 className="mt-5 font-serif text-2xl font-semibold text-navy">
                     {title}
                   </h3>
@@ -427,7 +427,7 @@ function Index() {
               <ImageIcon className="h-12 w-12 text-white/40" strokeWidth={1.25} />
             </div>
             <div className="flex flex-col justify-center gap-5 p-8 sm:p-12 md:col-span-3">
-              <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-teal">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-navy">
                 {t("events.featuredTag")}
               </span>
               <h3 className="font-serif text-3xl font-semibold leading-tight sm:text-4xl">
@@ -435,9 +435,9 @@ function Index() {
               </h3>
               <p className="text-base leading-relaxed text-white/75">{t("events.featured.desc")}</p>
               <div className="flex flex-wrap gap-x-8 gap-y-2 text-sm text-white/70">
-                <span className="inline-flex items-center gap-2"><Calendar className="h-4 w-4 text-teal" /> {t("events.featured.date")}</span>
-                <span className="inline-flex items-center gap-2"><Clock className="h-4 w-4 text-teal" /> {t("events.featured.time")}</span>
-                <span className="inline-flex items-center gap-2"><MapPin className="h-4 w-4 text-teal" /> {t("events.featured.location")}</span>
+                <span className="inline-flex items-center gap-2"><Calendar className="h-4 w-4 text-navy" /> {t("events.featured.date")}</span>
+                <span className="inline-flex items-center gap-2"><Clock className="h-4 w-4 text-navy" /> {t("events.featured.time")}</span>
+                <span className="inline-flex items-center gap-2"><MapPin className="h-4 w-4 text-navy" /> {t("events.featured.location")}</span>
               </div>
             </div>
           </article>
@@ -465,7 +465,7 @@ function Index() {
 
           {/* Flat bank panel */}
           <article className="mt-16 border border-border p-8 sm:p-12">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-teal-deep">{t("donate.bankName")}</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-navy">{t("donate.bankName")}</p>
             <h3 className="mt-2 font-serif text-3xl font-semibold text-navy">{bankAccount.bankName}</h3>
 
             <dl className="mt-8 grid gap-6 sm:grid-cols-2">
@@ -503,31 +503,31 @@ function Index() {
           </div>
 
           <div className="mt-16 grid gap-10 sm:grid-cols-2">
-            <div className="flex items-start gap-4 border-l border-teal/40 pl-5">
-              <Phone className="h-5 w-5 text-teal-deep" strokeWidth={1.5} />
+            <div className="flex items-start gap-4 border-l border-border pl-5">
+              <Phone className="h-5 w-5 text-navy" strokeWidth={1.5} />
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">{t("contact.phoneLabel")}</p>
                 <p className="mt-2 text-base text-navy">—</p>
               </div>
             </div>
-            <div className="flex items-start gap-4 border-l border-teal/40 pl-5">
-              <Mail className="h-5 w-5 text-teal-deep" strokeWidth={1.5} />
+            <div className="flex items-start gap-4 border-l border-border pl-5">
+              <Mail className="h-5 w-5 text-navy" strokeWidth={1.5} />
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">{t("contact.emailLabel")}</p>
-                <a href="mailto:brandonforever22legacy@gmail.com" className="mt-2 block break-all text-base text-navy hover:text-teal-deep">
+                <a href="mailto:brandonforever22legacy@gmail.com" className="mt-2 block break-all text-base text-navy hover:text-navy">
                   brandonforever22legacy@gmail.com
                 </a>
               </div>
             </div>
           </div>
 
-          <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-teal/30 pt-8 sm:flex-row">
+          <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-border pt-8 sm:flex-row">
             <div className="flex items-center gap-3">
               <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">{t("contact.socialLabel")}</span>
-              <a href="#" aria-label="Facebook" className="flex h-10 w-10 items-center justify-center border border-teal/40 text-navy transition-colors hover:bg-teal hover:text-white">
+              <a href="#" aria-label="Facebook" className="flex h-10 w-10 items-center justify-center border border-border text-navy transition-colors hover:bg-teal hover:text-white">
                 <Facebook className="h-4 w-4" />
               </a>
-              <a href="#" aria-label="Instagram" className="flex h-10 w-10 items-center justify-center border border-teal/40 text-navy transition-colors hover:bg-teal hover:text-white">
+              <a href="#" aria-label="Instagram" className="flex h-10 w-10 items-center justify-center border border-border text-navy transition-colors hover:bg-teal hover:text-white">
                 <Instagram className="h-4 w-4" />
               </a>
             </div>

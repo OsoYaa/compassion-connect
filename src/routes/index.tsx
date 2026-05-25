@@ -475,7 +475,7 @@ function Index() {
             </div>
           </div>
 
-          <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-border pt-8 sm:flex-row">
+          <div className="mt-12 flex flex-col items-center justify-between gap-6 pt-8 sm:flex-row">
             <div className="flex items-center gap-3">
               <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">{t("contact.socialLabel")}</span>
               {SOCIAL_LINKS.map(({ Icon, href, label }) => (

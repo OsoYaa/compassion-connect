@@ -505,7 +505,7 @@ function Index() {
             {[{ src: googleLogo, alt: "Google" }, ...Array.from({ length: 7 }, () => null)].map((partner, i) => (
               <div
                 key={i}
-                className="flex aspect-[3/2] items-center justify-center border-b border-r border-white/20 bg-white text-xs uppercase tracking-[0.2em] text-navy/70 transition-colors hover:bg-teal hover:text-white"
+                className="flex aspect-[3/2] items-center justify-center border border-white/30 bg-white text-xs uppercase tracking-[0.2em] text-navy/70"
               >
                 {partner ? (
                   <img src={partner.src} alt={partner.alt} className="h-2/3 w-auto object-contain transition" />

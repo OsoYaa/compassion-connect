@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
-import { SiteHeader, SiteFooter, SOCIAL_LINKS } from "@/components/site-chrome";
+import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 import { useT } from "@/lib/i18n";
 
 export const Route = createFileRoute("/contact")({
@@ -90,46 +90,34 @@ function ContactPage() {
             <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">{t("contact.intro")}</p>
           </div>
 
-          <div className="mx-auto mt-12 grid max-w-3xl gap-6 sm:grid-cols-2">
-            <div className="flex items-start gap-4 rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)]">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                <Phone className="h-5 w-5" />
-              </span>
-              <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">{t("contact.phoneLabel")}</p>
-                <p className="mt-2 text-base text-foreground">—</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4 rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)]">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                <Mail className="h-5 w-5" />
-              </span>
-              <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">{t("contact.emailLabel")}</p>
-                <a href="mailto:brandonforever22legacy@gmail.com" className="mt-2 block break-all text-base text-foreground hover:text-primary">
-                  brandonforever22legacy@gmail.com
-                </a>
-              </div>
-            </div>
+          <div className="mx-auto mt-14 max-w-3xl rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)] sm:p-10">
+            <p className="text-base leading-relaxed text-foreground sm:text-lg">
+              {t("volunteer.intro.p1")}
+            </p>
+            <h2 className="mt-6 text-lg font-semibold text-foreground sm:text-xl">
+              {t("volunteer.intro.benefitsTitle")}
+            </h2>
+            <ul className="mt-4 space-y-3 text-base leading-relaxed text-muted-foreground">
+              <li className="flex gap-3">
+                <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                <span>
+                  <strong className="text-foreground">{t("volunteer.intro.b1Title")}: </strong>
+                  {t("volunteer.intro.b1Text")}
+                </span>
+              </li>
+              <li className="flex gap-3">
+                <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                <span>
+                  <strong className="text-foreground">{t("volunteer.intro.b2Title")}: </strong>
+                  {t("volunteer.intro.b2Text")}
+                </span>
+              </li>
+            </ul>
+            <p className="mt-6 text-base leading-relaxed text-foreground sm:text-lg">
+              {t("volunteer.intro.join")}
+            </p>
           </div>
 
-          <div className="mt-10 flex flex-col items-center gap-4">
-            <p className="text-sm font-medium text-foreground">{t("contact.followUs") ?? "Follow us"}</p>
-            <div className="flex items-center gap-3">
-              {SOCIAL_LINKS.map(({ Icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-primary hover:text-primary"
-                >
-                  <Icon className="h-5 w-5" />
-                </a>
-              ))}
-            </div>
-          </div>
 
           <div className="mt-14 mx-auto max-w-2xl">
 

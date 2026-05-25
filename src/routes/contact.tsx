@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Heart, Mail } from "lucide-react";
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner";
-import { SiteHeader, SiteFooter } from "@/components/site-chrome";
+import { SiteHeader, SiteFooter, SOCIAL_LINKS } from "@/components/site-chrome";
 import { useT } from "@/lib/i18n";
 
 export const Route = createFileRoute("/contact")({

@@ -506,24 +506,24 @@ function Index() {
       </section>
 
       {/* ============ OUR PARTNERS ============ */}
-      <section id="partners" className="bg-teal py-28 sm:py-36 text-white">
+      <section id="partners" className="bg-white py-28 sm:py-36 text-navy">
         <div className="mx-auto max-w-6xl px-6">
           <div className="flex flex-col items-center gap-5 text-center">
-            <Eyebrow light>{t("partners.subheading")}</Eyebrow>
-            <Rule light />
-            <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-5xl md:text-6xl">
+            <Eyebrow>{t("partners.subheading")}</Eyebrow>
+            <Rule />
+            <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-navy sm:text-5xl md:text-6xl">
               {t("partners.headline")}
             </h2>
           </div>
-          <div className="mt-16 grid grid-cols-2 border-l border-t border-white/20 sm:grid-cols-3 md:grid-cols-4">
+          <div className="mt-16 grid grid-cols-2 border-l border-t border-navy/15 sm:grid-cols-3 md:grid-cols-4">
 
             {[{ src: googleLogo, alt: "Google" }, ...Array.from({ length: 7 }, () => null)].map((partner, i) => (
               <div
                 key={i}
-                className="flex aspect-[3/2] items-center justify-center border border-white/30 bg-white text-xs uppercase tracking-[0.2em] text-navy/70"
+                className="group flex aspect-[3/2] items-center justify-center border-b border-r border-navy/15 bg-white text-xs uppercase tracking-[0.2em] text-navy/60 transition-colors duration-300 hover:bg-teal hover:text-white"
               >
                 {partner ? (
-                  <img src={partner.src} alt={partner.alt} className="h-2/3 w-auto object-contain transition" />
+                  <img src={partner.src} alt={partner.alt} className="h-2/3 w-auto object-contain transition duration-300 group-hover:brightness-0 group-hover:invert" />
                 ) : (
                   t("partners.placeholder")
                 )}

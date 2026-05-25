@@ -297,6 +297,7 @@ function Index() {
               <p className="text-base leading-relaxed text-white/80 sm:text-lg">
                 <span dangerouslySetInnerHTML={{ __html: t("about.p1") }} />
               </p>
+              <AboutMore />
             </div>
           </div>
 

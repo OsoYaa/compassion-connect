@@ -73,7 +73,7 @@ const en: Dict = {
   "programs.p4.text": "Building a credible public voice through media campaigns, transparency, and storytelling that influence public opinion and policy-making.",
 
   "cases.headline": "Multimedia",
-  "cases.subheading": "Stories of humanitarian cases we've helped resolve through community action.",
+  "cases.subheading": "Stories of events and humanitarian cases we've helped resolve through community action.",
   "cases.readMore": "Read more",
   "cases.close": "Close",
   "cases.article1.title": "Article title placeholder",
@@ -203,7 +203,7 @@ const sq: Dict = {
   "programs.p4.text": "Ndërtimi i një zëri të besueshëm publik përmes fushatave mediatike, transparencës dhe tregimit të historive që ndikojnë në opinionin dhe politikbërjen.",
 
   "cases.headline": "Multimedia",
-  "cases.subheading": "Histori të rasteve humanitare që kemi ndihmuar t'i zgjidhim përmes veprimit të komunitetit.",
+  "cases.subheading": "Histori të eventeve dhe rasteve humanitare që kemi ndihmuar t'i zgjidhim përmes veprimit të komunitetit.",
   "cases.readMore": "Lexo më shumë",
   "cases.close": "Mbyll",
   "cases.article1.title": "Titulli i artikullit",

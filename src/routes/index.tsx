@@ -505,8 +505,13 @@ function Index() {
         </div>
       </section>
 
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="h-px w-full bg-border" />
+      </div>
+
       {/* ============ OUR PARTNERS ============ */}
       <section id="partners" className="bg-white py-28 sm:py-36 text-navy">
+
         <div className="mx-auto max-w-6xl px-6">
           <div className="flex flex-col items-center gap-5 text-center">
             <Eyebrow>{t("partners.subheading")}</Eyebrow>

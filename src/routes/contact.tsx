@@ -91,15 +91,17 @@ function ContactPage() {
             <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">{t("contact.intro")}</p>
 
             {/* Contact details */}
-            <div className="mx-auto mt-8 flex max-w-2xl flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-8">
-              <a href={`tel:${PHONE.replace(/\s+/g, "")}`} className="inline-flex items-center gap-2 text-sm text-foreground transition-colors hover:text-primary sm:text-base">
-                <Phone className="h-4 w-4 text-primary" />
-                <span>{PHONE}</span>
-              </a>
-              <a href={`mailto:${RECIPIENT}`} className="inline-flex items-center gap-2 text-sm text-foreground transition-colors hover:text-primary sm:text-base">
-                <Mail className="h-4 w-4 text-primary" />
-                <span>{RECIPIENT}</span>
-              </a>
+            <div className="mx-auto mt-8 flex max-w-3xl flex-col items-center gap-6">
+              <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-10">
+                <a href={`tel:${PHONE.replace(/\s+/g, "")}`} className="inline-flex items-center gap-2 text-base text-foreground transition-colors hover:text-primary sm:text-lg">
+                  <Phone className="h-5 w-5 text-primary" />
+                  <span>{PHONE}</span>
+                </a>
+                <a href={`mailto:${RECIPIENT}`} className="inline-flex items-center gap-2 text-base text-foreground transition-colors hover:text-primary sm:text-lg">
+                  <Mail className="h-5 w-5 text-primary" />
+                  <span>{RECIPIENT}</span>
+                </a>
+              </div>
               <div className="flex items-center gap-2">
                 {SOCIAL_LINKS.map(({ Icon, href, label }) => (
                   <a

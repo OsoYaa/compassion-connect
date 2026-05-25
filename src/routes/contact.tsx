@@ -87,6 +87,7 @@ function ContactPage() {
         <div className="mx-auto max-w-6xl">
           <div className="text-center">
             <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">{t("contact.headline")}</h1>
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">{t("contact.intro")}</p>
           </div>
 
           <div className="mx-auto mt-12 grid max-w-3xl gap-6 sm:grid-cols-2">

@@ -101,6 +101,7 @@ const en: Dict = {
   "involve.callout": "Together, we sow love. We inspire hope. We leave behind a legacy that lives forever.",
 
   "contact.headline": "Contact",
+  "contact.intro": "We are here to listen, collaborate and move forward together. If you would like to be part of our mission, share a story, or propose a project, contact us:",
   "contact.phoneLabel": "Phone",
   "contact.emailLabel": "Email",
   "contact.socialLabel": "Follow us",
@@ -225,6 +226,7 @@ const sq: Dict = {
   "involve.callout": "Së bashku, mbjellim dashuri. Frymëzojmë shpresë. Lëmë pas një trashëgimi që jeton përgjithmonë.",
 
   "contact.headline": "Kontakt",
+  "contact.intro": "Jemi këtu për të dëgjuar, bashkëpunuar dhe ecur përpara së bashku. Nëse dëshironi të bëheni pjesë e misionit tonë, të ndani një histori, apo të propozoni një projekt, na kontaktoni:",
   "contact.phoneLabel": "Telefon",
   "contact.emailLabel": "Email",
   "contact.socialLabel": "Na ndiqni",

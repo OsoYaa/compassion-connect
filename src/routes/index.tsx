@@ -465,6 +465,7 @@ function Index() {
             <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-5xl md:text-6xl">
               {t("contact.headline")}
             </h2>
+            <p className="mx-auto mt-2 max-w-2xl text-base leading-relaxed text-white/80 sm:text-lg">{t("contact.intro")}</p>
           </div>
 
           <div className="mt-16 grid gap-10 sm:grid-cols-2">

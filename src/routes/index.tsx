@@ -34,7 +34,7 @@ function Eyebrow({ children, light = false }: { children: React.ReactNode; light
   return (
     <span
       className={`inline-block text-[11px] font-semibold uppercase tracking-[0.32em] ${
-        light ? "text-white/60" : "text-navy"
+        light ? "text-white/80" : "text-navy"
       }`}
     >
       {children}
@@ -104,7 +104,7 @@ function CaseCard({ item, index }: { item: CaseItem; index: number }) {
           {item.image ? (
             <img src={item.image} alt={title} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
           ) : (
-            <ImageIcon className="h-10 w-10 text-muted-foreground/50" strokeWidth={1.25} />
+            <ImageIcon className="h-10 w-10 text-muted-foreground/70" strokeWidth={1.25} />
           )}
         </button>
         <h3 className="mt-6 font-serif text-2xl font-semibold text-navy">{title}</h3>
@@ -158,7 +158,7 @@ function AboutMore() {
       >
         <div className="overflow-hidden">
           <div
-            className="text-base leading-relaxed text-white/80 sm:text-lg"
+            className="text-base leading-relaxed text-white/90 sm:text-lg"
             dangerouslySetInnerHTML={{ __html: t("about.more") }}
           />
         </div>
@@ -267,7 +267,7 @@ function Index() {
               </h2>
             </div>
             <div className="max-w-4xl">
-              <p className="text-base leading-relaxed text-white/80 sm:text-lg">
+              <p className="text-base leading-relaxed text-white/90 sm:text-lg">
                 <span dangerouslySetInnerHTML={{ __html: t("about.p1") }} />
               </p>
               <AboutMore />
@@ -363,7 +363,7 @@ function Index() {
 
           <article className="mt-20 grid border border-border md:grid-cols-5">
             <div className="relative flex aspect-[16/10] items-center justify-center bg-secondary md:col-span-2 md:aspect-auto">
-              <ImageIcon className="h-12 w-12 text-muted-foreground/50" strokeWidth={1.25} />
+              <ImageIcon className="h-12 w-12 text-muted-foreground/70" strokeWidth={1.25} />
             </div>
             <div className="flex flex-col justify-center gap-5 p-8 sm:p-12 md:col-span-3">
               <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-navy">
@@ -404,20 +404,20 @@ function Index() {
 
           {/* Flat bank panel */}
           <article className="mt-16 border border-white/15 bg-white/[0.04] p-8 sm:p-12">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">{t("donate.bankName")}</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/85">{t("donate.bankName")}</p>
             <h3 className="mt-2 font-serif text-3xl font-semibold text-white">{bankAccount.bankName}</h3>
 
             <dl className="mt-8 grid gap-6 sm:grid-cols-2">
               <div>
-                <dt className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/60">{t("donate.holder")}</dt>
+                <dt className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/80">{t("donate.holder")}</dt>
                 <dd className="mt-2 text-base text-white">{bankAccount.holder}</dd>
               </div>
               <div>
-                <dt className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/60">{t("donate.swift")}</dt>
+                <dt className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/80">{t("donate.swift")}</dt>
                 <dd className="mt-2 font-mono text-base text-white">{bankAccount.swift}</dd>
               </div>
               <div className="sm:col-span-2">
-                <dt className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/60">{t("donate.iban")}</dt>
+                <dt className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/80">{t("donate.iban")}</dt>
                 <dd className="mt-2 flex flex-wrap items-center gap-3">
                   <code className="border border-white/20 bg-white/[0.06] px-3 py-1.5 font-mono text-sm tracking-wide text-white">
                     {bankAccount.iban}
@@ -505,7 +505,7 @@ function Index() {
             {[{ src: googleLogo, alt: "Google" }, ...Array.from({ length: 7 }, () => null)].map((partner, i) => (
               <div
                 key={i}
-                className="flex aspect-[3/2] items-center justify-center border-b border-r border-white/20 bg-white/[0.04] text-xs uppercase tracking-[0.2em] text-white/70 transition-colors hover:bg-white/10"
+                className="flex aspect-[3/2] items-center justify-center border-b border-r border-white/20 bg-white/[0.04] text-xs uppercase tracking-[0.2em] text-white/90 transition-colors hover:bg-white/10"
               >
                 {partner ? (
                   <img src={partner.src} alt={partner.alt} className="h-2/3 w-auto object-contain opacity-100 transition md:opacity-80 md:grayscale md:hover:opacity-100 md:hover:grayscale-0" />

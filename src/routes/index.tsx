@@ -163,10 +163,10 @@ function PillarTile({
         type="button"
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
-        className="group flex w-full items-start gap-3 border border-white/15 bg-navy/60 p-4 text-left text-white backdrop-blur-sm transition-colors hover:border-navy"
+        className="group flex w-full items-start gap-3 border border-white/15 bg-navy/60 p-4 text-left text-white backdrop-blur-sm transition-colors hover:border-white/50"
         style={{ animationDelay: `${index * 80}ms` }}
       >
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center border border-white/20 text-navy">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center border border-white/30 text-white">
           <Icon className="h-4 w-4" strokeWidth={1.75} />
         </span>
         <div className="min-w-0 flex-1">
@@ -174,7 +174,7 @@ function PillarTile({
             <h3 className="text-[11px] font-semibold uppercase tracking-[0.22em]">{title}</h3>
             <span
               aria-hidden="true"
-              className={`text-navy transition-transform duration-300 ${open ? "rotate-45" : ""}`}
+              className={`text-white/80 transition-transform duration-300 ${open ? "rotate-45" : ""}`}
             >
               +
             </span>
@@ -427,7 +427,7 @@ function Index() {
               <ImageIcon className="h-12 w-12 text-white/40" strokeWidth={1.25} />
             </div>
             <div className="flex flex-col justify-center gap-5 p-8 sm:p-12 md:col-span-3">
-              <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-navy">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
                 {t("events.featuredTag")}
               </span>
               <h3 className="font-serif text-3xl font-semibold leading-tight sm:text-4xl">
@@ -435,9 +435,9 @@ function Index() {
               </h3>
               <p className="text-base leading-relaxed text-white/75">{t("events.featured.desc")}</p>
               <div className="flex flex-wrap gap-x-8 gap-y-2 text-sm text-white/70">
-                <span className="inline-flex items-center gap-2"><Calendar className="h-4 w-4 text-navy" /> {t("events.featured.date")}</span>
-                <span className="inline-flex items-center gap-2"><Clock className="h-4 w-4 text-navy" /> {t("events.featured.time")}</span>
-                <span className="inline-flex items-center gap-2"><MapPin className="h-4 w-4 text-navy" /> {t("events.featured.location")}</span>
+                <span className="inline-flex items-center gap-2"><Calendar className="h-4 w-4 text-white/70" /> {t("events.featured.date")}</span>
+                <span className="inline-flex items-center gap-2"><Clock className="h-4 w-4 text-white/70" /> {t("events.featured.time")}</span>
+                <span className="inline-flex items-center gap-2"><MapPin className="h-4 w-4 text-white/70" /> {t("events.featured.location")}</span>
               </div>
             </div>
           </article>

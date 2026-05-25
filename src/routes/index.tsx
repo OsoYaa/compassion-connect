@@ -12,7 +12,7 @@ import brandonPortraitMobile from "@/assets/brandon-portrait-mobile.jpg";
 import googleLogo from "@/assets/google transparent.png";
 import { Toaster } from "@/components/ui/sonner";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { SiteHeader, SiteFooter } from "@/components/site-chrome";
+import { SiteHeader, SiteFooter, SOCIAL_LINKS } from "@/components/site-chrome";
 import { useT } from "@/lib/i18n";
 
 export const Route = createFileRoute("/")({

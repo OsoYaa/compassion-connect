@@ -163,10 +163,10 @@ function PillarTile({
         type="button"
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
-        className="group flex w-full items-start gap-3 border border-white/15 bg-navy/60 p-4 text-left text-white backdrop-blur-sm transition-colors hover:border-navy"
+        className="group flex w-full items-start gap-3 border border-white/15 bg-navy/60 p-4 text-left text-white backdrop-blur-sm transition-colors hover:border-white/50"
         style={{ animationDelay: `${index * 80}ms` }}
       >
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center border border-white/20 text-navy">
+        <span className="flex h-9 w-9 shrink-0 items-center justify-center border border-white/30 text-white">
           <Icon className="h-4 w-4" strokeWidth={1.75} />
         </span>
         <div className="min-w-0 flex-1">
@@ -174,7 +174,7 @@ function PillarTile({
             <h3 className="text-[11px] font-semibold uppercase tracking-[0.22em]">{title}</h3>
             <span
               aria-hidden="true"
-              className={`text-navy transition-transform duration-300 ${open ? "rotate-45" : ""}`}
+              className={`text-white/80 transition-transform duration-300 ${open ? "rotate-45" : ""}`}
             >
               +
             </span>

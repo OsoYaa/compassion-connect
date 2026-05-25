@@ -1,5 +1,5 @@
-import { Link } from "@tanstack/react-router";
-import { Facebook, Instagram, Twitter, Youtube, Languages, Home } from "lucide-react";
+import { Link, useRouterState } from "@tanstack/react-router";
+import { Facebook, Instagram, Twitter, Youtube, Languages, Home, Heart } from "lucide-react";
 import { useT } from "@/lib/i18n";
 
 export const SOCIAL_LINKS = [
@@ -9,25 +9,68 @@ export const SOCIAL_LINKS = [
   { Icon: Youtube, href: "#", label: "YouTube" },
 ];
 
+const SECTION_LINKS: { id: string; tKey: string }[] = [
+  { id: "about", tKey: "nav.about" },
+  { id: "programs", tKey: "nav.programs" },
+  { id: "involve", tKey: "nav.involve" },
+  { id: "cases", tKey: "nav.cases" },
+  { id: "events", tKey: "nav.events" },
+  { id: "partners", tKey: "nav.partners" },
+  { id: "contact", tKey: "nav.contact" },
+];
+
 export function SiteHeader() {
   const { lang, setLang, t } = useT();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const onHome = pathname === "/";
+
+  const handleHomeClick = (e: React.MouseEvent) => {
+    if (onHome) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  const handleSectionClick = (e: React.MouseEvent, id: string) => {
+    if (onHome) {
+      e.preventDefault();
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
         <Link
           to="/"
-          className="flex h-10 w-10 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-secondary hover:text-primary"
+          onClick={handleHomeClick}
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-secondary hover:text-primary"
           aria-label={t("nav.home")}
         >
           <Home className="h-5 w-5" />
         </Link>
 
-        <nav className="flex items-center gap-1 sm:gap-2">
+        {/* Desktop section nav */}
+        <nav className="hidden lg:flex items-center gap-1">
+          {SECTION_LINKS.map((s) => (
+            <a
+              key={s.id}
+              href={`/#${s.id}`}
+              onClick={(e) => handleSectionClick(e, s.id)}
+              className="rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+            >
+              {t(s.tKey)}
+            </a>
+          ))}
+        </nav>
+
+        <div className="flex items-center gap-1 sm:gap-2">
+          {/* Mobile-only contact link */}
           <Link
             to="/contact"
-            className="rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
-            activeProps={{ className: "rounded-md px-3 py-2 text-sm font-medium text-primary" }}
+            className="lg:hidden rounded-md px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+            activeProps={{ className: "lg:hidden rounded-md px-3 py-2 text-sm font-medium text-primary" }}
           >
             {t("nav.contact")}
           </Link>
@@ -55,7 +98,16 @@ export function SiteHeader() {
             <Languages className="h-3.5 w-3.5" />
             {t("nav.lang")}
           </button>
-        </nav>
+
+          <a
+            href="/#donate"
+            onClick={(e) => handleSectionClick(e, "donate")}
+            className="ml-1 inline-flex items-center gap-1.5 rounded-md bg-accent-red px-3 py-2 text-xs font-semibold uppercase tracking-wider text-white transition-all hover:brightness-110 sm:px-4"
+          >
+            <Heart className="h-3.5 w-3.5" fill="currentColor" />
+            <span className="hidden xs:inline sm:inline">{t("nav.donate")}</span>
+          </a>
+        </div>
       </div>
     </header>
   );

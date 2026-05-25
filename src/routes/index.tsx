@@ -387,13 +387,13 @@ function Index() {
       </section>
 
 
-      {/* ============ RESOLVED CASES ============ */}
-      <section id="cases" className="bg-teal-wash py-28 sm:py-36">
+      {/* ============ MULTIMEDIA ============ */}
+      <section id="cases" className="bg-teal py-28 sm:py-36 text-white">
         <div className="mx-auto max-w-6xl px-6">
           <div className="flex flex-col items-center gap-5 text-center">
-            <Eyebrow>{t("cases.subheading")}</Eyebrow>
-            <Rule />
-            <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-navy sm:text-5xl md:text-6xl">
+            <Eyebrow light>{t("cases.subheading")}</Eyebrow>
+            <Rule light />
+            <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-5xl md:text-6xl">
               {t("cases.headline")}
             </h2>
           </div>
@@ -407,45 +407,45 @@ function Index() {
       </section>
 
       {/* ============ EVENTS ============ */}
-      <section id="events" className="bg-navy text-white py-28 sm:py-36">
+      <section id="events" className="bg-background py-28 sm:py-36">
         <div className="mx-auto max-w-6xl px-6">
           <div className="flex flex-col items-center gap-5 text-center">
-            <Eyebrow light>{t("events.subheading")}</Eyebrow>
-            <Rule light />
-            <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
+            <Eyebrow>{t("events.subheading")}</Eyebrow>
+            <Rule />
+            <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-navy sm:text-5xl md:text-6xl">
               {t("events.headline")}
             </h2>
           </div>
 
-          <article className="mt-20 grid border border-white/15 md:grid-cols-5">
-            <div className="relative flex aspect-[16/10] items-center justify-center bg-white/5 md:col-span-2 md:aspect-auto">
-              <ImageIcon className="h-12 w-12 text-white/40" strokeWidth={1.25} />
+          <article className="mt-20 grid border border-border md:grid-cols-5">
+            <div className="relative flex aspect-[16/10] items-center justify-center bg-secondary md:col-span-2 md:aspect-auto">
+              <ImageIcon className="h-12 w-12 text-muted-foreground/50" strokeWidth={1.25} />
             </div>
             <div className="flex flex-col justify-center gap-5 p-8 sm:p-12 md:col-span-3">
-              <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-navy">
                 {t("events.featuredTag")}
               </span>
-              <h3 className="font-serif text-3xl font-semibold leading-tight sm:text-4xl">
+              <h3 className="font-serif text-3xl font-semibold leading-tight text-navy sm:text-4xl">
                 {t("events.featured.title")}
               </h3>
-              <p className="text-base leading-relaxed text-white/75">{t("events.featured.desc")}</p>
-              <div className="flex flex-wrap gap-x-8 gap-y-2 text-sm text-white/70">
-                <span className="inline-flex items-center gap-2"><Calendar className="h-4 w-4 text-white/70" /> {t("events.featured.date")}</span>
-                <span className="inline-flex items-center gap-2"><Clock className="h-4 w-4 text-white/70" /> {t("events.featured.time")}</span>
-                <span className="inline-flex items-center gap-2"><MapPin className="h-4 w-4 text-white/70" /> {t("events.featured.location")}</span>
+              <p className="text-base leading-relaxed text-muted-foreground">{t("events.featured.desc")}</p>
+              <div className="flex flex-wrap gap-x-8 gap-y-2 text-sm text-muted-foreground">
+                <span className="inline-flex items-center gap-2"><Calendar className="h-4 w-4" /> {t("events.featured.date")}</span>
+                <span className="inline-flex items-center gap-2"><Clock className="h-4 w-4" /> {t("events.featured.time")}</span>
+                <span className="inline-flex items-center gap-2"><MapPin className="h-4 w-4" /> {t("events.featured.location")}</span>
               </div>
             </div>
           </article>
         </div>
       </section>
 
-      {/* ============ DONATE — Red reserved for final CTA ============ */}
-      <section id="donate" className="bg-background py-28 sm:py-36">
+      {/* ============ DONATE ============ */}
+      <section id="donate" className="bg-navy text-white py-28 sm:py-36">
         <div className="mx-auto max-w-3xl px-6">
           <div className="flex flex-col items-center gap-5 text-center">
-            <Eyebrow>{t("donate.bankName")}</Eyebrow>
-            <Rule />
-            <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-navy sm:text-5xl md:text-6xl">
+            <Eyebrow light>{t("donate.bankName")}</Eyebrow>
+            <Rule light />
+            <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-5xl md:text-6xl">
               {t("donate.headline")}
             </h2>
             <a
@@ -459,23 +459,23 @@ function Index() {
           </div>
 
           {/* Flat bank panel */}
-          <article className="mt-16 border border-border p-8 sm:p-12">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-navy">{t("donate.bankName")}</p>
-            <h3 className="mt-2 font-serif text-3xl font-semibold text-navy">{bankAccount.bankName}</h3>
+          <article className="mt-16 border border-white/15 bg-white/[0.04] p-8 sm:p-12">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/70">{t("donate.bankName")}</p>
+            <h3 className="mt-2 font-serif text-3xl font-semibold text-white">{bankAccount.bankName}</h3>
 
             <dl className="mt-8 grid gap-6 sm:grid-cols-2">
               <div>
-                <dt className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">{t("donate.holder")}</dt>
-                <dd className="mt-2 text-base text-navy">{bankAccount.holder}</dd>
+                <dt className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/60">{t("donate.holder")}</dt>
+                <dd className="mt-2 text-base text-white">{bankAccount.holder}</dd>
               </div>
               <div>
-                <dt className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">{t("donate.swift")}</dt>
-                <dd className="mt-2 font-mono text-base text-navy">{bankAccount.swift}</dd>
+                <dt className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/60">{t("donate.swift")}</dt>
+                <dd className="mt-2 font-mono text-base text-white">{bankAccount.swift}</dd>
               </div>
               <div className="sm:col-span-2">
-                <dt className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">{t("donate.iban")}</dt>
+                <dt className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/60">{t("donate.iban")}</dt>
                 <dd className="mt-2 flex flex-wrap items-center gap-3">
-                  <code className="border border-border bg-secondary px-3 py-1.5 font-mono text-sm tracking-wide text-navy">
+                  <code className="border border-white/20 bg-white/[0.06] px-3 py-1.5 font-mono text-sm tracking-wide text-white">
                     {bankAccount.iban}
                   </code>
                   <CopyIban iban={bankAccount.iban} />
@@ -487,38 +487,38 @@ function Index() {
       </section>
 
       {/* ============ CONTACT ============ */}
-      <section id="contact" className="bg-teal py-28 sm:py-36 text-white">
+      <section id="contact" className="bg-background py-28 sm:py-36">
         <div className="mx-auto max-w-4xl px-6">
           <div className="flex flex-col items-center gap-5 text-center">
-            <Rule light />
-            <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-5xl md:text-6xl">
+            <Rule />
+            <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-navy sm:text-5xl md:text-6xl">
               {t("contact.headline")}
             </h2>
-            <p className="mx-auto mt-2 max-w-2xl text-base leading-relaxed text-white/80 sm:text-lg">{t("contact.intro")}</p>
+            <p className="mx-auto mt-2 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">{t("contact.intro")}</p>
           </div>
 
           <div className="mt-16 grid gap-10 sm:grid-cols-2">
-            <div className="flex items-start gap-4 border-l border-white/30 pl-5">
-              <Phone className="h-5 w-5 text-white" strokeWidth={1.5} />
+            <div className="flex items-start gap-4 border-l border-border pl-5">
+              <Phone className="h-5 w-5 text-navy" strokeWidth={1.5} />
               <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/60">{t("contact.phoneLabel")}</p>
-                <p className="mt-2 text-base text-white">—</p>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">{t("contact.phoneLabel")}</p>
+                <p className="mt-2 text-base text-navy">—</p>
               </div>
             </div>
-            <div className="flex items-start gap-4 border-l border-white/30 pl-5">
-              <Mail className="h-5 w-5 text-white" strokeWidth={1.5} />
+            <div className="flex items-start gap-4 border-l border-border pl-5">
+              <Mail className="h-5 w-5 text-navy" strokeWidth={1.5} />
               <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/60">{t("contact.emailLabel")}</p>
-                <a href="mailto:brandonforever22legacy@gmail.com" className="mt-2 block break-all text-base text-white hover:text-white/80">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">{t("contact.emailLabel")}</p>
+                <a href="mailto:brandonforever22legacy@gmail.com" className="mt-2 block break-all text-base text-navy hover:text-navy/80">
                   brandonforever22legacy@gmail.com
                 </a>
               </div>
             </div>
           </div>
 
-          <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-white/30 pt-8 sm:flex-row">
+          <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-border pt-8 sm:flex-row">
             <div className="flex items-center gap-3">
-              <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/60">{t("contact.socialLabel")}</span>
+              <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">{t("contact.socialLabel")}</span>
               {SOCIAL_LINKS.map(({ Icon, href, label }) => (
                 <a
                   key={label}
@@ -526,7 +526,7 @@ function Index() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="flex h-10 w-10 items-center justify-center border border-white/40 text-white transition-colors hover:bg-white hover:text-navy"
+                  className="flex h-10 w-10 items-center justify-center border border-border text-navy transition-colors hover:bg-navy hover:text-white"
                 >
                   <Icon className="h-4 w-4" />
                 </a>
@@ -534,33 +534,34 @@ function Index() {
             </div>
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-white px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.22em] text-navy transition-colors hover:bg-white/90"
+              className="inline-flex items-center justify-center gap-2 bg-navy px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.22em] text-white transition-colors hover:bg-navy/90"
             >
               {t("contact.cta")} <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
 
-          <blockquote className="mx-auto mt-16 max-w-2xl text-center font-serif text-xl italic text-white sm:text-2xl">
+          <blockquote className="mx-auto mt-16 max-w-2xl text-center font-serif text-xl italic text-navy sm:text-2xl">
             "{t("contact.calloutQuote")}"
           </blockquote>
         </div>
       </section>
 
       {/* ============ OUR PARTNERS ============ */}
-      <section id="partners" className="bg-background py-28 sm:py-36">
+      <section id="partners" className="bg-teal py-28 sm:py-36 text-white">
         <div className="mx-auto max-w-6xl px-6">
           <div className="flex flex-col items-center gap-5 text-center">
-            <Eyebrow>{t("partners.subheading")}</Eyebrow>
-            <Rule />
-            <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-navy sm:text-5xl md:text-6xl">
+            <Eyebrow light>{t("partners.subheading")}</Eyebrow>
+            <Rule light />
+            <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-5xl md:text-6xl">
               {t("partners.headline")}
             </h2>
           </div>
-          <div className="mt-16 grid grid-cols-2 border-l border-t border-border sm:grid-cols-3 md:grid-cols-4">
+          <div className="mt-16 grid grid-cols-2 border-l border-t border-white/20 sm:grid-cols-3 md:grid-cols-4">
+
             {[{ src: googleLogo, alt: "Google" }, ...Array.from({ length: 7 }, () => null)].map((partner, i) => (
               <div
                 key={i}
-                className="flex aspect-[3/2] items-center justify-center border-b border-r border-border bg-background text-xs uppercase tracking-[0.2em] text-muted-foreground transition-colors hover:bg-teal-wash"
+                className="flex aspect-[3/2] items-center justify-center border-b border-r border-white/20 bg-white/[0.04] text-xs uppercase tracking-[0.2em] text-white/70 transition-colors hover:bg-white/10"
               >
                 {partner ? (
                   <img src={partner.src} alt={partner.alt} className="h-2/3 w-auto object-contain opacity-100 transition md:opacity-80 md:grayscale md:hover:opacity-100 md:hover:grayscale-0" />

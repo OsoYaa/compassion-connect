@@ -113,9 +113,6 @@ function ContactPage() {
                 </span>
               </li>
             </ul>
-            <p className="mt-6 text-base leading-relaxed text-foreground sm:text-lg">
-              {t("volunteer.intro.join")}
-            </p>
           </div>
 
 

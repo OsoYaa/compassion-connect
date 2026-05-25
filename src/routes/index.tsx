@@ -12,7 +12,7 @@ import brandonPortraitMobile from "@/assets/brandon-portrait-mobile.jpg";
 import googleLogo from "@/assets/google transparent.png";
 import { Toaster } from "@/components/ui/sonner";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { SiteHeader, SiteFooter } from "@/components/site-chrome";
+import { SiteHeader, SiteFooter, SOCIAL_LINKS } from "@/components/site-chrome";
 import { useT } from "@/lib/i18n";
 
 export const Route = createFileRoute("/")({
@@ -524,12 +524,18 @@ function Index() {
           <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-white/30 pt-8 sm:flex-row">
             <div className="flex items-center gap-3">
               <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/60">{t("contact.socialLabel")}</span>
-              <a href="#" aria-label="Facebook" className="flex h-10 w-10 items-center justify-center border border-white/40 text-white transition-colors hover:bg-white hover:text-navy">
-                <Facebook className="h-4 w-4" />
-              </a>
-              <a href="#" aria-label="Instagram" className="flex h-10 w-10 items-center justify-center border border-white/40 text-white transition-colors hover:bg-white hover:text-navy">
-                <Instagram className="h-4 w-4" />
-              </a>
+              {SOCIAL_LINKS.map(({ Icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="flex h-10 w-10 items-center justify-center border border-white/40 text-white transition-colors hover:bg-white hover:text-navy"
+                >
+                  <Icon className="h-4 w-4" />
+                </a>
+              ))}
             </div>
             <Link
               to="/contact"

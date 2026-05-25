@@ -389,7 +389,7 @@ function Index() {
 
 
       {/* ============ RESOLVED CASES ============ */}
-      <section id="cases" className="bg-background py-28 sm:py-36">
+      <section id="cases" className="bg-teal-wash py-28 sm:py-36">
         <div className="mx-auto max-w-6xl px-6">
           <div className="flex flex-col items-center gap-5 text-center">
             <Eyebrow>{t("cases.subheading")}</Eyebrow>

@@ -7,8 +7,14 @@ type Dict = Record<string, string>;
 const en: Dict = {
   "nav.contact": "Contact",
   "nav.home": "Home",
-  "nav.donate": "Donate",
+  "nav.donate": "Donate Now",
   "nav.lang": "SQ",
+  "nav.about": "About",
+  "nav.programs": "Programs",
+  "nav.involve": "Get Involved",
+  "nav.cases": "Cases",
+  "nav.events": "Events",
+  "nav.partners": "Partners",
 
   "hero.slogan": "Slogan",
   "hero.title": "Brandon Forever 22 Legacy",
@@ -125,8 +131,14 @@ const en: Dict = {
 const sq: Dict = {
   "nav.contact": "Kontakt",
   "nav.home": "Ballina",
-  "nav.donate": "Dhuro",
+  "nav.donate": "Dhuro tani",
   "nav.lang": "EN",
+  "nav.about": "Rreth nesh",
+  "nav.programs": "Programet",
+  "nav.involve": "Përfshihu",
+  "nav.cases": "Rastet",
+  "nav.events": "Ngjarjet",
+  "nav.partners": "Partnerët",
 
   "hero.slogan": "Sllogani",
   "hero.title": "Brandon Forever 22 Legacy",

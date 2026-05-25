@@ -7,7 +7,11 @@ type Dict = Record<string, string>;
 const en: Dict = {
   "nav.contact": "Contact",
   "nav.home": "Home",
-  "nav.donate": "Donate",
+  "nav.donate": "Donate Now",
+  "nav.about": "About",
+  "nav.programs": "Programs",
+  "nav.events": "Events",
+  "nav.partners": "Partners",
   "nav.lang": "SQ",
 
   "hero.slogan": "Slogan",

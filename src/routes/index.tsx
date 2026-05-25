@@ -490,7 +490,6 @@ function Index() {
       <section id="contact" className="bg-teal py-28 sm:py-36 text-white">
         <div className="mx-auto max-w-4xl px-6">
           <div className="flex flex-col items-center gap-5 text-center">
-            <Eyebrow light>{t("contact.headline")}</Eyebrow>
             <Rule light />
             <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-5xl md:text-6xl">
               {t("contact.headline")}

@@ -148,6 +148,8 @@ const sq: Dict = {
 
   "hero.slogan": "Ne besojmë se trashëgimia e vërtetë nuk matet me kohën, por me jetët që prekim.",
   "hero.title": "Një jetë. Një frymëzim. Një trashëgimi që vazhdon.",
+  "hero.title.l1": "Një jetë. Një frymëzim.",
+  "hero.title.l2": "Një trashëgimi që vazhdon.",
   "hero.subtitle": "Organizata jo-fitimprurëse \"Brandon Forever 22 Legacy\" lindi për të kthyer kujtimin në veprim dhe dhimbjen në ndikim pozitiv. Përmes edukimit, mbështetjes sociale dhe fuqizimit të rinisë, ne punojmë që historia e <strong>Brandon</strong>-it të shndërrohet në një burim shprese për një komunitet më të fortë, më njerëzor dhe më solidar.",
   "hero.donate": "DHURO TANI",
   "hero.learn": "MËSO MË SHUMË",

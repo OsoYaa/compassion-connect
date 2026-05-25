@@ -356,41 +356,6 @@ function Index() {
         </div>
       </section>
 
-      {/* ============ INVOLVEMENT — full-width teal wash chapter ============ */}
-      <section id="involve" className="bg-teal py-28 sm:py-36 text-white">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="flex flex-col items-center gap-5 text-center">
-            <Eyebrow light>{t("involve.headline")}</Eyebrow>
-            <Rule light />
-            <h2 className="max-w-3xl font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-5xl md:text-6xl">
-              {t("involve.headline")}
-            </h2>
-          </div>
-
-          <ul className="mt-20 grid gap-x-12 gap-y-14 sm:grid-cols-2">
-            {[
-              { Icon: Heart, title: t("involve.i1.title"), text: t("involve.i1.text") },
-              { Icon: Gift, title: t("involve.i2.title"), text: t("involve.i2.text") },
-              { Icon: Share2, title: t("involve.i3.title"), text: t("involve.i3.text") },
-              { Icon: TrendingUp, title: t("involve.i4.title"), text: t("involve.i4.text") },
-            ].map(({ Icon, title, text }, i) => (
-              <li key={i} className="flex gap-5 border-l border-white/30 pl-6">
-                <div>
-                  <Icon className="h-7 w-7 text-white" strokeWidth={1.5} />
-                  <h3 className="mt-5 font-serif text-2xl font-semibold text-white">
-                    {title}
-                  </h3>
-                  <p className="mt-3 text-base leading-relaxed text-white/80">{text}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
-
-          <blockquote className="mx-auto mt-20 max-w-3xl text-center font-serif text-2xl italic leading-snug text-white sm:text-3xl">
-            "{t("involve.callout")}"
-          </blockquote>
-        </div>
-      </section>
 
       {/* ============ RESOLVED CASES ============ */}
       <section id="cases" className="bg-background py-28 sm:py-36">

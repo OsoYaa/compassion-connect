@@ -317,7 +317,6 @@ function Index() {
         <div className="mx-auto max-w-6xl px-6">
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-5">
-              <Eyebrow light>{t("about.kicker")}</Eyebrow>
               <Rule light />
               <h2 className="font-serif text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
                 {t("about.headline")}

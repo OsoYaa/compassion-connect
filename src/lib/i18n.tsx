@@ -137,7 +137,7 @@ const sq: Dict = {
   "nav.programs": "Programet",
   "nav.involve": "Përfshihu",
   "nav.cases": "Rastet",
-  "nav.events": "Ngjarjet",
+  "nav.events": "Eventet",
   "nav.partners": "Partnerët",
 
   "hero.slogan": "Sllogani",

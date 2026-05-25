@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   Copy, Check, PlayCircle, ArrowRight, Megaphone, BookHeart, HandHeart,
-  GraduationCap, Phone, Mail, Facebook, Instagram, Heart, Gift, Share2, TrendingUp, ImageIcon,
+  GraduationCap, Phone, Mail, Heart, ImageIcon,
   Calendar, MapPin, Clock, ChevronDown,
 } from "lucide-react";
 import { toast } from "sonner";
@@ -145,52 +145,6 @@ function CaseCard({ item, index }: { item: CaseItem; index: number }) {
   );
 }
 
-function PillarTile({
-  index,
-  Icon,
-  title,
-  text,
-}: {
-  index: number;
-  Icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
-  title: string;
-  text: string;
-}) {
-  const [open, setOpen] = useState(false);
-  return (
-    <li>
-      <button
-        type="button"
-        onClick={() => setOpen((o) => !o)}
-        aria-expanded={open}
-        className="group flex w-full items-start gap-3 border border-white/15 bg-navy/60 p-4 text-left text-white backdrop-blur-sm transition-colors hover:border-white/50"
-        style={{ animationDelay: `${index * 80}ms` }}
-      >
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center border border-white/30 text-white">
-          <Icon className="h-4 w-4" strokeWidth={1.75} />
-        </span>
-        <div className="min-w-0 flex-1">
-          <div className="flex items-center justify-between gap-2">
-            <h3 className="text-[11px] font-semibold uppercase tracking-[0.22em]">{title}</h3>
-            <span
-              aria-hidden="true"
-              className={`text-white/80 transition-transform duration-300 ${open ? "rotate-45" : ""}`}
-            >
-              +
-            </span>
-          </div>
-          <div
-            className={`grid transition-all duration-300 ease-out ${
-              open ? "mt-2 grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-            }`}
-          >
-            <p className="overflow-hidden text-xs leading-relaxed text-white/80">{text}</p>
-          </div>
-        </div>
-      </button>
-    </li>
-  );
-}
 
 function AboutMore() {
   const { t } = useT();
@@ -262,17 +216,15 @@ function Index() {
 
         <div className="relative z-10 mx-auto flex min-h-[calc(100vh-6rem)] w-full max-w-4xl flex-col justify-center md:mx-0 md:ml-[2%] md:max-w-[65%] md:justify-start md:pt-[11rem] lg:pt-[13rem] md:pr-8">
           <div className="animate-fade-up flex flex-col text-center md:text-left text-white">
-            <h1 className="mt-[12.5rem] font-serif text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:mt-[15.5rem] sm:text-6xl md:mt-0 md:text-7xl">
-              {t("hero.title")}
+            <h1 className="mt-[12.5rem] font-serif text-3xl font-semibold leading-[1.05] tracking-tight text-white sm:mt-[15.5rem] sm:text-5xl md:mt-0 md:text-6xl">
+              <span className="block">{t("hero.title.l1")}</span>
+              {t("hero.title.l2") && <span className="block">{t("hero.title.l2")}</span>}
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-white/80 sm:text-base md:mx-0 md:text-lg">
               <span dangerouslySetInnerHTML={{ __html: t("hero.subtitle") }} />
             </p>
-            <p className="mt-8 font-serif text-lg italic tracking-[0.04em] text-white/90 sm:text-2xl md:text-3xl">
-              {t("hero.slogan")}
-            </p>
 
-            {/* Two-button layout: teal primary + white outline ghost */}
+            {/* Three primary actions */}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center md:justify-start">
               <a
                 href="https://gofundme.com"
@@ -296,18 +248,10 @@ function Index() {
               </a>
             </div>
 
+            <p className="mt-10 font-serif text-lg italic tracking-[0.04em] text-white/90 sm:text-xl md:text-2xl">
+              {t("hero.slogan")}
+            </p>
 
-            {/* Expandable pillar grid — titles only */}
-            <ul className="mt-10 grid w-full grid-cols-1 gap-3 sm:grid-cols-2 md:max-w-2xl">
-              {[
-                { Icon: Heart, title: t("involve.i1.title"), text: t("involve.i1.text") },
-                { Icon: Gift, title: t("involve.i2.title"), text: t("involve.i2.text") },
-                { Icon: Share2, title: t("involve.i3.title"), text: t("involve.i3.text") },
-                { Icon: TrendingUp, title: t("involve.i4.title"), text: t("involve.i4.text") },
-              ].map((p, i) => (
-                <PillarTile key={i} index={i} Icon={p.Icon} title={p.title} text={p.text} />
-              ))}
-            </ul>
           </div>
         </div>
       </section>

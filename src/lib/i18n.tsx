@@ -18,6 +18,8 @@ const en: Dict = {
 
   "hero.slogan": "Slogan",
   "hero.title": "Brandon Forever 22 Legacy",
+  "hero.title.l1": "Brandon Forever 22 Legacy",
+  "hero.title.l2": "",
   "hero.subtitle": "It is a non-profit organization established in memory of <strong>Brandon</strong>, with the mission to build a better world through human solidarity.",
   "hero.donate": "DONATE NOW",
   "hero.learn": "LEARN MORE",
@@ -146,6 +148,8 @@ const sq: Dict = {
 
   "hero.slogan": "Ne besojmë se trashëgimia e vërtetë nuk matet me kohën, por me jetët që prekim.",
   "hero.title": "Një jetë. Një frymëzim. Një trashëgimi që vazhdon.",
+  "hero.title.l1": "Një jetë. Një frymëzim.",
+  "hero.title.l2": "Një trashëgimi që vazhdon.",
   "hero.subtitle": "Organizata jo-fitimprurëse \"Brandon Forever 22 Legacy\" lindi për të kthyer kujtimin në veprim dhe dhimbjen në ndikim pozitiv. Përmes edukimit, mbështetjes sociale dhe fuqizimit të rinisë, ne punojmë që historia e <strong>Brandon</strong>-it të shndërrohet në një burim shprese për një komunitet më të fortë, më njerëzor dhe më solidar.",
   "hero.donate": "DHURO TANI",
   "hero.learn": "MËSO MË SHUMË",

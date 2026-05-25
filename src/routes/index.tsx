@@ -64,7 +64,7 @@ function CopyIban({ iban }: { iban: string }) {
     <button
       onClick={onCopy}
       aria-label="Copy IBAN"
-      className="inline-flex h-8 w-8 items-center justify-center rounded-sm border border-border text-navy transition-colors hover:border-navy hover:text-navy"
+      className="inline-flex h-8 w-8 items-center justify-center rounded-sm border border-white/40 text-white transition-colors hover:border-white hover:bg-white/10"
     >
       {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
     </button>

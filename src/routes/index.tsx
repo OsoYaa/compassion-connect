@@ -249,7 +249,7 @@ function Index() {
             </div>
 
             <p className="mt-10 font-serif text-lg italic tracking-[0.04em] text-white/90 sm:text-xl md:text-2xl">
-              {t("hero.slogan")}
+              <span dangerouslySetInnerHTML={{ __html: t("hero.slogan") }} />
             </p>
 
           </div>

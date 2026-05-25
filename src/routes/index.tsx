@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   Copy, Check, PlayCircle, ArrowRight, Megaphone, BookHeart, HandHeart,
-  GraduationCap, Phone, Mail, Facebook, Instagram, Heart, Gift, Share2, TrendingUp, ImageIcon,
+  GraduationCap, Phone, Mail, Heart, ImageIcon,
   Calendar, MapPin, Clock, ChevronDown,
 } from "lucide-react";
 import { toast } from "sonner";

@@ -159,7 +159,7 @@ const sq: Dict = {
   "nav.events": "Eventet",
   "nav.partners": "Partnerët",
 
-  "hero.slogan": "Ne besojmë se trashëgimia e vërtetë nuk matet me kohën, por me jetët që prekim.",
+  "hero.slogan": "Ne besojmë se trashëgimia e vërtetë nuk matet me kohën,<br/>por me jetët që prekim.",
   "hero.title": "Një jetë. Një frymëzim. Një trashëgimi që vazhdon.",
   "hero.title.l1": "Një jetë. Një frymëzim.",
   "hero.title.l2": "Një trashëgimi që vazhdon.",

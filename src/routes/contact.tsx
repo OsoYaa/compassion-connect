@@ -130,28 +130,8 @@ function ContactPage() {
             </div>
           </div>
 
-          <div className="mt-14 grid gap-8 md:grid-cols-2 md:gap-10">
-            {/* People in Need */}
-            <form onSubmit={onSubmit("need")} className="rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)] sm:p-9">
-              <div className="flex items-center gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <Heart className="h-5 w-5" />
-                </span>
-                <h2 className="text-xl font-semibold text-foreground sm:text-2xl">{t("contact.peopleTitle")}</h2>
-              </div>
-              <p className="mt-2 text-sm text-muted-foreground">{t("contact.peopleDesc")}</p>
-              <div className="mt-6 space-y-4">
-                <Field id="need-name" label={t("form.fullName")} required />
-                <Field id="need-phone" label={t("form.phone")} type="tel" required />
-                <Field id="need-msg" label={t("form.message")} as="textarea" required />
-              </div>
-              <button
-                type="submit"
-                className="mt-6 inline-flex w-full items-center justify-center rounded-md bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-              >
-                {t("form.submit")}
-              </button>
-            </form>
+          <div className="mt-14 mx-auto max-w-2xl">
+
 
             {/* Volunteers */}
             <form onSubmit={onSubmit("vol")} className="rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)] sm:p-9">

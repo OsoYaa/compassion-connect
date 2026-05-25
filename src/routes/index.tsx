@@ -242,7 +242,7 @@ function Index() {
               </a>
               <a
                 href="#partners"
-                className="inline-flex min-w-[12rem] items-center justify-center gap-2 border border-white/80 bg-transparent px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.22em] text-white transition-colors hover:bg-white hover:text-navy whitespace-nowrap"
+                className="inline-flex min-w-[12rem] items-center justify-center gap-2 border border-white/80 bg-transparent px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.22em] text-white transition-colors hover:border-teal-deep hover:bg-teal-deep hover:text-white whitespace-nowrap"
               >
                 {t("hero.partners")}
               </a>

@@ -28,26 +28,35 @@ jobs:
       - name: Build
         run: bun run build
 
-      - name: Locate wrangler config
-        id: locate
+      - name: Prepare Cloudflare deploy config
         run: |
-          echo "--- repo root ---"
-          ls -la
-          echo "--- dist tree (3 levels) ---"
-          find dist -maxdepth 3 -print 2>/dev/null || echo "no dist/"
-          echo "--- searching for wrangler.json* anywhere ---"
-          FOUND=$(find . -path ./node_modules -prune -o -type f \( -name 'wrangler.json' -o -name 'wrangler.jsonc' -o -name 'wrangler.toml' \) -print 2>/dev/null | grep -v node_modules | head -20)
-          echo "$FOUND"
-          CFG=$(echo "$FOUND" | grep -E '(dist|\.output|build)/' | head -1)
-          if [ -z "$CFG" ]; then CFG=$(echo "$FOUND" | head -1); fi
-          echo "Selected config: $CFG"
-          echo "config=$CFG" >> $GITHUB_OUTPUT
-          echo "dir=$(dirname "$CFG")" >> $GITHUB_OUTPUT
+          test -f dist/server/index.mjs
+          test -d dist/client
+          cat > dist/server/wrangler.json <<'EOF'
+          {
+            "name": "compassion-connect",
+            "compatibility_date": "2025-09-24",
+            "compatibility_flags": ["nodejs_compat"],
+            "main": "index.mjs",
+            "assets": {
+              "binding": "ASSETS",
+              "directory": "../client"
+            },
+            "no_bundle": true,
+            "rules": [
+              {
+                "type": "ESModule",
+                "globs": ["**/*.mjs", "**/*.js"]
+              }
+            ]
+          }
+          EOF
+          cat dist/server/wrangler.json
 
       - name: Deploy to Cloudflare
-        working-directory: ${{ steps.locate.outputs.dir }}
+        working-directory: ./dist/server
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: npx wrangler@latest deploy --name compassion-connect
+        run: npx wrangler@latest deploy -c wrangler.json --name compassion-connect
 

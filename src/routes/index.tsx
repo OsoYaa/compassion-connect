@@ -191,7 +191,7 @@ function EventArticleCard({
   }
   return (
     <article className="grid border border-white/20 md:grid-cols-5">
-      <div className="relative flex items-center justify-center bg-white/[0.06] md:col-span-2 overflow-hidden w-full h-full">
+      <div className="relative flex items-center justify-center bg-white/[0.06] md:col-span-2 overflow-hidden w-full aspect-[3/2]">
         {article.image ? (
           <img src={article.image} alt={article.title} className="w-full h-full object-contain" />
         ) : (
@@ -299,9 +299,9 @@ function EventsSection() {
                 {openArticle?.title}
               </DialogTitle>
             </DialogHeader>
-            <div className="relative w-full max-w-[600px] overflow-hidden bg-secondary mx-auto">
+            <div className="relative w-full max-w-[600px] overflow-hidden bg-secondary mx-auto aspect-[3/2]">
               {openArticle?.image ? (
-                <img src={openArticle.image} alt={openArticle.title} className="w-full h-auto object-contain" />
+                <img src={openArticle.image} alt={openArticle.title} className="w-full h-full object-contain" />
               ) : (
                 <div className="flex h-full w-full items-center justify-center text-navy/50">
                   <ImageIcon className="h-12 w-12" strokeWidth={1.25} />

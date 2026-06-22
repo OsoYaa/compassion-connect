@@ -15,6 +15,7 @@ import strehheShpreseLogo from "@/assets/partners/strehe-shprese.jpg.asset.json"
 import bashkiaCerrikLogo from "@/assets/partners/bashkia-cerrik.jpg.asset.json";
 import bashkiaGramshLogo from "@/assets/partners/bashkia-gramsh.png.asset.json";
 import bashkiaTiraneLogo from "@/assets/partners/bashkia-tirane.png.asset.json";
+import eventi1Image from "@/assets/events/eventi-1-xheko.png.asset.json";
 import { Toaster } from "@/components/ui/sonner";
 import { SiteHeader, SiteFooter, SOCIAL_LINKS } from "@/components/site-chrome";
 import { useT } from "@/lib/i18n";
@@ -148,7 +149,9 @@ type EventArticle = {
   excerpt: string;
   body: string;
   date?: string;
+  time?: string;
   location?: string;
+  image?: string;
   isFeatured?: boolean;
 };
 
@@ -165,8 +168,12 @@ function EventArticleCard({
   if (compact) {
     return (
       <article className="flex flex-col border border-white/20 bg-white/[0.04]">
-        <div className="relative flex aspect-[16/10] items-center justify-center bg-white/[0.06]">
-          <ImageIcon className="h-10 w-10 text-white/70" strokeWidth={1.25} />
+        <div className="relative flex aspect-[16/10] items-center justify-center bg-white/[0.06] overflow-hidden">
+          {article.image ? (
+            <img src={article.image} alt={article.title} className="h-full w-full object-cover" />
+          ) : (
+            <ImageIcon className="h-10 w-10 text-white/70" strokeWidth={1.25} />
+          )}
         </div>
         <div className="flex flex-1 flex-col gap-3 p-6">
           <h3 className="font-serif text-xl font-semibold leading-snug text-white">{article.title}</h3>
@@ -184,8 +191,12 @@ function EventArticleCard({
   }
   return (
     <article className="grid border border-white/20 md:grid-cols-5">
-      <div className="relative flex aspect-[16/10] items-center justify-center bg-white/[0.06] md:col-span-2 md:aspect-auto">
-        <ImageIcon className="h-12 w-12 text-white/70" strokeWidth={1.25} />
+      <div className="relative flex aspect-[16/10] items-center justify-center bg-white/[0.06] md:col-span-2 md:aspect-auto overflow-hidden">
+        {article.image ? (
+          <img src={article.image} alt={article.title} className="h-full w-full object-cover" />
+        ) : (
+          <ImageIcon className="h-12 w-12 text-white/70" strokeWidth={1.25} />
+        )}
       </div>
       <div className="flex flex-col justify-center gap-5 p-8 sm:p-12 md:col-span-3">
         <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/85">
@@ -195,6 +206,13 @@ function EventArticleCard({
           {article.title}
         </h3>
         <p className="text-base leading-relaxed text-white/85">{article.excerpt}</p>
+        {(article.date || article.time || article.location) && (
+          <div className="flex flex-wrap gap-4 text-sm text-white/70">
+            {article.date && <span>{article.date}</span>}
+            {article.time && <span>{article.time}</span>}
+            {article.location && <span>{article.location}</span>}
+          </div>
+        )}
         <button
           type="button"
           onClick={onOpen}
@@ -218,7 +236,9 @@ function EventsSection() {
     excerpt: t("events.featured.desc"),
     body: t("events.featured.body"),
     date: t("events.featured.date"),
+    time: t("events.featured.time"),
     location: t("events.featured.location"),
+    image: eventi1Image.url,
     isFeatured: true,
   };
 
@@ -283,9 +303,13 @@ function EventsSection() {
               </DialogTitle>
             </DialogHeader>
             <div className="relative aspect-video w-full overflow-hidden bg-secondary">
-              <div className="flex h-full w-full items-center justify-center text-navy/50">
-                <ImageIcon className="h-12 w-12" strokeWidth={1.25} />
-              </div>
+              {openArticle?.image ? (
+                <img src={openArticle.image} alt={openArticle.title} className="h-full w-full object-cover" />
+              ) : (
+                <div className="flex h-full w-full items-center justify-center text-navy/50">
+                  <ImageIcon className="h-12 w-12" strokeWidth={1.25} />
+                </div>
+              )}
             </div>
             <p className="mt-2 whitespace-pre-line text-base leading-relaxed text-foreground">
               {openArticle?.body}

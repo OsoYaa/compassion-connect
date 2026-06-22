@@ -190,21 +190,21 @@ function EventArticleCard({
     );
   }
   return (
-    <article className="grid items-start border border-white/20 md:grid-cols-[44%_1fr]">
-      <div className="relative flex items-center justify-center overflow-hidden w-full self-start">
+    <article className="grid items-start border border-white/20 md:grid-cols-[40%_1fr] lg:grid-cols-[41%_1fr]">
+      <div className="relative flex items-center justify-center overflow-hidden w-full self-start bg-white/[0.03]">
         {article.image ? (
           <img src={article.image} alt={article.title} className="w-full h-auto object-contain" />
         ) : (
           <ImageIcon className="h-12 w-12 text-white/70" strokeWidth={1.25} />
         )}
       </div>
-      <div className="flex flex-col justify-center gap-3 p-6 md:p-6 lg:p-7">
-        <h3 className="font-serif text-2xl font-semibold leading-tight text-white lg:text-3xl">
+      <div className="flex flex-col justify-center gap-3 p-6 md:p-5 lg:p-6">
+        <h3 className="font-serif text-2xl font-semibold leading-tight text-white lg:text-[1.7rem]">
           {article.title}
         </h3>
-        <p className="text-base leading-relaxed text-white/85">{article.excerpt}</p>
+        <p className="text-sm leading-relaxed text-white/85 lg:text-base">{article.excerpt}</p>
         {(article.date || article.time || article.location) && (
-          <div className="flex flex-wrap gap-4 text-sm text-white/70">
+          <div className="flex flex-wrap gap-3 text-sm text-white/70 lg:gap-4">
             {article.date && <span>{article.date}</span>}
             {article.time && <span>{article.time}</span>}
             {article.location && <span>{article.location}</span>}

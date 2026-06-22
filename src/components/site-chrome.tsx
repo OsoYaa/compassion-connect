@@ -19,7 +19,8 @@ export const SOCIAL_LINKS = [
 
 const SECTION_LINKS: { id: string; tKey: string }[] = [
   { id: "about", tKey: "nav.about" },
-  { id: "cases", tKey: "nav.cases" },
+  // Hidden: Multimedia section link — uncomment when the "cases" section is restored
+  // { id: "cases", tKey: "nav.cases" },
   { id: "events", tKey: "nav.events" },
   { id: "partners", tKey: "nav.partners" },
   { id: "contact", tKey: "nav.contact" },

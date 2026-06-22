@@ -9,7 +9,7 @@ import { toast } from "sonner";
 import logo from "@/assets/logo.png";
 import brandonPortrait from "@/assets/unnamed.jpg";
 import brandonPortraitMobile from "@/assets/brandon-portrait-mobile.jpg";
-import googleLogo from "@/assets/google transparent.png";
+// import googleLogo from "@/assets/google transparent.png"; // hidden — Google partner removed
 // Partner logos — uncomment imports and the entries below to display them
 import strehheShpreseLogo from "@/assets/partners/strehe-shprese.jpg.asset.json";
 import bashkiaCerrikLogo from "@/assets/partners/bashkia-cerrik.jpg.asset.json";

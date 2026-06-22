@@ -663,13 +663,14 @@ function Index() {
           </div>
           <div className="mt-16 grid grid-cols-2 gap-12 sm:grid-cols-3 md:grid-cols-4 md:gap-16">
             {[
-              // Hidden: Google partner — uncomment to restore
-              // { src: googleLogo, alt: "Google" },
-              { src: bashkiaTiraneLogo.url, alt: "Bashkia Tiranë" },
+              { src: bashkiaTiraneLogo.url, alt: "Bashkia Tiranë — Njësitë 1-14" },
+              { src: bashkiaDurresLogo.url, alt: "Bashkia Durrës" },
+              { src: bashkiaElbasanLogo.url, alt: "Bashkia Elbasan" },
+              { src: bashkiaKamezLogo.url, alt: "Bashkia Kamëz" },
               { src: bashkiaCerrikLogo.url, alt: "Bashkia Cërrik" },
               { src: bashkiaGramshLogo.url, alt: "Bashkia Gramsh" },
-              { src: strehheShpreseLogo.url, alt: "Strehë & Shpresë" },
-              ...Array.from({ length: 4 }, () => null),
+              { src: bashkiaBelshLogo.url, alt: "Bashkia Belsh" },
+              { src: strehheShpreseLogo.url, alt: "Strehë & Shpresë — Shtëpia e të Moshuarve" },
             ].map((partner, i) => (
               <div
                 key={i}

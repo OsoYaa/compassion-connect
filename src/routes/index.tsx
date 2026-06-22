@@ -190,21 +190,21 @@ function EventArticleCard({
     );
   }
   return (
-    <article className="grid border border-white/20 md:grid-cols-5">
-      <div className="relative flex items-center justify-center bg-white/[0.06] md:col-span-2 overflow-hidden w-full aspect-[3/2]">
+    <article className="grid items-stretch border border-white/20 md:grid-cols-5">
+      <div className="relative flex items-center justify-center bg-white/[0.06] md:col-span-2 overflow-hidden w-full self-start">
         {article.image ? (
-          <img src={article.image} alt={article.title} className="w-full h-full object-contain" />
+          <img src={article.image} alt={article.title} className="w-full h-auto object-contain" />
         ) : (
           <ImageIcon className="h-12 w-12 text-white/70" strokeWidth={1.25} />
         )}
       </div>
-      <div className="flex flex-col justify-center gap-5 p-8 sm:p-12 md:col-span-3">
-        <h3 className="font-serif text-3xl font-semibold leading-tight text-white sm:text-4xl">
+      <div className="flex flex-col justify-center gap-2 p-5 sm:p-6 md:col-span-3">
+        <h3 className="font-serif text-xl font-semibold leading-tight text-white sm:text-2xl">
           {article.title}
         </h3>
-        <p className="text-base leading-relaxed text-white/85">{article.excerpt}</p>
+        <p className="text-sm leading-normal text-white/85">{article.excerpt}</p>
         {(article.date || article.time || article.location) && (
-          <div className="flex flex-wrap gap-4 text-sm text-white/70">
+          <div className="flex flex-wrap gap-3 text-xs text-white/70">
             {article.date && <span>{article.date}</span>}
             {article.time && <span>{article.time}</span>}
             {article.location && <span>{article.location}</span>}
@@ -213,7 +213,7 @@ function EventArticleCard({
         <button
           type="button"
           onClick={onOpen}
-          className="mt-2 inline-flex items-center gap-2 self-start bg-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.22em] text-teal transition-colors hover:bg-white/90"
+          className="inline-flex items-center gap-2 self-start bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-teal transition-colors hover:bg-white/90"
         >
           {t("events.readMore")} <ArrowRight className="h-4 w-4" />
         </button>

@@ -184,6 +184,10 @@ export function SiteFooter() {
           {t("footer.address")}
         </p>
         <p className="text-sm text-muted-foreground">
+          <span className="font-medium text-foreground">{t("footer.phoneLabel")}: </span>
+          <a href="tel:+355698028222" className="hover:text-primary">+355 69 802 8222</a>
+        </p>
+        <p className="text-sm text-muted-foreground">
           <span className="font-medium text-foreground">{t("footer.emailLabel")}: </span>
           <a href="mailto:brandonforever22legacy@gmail.com" className="hover:text-primary">brandonforever22legacy@gmail.com</a>
         </p>

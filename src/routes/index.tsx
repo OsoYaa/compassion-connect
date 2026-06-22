@@ -10,11 +10,15 @@ import logo from "@/assets/logo.png";
 import brandonPortrait from "@/assets/unnamed.jpg";
 import brandonPortraitMobile from "@/assets/brandon-portrait-mobile.jpg";
 // import googleLogo from "@/assets/google transparent.png"; // hidden — Google partner removed
-// Partner logos — uncomment imports and the entries below to display them
-import strehheShpreseLogo from "@/assets/partners/strehe-shprese.jpg.asset.json";
-import bashkiaCerrikLogo from "@/assets/partners/bashkia-cerrik.jpg.asset.json";
-import bashkiaGramshLogo from "@/assets/partners/bashkia-gramsh.png.asset.json";
-import bashkiaTiraneLogo from "@/assets/partners/bashkia-tirane.png.asset.json";
+// Partner logos
+import bashkiaTiraneLogo from "@/assets/partners/bashkia-tirane-njesite.png.asset.json";
+import bashkiaDurresLogo from "@/assets/partners/bashkia-durres.png.asset.json";
+import bashkiaElbasanLogo from "@/assets/partners/bashkia-elbasan.png.asset.json";
+import bashkiaKamezLogo from "@/assets/partners/bashkia-kamez.png.asset.json";
+import bashkiaCerrikLogo from "@/assets/partners/bashkia-cerrik-2.jpg.asset.json";
+import bashkiaGramshLogo from "@/assets/partners/bashkia-gramsh-2.png.asset.json";
+import bashkiaBelshLogo from "@/assets/partners/bashkia-belsh.png.asset.json";
+import strehheShpreseLogo from "@/assets/partners/strehe-shprese-2.jpg.asset.json";
 import eventi1Image from "@/assets/events/eventi-1-xheko.png.asset.json";
 import { Toaster } from "@/components/ui/sonner";
 import { SiteHeader, SiteFooter, SOCIAL_LINKS } from "@/components/site-chrome";

@@ -30,6 +30,10 @@ jobs:
 
       - name: Verify build output
         run: |
+          set -x
+          ls -la dist || true
+          ls -la dist/server || true
+          ls -la dist/client || true
           test -f dist/server/index.mjs
           test -d dist/client
           test -f dist/server/wrangler.json

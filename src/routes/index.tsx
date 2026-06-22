@@ -168,9 +168,9 @@ function EventArticleCard({
   if (compact) {
     return (
       <article className="flex flex-col border border-white/20 bg-white/[0.04]">
-        <div className="relative flex items-center justify-center bg-white/[0.06] overflow-hidden w-full max-w-[600px] h-[400px]">
+        <div className="relative flex items-center justify-center bg-white/[0.06] overflow-hidden aspect-square w-full">
           {article.image ? (
-            <img src={article.image} alt={article.title} className="h-full w-full object-contain" />
+            <img src={article.image} alt={article.title} className="h-full w-full object-cover" />
           ) : (
             <ImageIcon className="h-10 w-10 text-white/70" strokeWidth={1.25} />
           )}

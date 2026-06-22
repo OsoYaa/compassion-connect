@@ -190,7 +190,7 @@ function EventArticleCard({
     );
   }
   return (
-    <article className="grid items-start border border-white/20 md:grid-cols-[40%_1fr] lg:grid-cols-[41%_1fr]">
+    <article className="grid items-start border border-white/20 md:grid-cols-[minmax(0,48%)_minmax(0,1fr)] lg:grid-cols-[minmax(0,46%)_minmax(0,1fr)]">
       <div className="relative flex items-center justify-center overflow-hidden w-full self-start bg-white/[0.03]">
         {article.image ? (
           <img src={article.image} alt={article.title} className="w-full h-auto object-contain" />

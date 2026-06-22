@@ -28,10 +28,14 @@ jobs:
       - name: Build
         run: bun run build
 
+      - name: Set Worker name
+        run: node -e "const fs=require('fs'); const p='dist/server/wrangler.json'; const c=JSON.parse(fs.readFileSync(p,'utf8')); c.name='compassion-connect'; fs.writeFileSync(p, JSON.stringify(c,null,2));"
+
       - name: Deploy to Cloudflare
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: dist
-          command: deploy
+          command: deploy -c server/wrangler.json
+

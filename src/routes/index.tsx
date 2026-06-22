@@ -461,7 +461,7 @@ function Index() {
           {/* Videos: Himni & Historia e Brandon-it (textless, aligned with columns above) */}
           <div className="mt-16 grid gap-12 lg:grid-cols-2 lg:gap-0">
             <div className="lg:pr-12">
-              <VideoEmbed id="" title={t("about.video1")} />
+              <VideoEmbed id="eOXhzgdP134" title={t("about.video1")} />
             </div>
             {/* Hidden: "Historia e Brandon-it" video — uncomment to restore
             <div className="lg:pl-12">

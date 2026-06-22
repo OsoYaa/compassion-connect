@@ -651,7 +651,7 @@ function Index() {
                 className="flex items-center justify-center px-4 py-6 text-xs uppercase tracking-[0.2em] text-navy/60"
               >
                 {partner ? (
-                  <img src={partner.src} alt={partner.alt} className="h-16 w-auto object-contain" />
+                  <img src={partner.src} alt={partner.alt} className="h-28 w-auto object-contain sm:h-36" />
                 ) : (
                   t("partners.placeholder")
                 )}

@@ -207,7 +207,7 @@ const sq: Dict = {
   "events.seeLess": "Shfaq më pak",
   "events.readMore": "Lexo artikullin",
   "events.close": "Mbyll",
-  "events.featured.body": "Ky takim do të shënnojë nisjen e rrugëtimit tonë të përbashkët për të jetësuar një vizion të madh dhe plot shpresë. Bashkë për një trashëgimi që vazhdon.",
+  "events.featured.body": "Ky takim do të shënojë nisjen e rrugëtimit tonë të përbashkët për të sjellë në jetë një vizion plot shpresë. Bashkë për një trashëgimi që vazhdon...",
   "events.placeholder.title": "Titulli i artikullit",
   "events.placeholder.excerpt": "Një përmbledhje e shkurtër e artikullit do të shfaqet këtu.",
   "events.placeholder.body": "Trupi i plotë i artikullit do të shfaqet këtu. Zëvendësojeni me historinë reale dhe detajet.",

@@ -293,7 +293,7 @@ function EventsSection() {
         */}
 
         <Dialog open={!!openArticle} onOpenChange={(o) => !o && setOpenArticle(null)}>
-          <DialogContent className="max-w-3xl">
+          <DialogContent className="max-h-[90vh] max-w-3xl overflow-y-auto">
             <DialogHeader>
               <DialogTitle className="font-serif text-2xl sm:text-3xl">
                 {openArticle?.title}

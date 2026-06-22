@@ -640,10 +640,10 @@ function Index() {
             {[
               // Hidden: Google partner — uncomment to restore
               // { src: googleLogo, alt: "Google" },
-              { src: strehheShpreseLogo.url, alt: "Strehë & Shpresë" },
+              { src: bashkiaTiraneLogo.url, alt: "Bashkia Tiranë" },
               { src: bashkiaCerrikLogo.url, alt: "Bashkia Cërrik" },
               { src: bashkiaGramshLogo.url, alt: "Bashkia Gramsh" },
-              { src: bashkiaTiraneLogo.url, alt: "Bashkia Tiranë" },
+              { src: strehheShpreseLogo.url, alt: "Strehë & Shpresë" },
               ...Array.from({ length: 4 }, () => null),
             ].map((partner, i) => (
               <div

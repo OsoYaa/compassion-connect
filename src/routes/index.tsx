@@ -198,13 +198,13 @@ function EventArticleCard({
           <ImageIcon className="h-12 w-12 text-white/70" strokeWidth={1.25} />
         )}
       </div>
-      <div className="flex flex-col justify-center gap-3 p-6 md:p-5 lg:p-6">
-        <h3 className="font-serif text-2xl font-semibold leading-tight text-white lg:text-[1.7rem]">
+      <div className="flex flex-col justify-between gap-4 p-6 md:p-5 lg:p-6">
+        <h3 className="font-serif text-2xl font-semibold leading-tight text-white lg:text-[1.9rem]">
           {article.title}
         </h3>
-        <p className="text-sm leading-relaxed text-white/85 lg:text-base">{article.excerpt}</p>
+        <p className="text-base leading-relaxed text-white/85 lg:text-[1.05rem]">{article.excerpt}</p>
         {(article.date || article.time || article.location) && (
-          <div className="flex flex-wrap gap-3 text-sm text-white/70 lg:gap-4">
+          <div className="flex flex-wrap gap-3 text-sm text-white/70 lg:gap-4 lg:text-base">
             {article.date && <span>{article.date}</span>}
             {article.time && <span>{article.time}</span>}
             {article.location && <span>{article.location}</span>}
@@ -213,7 +213,7 @@ function EventArticleCard({
         <button
           type="button"
           onClick={onOpen}
-          className="mt-1 inline-flex items-center gap-2 self-start bg-white px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.22em] text-teal transition-colors hover:bg-white/90"
+          className="mt-2 inline-flex items-center gap-2 self-start bg-white px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.22em] text-teal transition-colors hover:bg-white/90"
         >
           {t("events.readMore")} <ArrowRight className="h-4 w-4" />
         </button>

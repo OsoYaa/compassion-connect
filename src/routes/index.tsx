@@ -539,7 +539,7 @@ function Index() {
               <Phone className="h-5 w-5 text-navy" strokeWidth={1.5} />
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">{t("contact.phoneLabel")}</p>
-                <p className="mt-2 text-base text-navy">—</p>
+                <a href="tel:+355698028222" className="mt-2 block text-base text-navy hover:text-navy/80">+355 69 802 8222</a>
               </div>
             </div>
             <div className="flex items-start gap-4 border-l border-border pl-5">

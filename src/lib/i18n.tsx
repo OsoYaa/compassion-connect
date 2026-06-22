@@ -170,6 +170,7 @@ const en: Dict = {
   "footer.org": "Brandon Forever 22 Legacy",
   "footer.address": "Rruga Sulejman Delvina, Tiranë - Shqipëri",
   "footer.addressLabel": "Address",
+  "footer.phoneLabel": "Phone",
   "footer.emailLabel": "Email",
 
   "scroll.aria": "Scroll to content",
@@ -341,6 +342,7 @@ const sq: Dict = {
   "footer.org": "Brandon Forever 22 Legacy",
   "footer.address": "Rruga Sulejman Delvina, Tiranë - Shqipëri",
   "footer.addressLabel": "Adresa",
+  "footer.phoneLabel": "Telefon",
   "footer.emailLabel": "Email",
 
   "scroll.aria": "Lëviz te përmbajtja",

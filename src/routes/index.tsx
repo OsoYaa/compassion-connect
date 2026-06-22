@@ -299,9 +299,9 @@ function EventsSection() {
                 {openArticle?.title}
               </DialogTitle>
             </DialogHeader>
-            <div className="relative w-full max-w-[600px] overflow-hidden bg-secondary mx-auto aspect-[3/2]">
+            <div className="relative w-full overflow-hidden bg-secondary mx-auto">
               {openArticle?.image ? (
-                <img src={openArticle.image} alt={openArticle.title} className="w-full h-full object-contain" />
+                <img src={openArticle.image} alt={openArticle.title} className="w-full h-auto object-contain" />
               ) : (
                 <div className="flex h-full w-full items-center justify-center text-navy/50">
                   <ImageIcon className="h-12 w-12" strokeWidth={1.25} />

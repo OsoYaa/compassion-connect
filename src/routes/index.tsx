@@ -190,16 +190,16 @@ function EventArticleCard({
     );
   }
   return (
-    <article className="grid items-start border border-white/20 md:grid-cols-5">
-      <div className="relative flex items-center justify-center bg-white/[0.06] md:col-span-2 overflow-hidden w-full self-start">
+    <article className="grid items-start border border-white/20 md:grid-cols-[44%_1fr]">
+      <div className="relative flex items-center justify-center overflow-hidden w-full self-start">
         {article.image ? (
           <img src={article.image} alt={article.title} className="w-full h-auto object-contain" />
         ) : (
           <ImageIcon className="h-12 w-12 text-white/70" strokeWidth={1.25} />
         )}
       </div>
-      <div className="flex flex-col justify-center gap-4 p-6 sm:p-8 md:col-span-3">
-        <h3 className="font-serif text-2xl font-semibold leading-tight text-white sm:text-3xl">
+      <div className="flex flex-col justify-center gap-3 p-6 md:p-6 lg:p-7">
+        <h3 className="font-serif text-2xl font-semibold leading-tight text-white lg:text-3xl">
           {article.title}
         </h3>
         <p className="text-base leading-relaxed text-white/85">{article.excerpt}</p>
@@ -213,7 +213,7 @@ function EventArticleCard({
         <button
           type="button"
           onClick={onOpen}
-          className="mt-2 inline-flex items-center gap-2 self-start bg-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.22em] text-teal transition-colors hover:bg-white/90"
+          className="mt-1 inline-flex items-center gap-2 self-start bg-white px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.22em] text-teal transition-colors hover:bg-white/90"
         >
           {t("events.readMore")} <ArrowRight className="h-4 w-4" />
         </button>

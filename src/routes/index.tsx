@@ -199,9 +199,6 @@ function EventArticleCard({
         )}
       </div>
       <div className="flex flex-col justify-center gap-5 p-8 sm:p-12 md:col-span-3">
-        <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/85">
-          {t("events.featuredTag")}
-        </span>
         <h3 className="font-serif text-3xl font-semibold leading-tight text-white sm:text-4xl">
           {article.title}
         </h3>

@@ -41,7 +41,7 @@ const en: Dict = {
   "events.placeholder.excerpt": "A short excerpt about the article will appear here.",
   "events.placeholder.body": "The full article body will appear here. Replace with the real story and details.",
   "events.subheading": "Join us at our gatherings, fundraisers, and community activities.",
-  "events.featuredTag": "Featured Event",
+  
   "events.upcoming": "Upcoming Events",
   "events.featured.title": "Founding Meeting of the Center 'BRANDON FOREVER 22 LEGACY'",
   "events.featured.desc": "Together for a legacy that continues.",
@@ -212,7 +212,7 @@ const sq: Dict = {
   "events.placeholder.excerpt": "Një përmbledhje e shkurtër e artikullit do të shfaqet këtu.",
   "events.placeholder.body": "Trupi i plotë i artikullit do të shfaqet këtu. Zëvendësojeni me historinë reale dhe detajet.",
   "events.subheading": "Bashkohuni me ne në takimet, fushatat dhe aktivitetet tona.",
-  "events.featuredTag": "Event i Veçantë",
+  
   "events.upcoming": "Eventet e Ardhshme",
   "events.featured.title": "Takimi Themelues i Qendrës 'BRANDON FOREVER 22 LEGACY'",
   "events.featured.desc": "Bashkë për një trashëgimi që vazhdon.",

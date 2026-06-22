@@ -261,6 +261,7 @@ function EventsSection() {
           </div>
         </div>
 
+        {/* Hidden: "Shiko më shumë evente" button — uncomment to restore
         <div className="mt-10 flex justify-center">
           <button
             type="button"
@@ -272,6 +273,7 @@ function EventsSection() {
             <ChevronDown className={`h-4 w-4 transition-transform ${expanded ? "rotate-180" : ""}`} />
           </button>
         </div>
+        */}
 
         <Dialog open={!!openArticle} onOpenChange={(o) => !o && setOpenArticle(null)}>
           <DialogContent className="max-w-3xl">
@@ -436,9 +438,11 @@ function Index() {
             <div className="lg:pr-12">
               <VideoEmbed id="" title={t("about.video1")} />
             </div>
+            {/* Hidden: "Historia e Brandon-it" video — uncomment to restore
             <div className="lg:pl-12">
               <VideoEmbed id="" title={t("about.video2")} />
             </div>
+            */}
           </div>
         </div>
       </section>
@@ -474,7 +478,7 @@ function Index() {
       </section>
 
 
-      {/* ============ MULTIMEDIA ============ */}
+      {/* ============ MULTIMEDIA (hidden — uncomment to restore) ============
       <section id="cases" className="bg-background py-28 sm:py-36 text-navy">
         <div className="mx-auto max-w-6xl px-6">
           <div className="flex flex-col items-center gap-5 text-center">
@@ -493,6 +497,7 @@ function Index() {
           </div>
         </div>
       </section>
+      */}
 
       {/* ============ EVENTS ============ */}
       <EventsSection />
@@ -573,6 +578,7 @@ function Index() {
             <blockquote className="font-handwriting mt-6 text-2xl text-white/90 sm:text-3xl">
               {t("donate.tagline")}
             </blockquote>
+            {/* Hidden: "Dhuro në GoFundMe" button — uncomment to restore
             <a
               href="https://gofundme.com"
               target="_blank"
@@ -581,12 +587,13 @@ function Index() {
             >
               <Heart className="h-4 w-4" fill="currentColor" /> {t("donate.gofundme")}
             </a>
+            */}
             <p className="font-handwriting mt-6 text-2xl text-white/90 sm:text-3xl">
               {t("donate.thanks")}
             </p>
           </div>
 
-          {/* Flat bank panel */}
+          {/* Hidden: bank details panel — uncomment to restore
           <article className="mt-16 border border-white/15 bg-white/[0.04] p-8 sm:p-12">
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/85">{t("donate.bankName")}</p>
             <h3 className="mt-2 font-serif text-3xl font-semibold text-white">{bankAccount.bankName}</h3>
@@ -611,6 +618,7 @@ function Index() {
               </div>
             </dl>
           </article>
+          */}
         </div>
       </section>
 
@@ -630,13 +638,13 @@ function Index() {
           </div>
           <div className="mt-16 grid grid-cols-2 gap-12 sm:grid-cols-3 md:grid-cols-4 md:gap-16">
             {[
-              { src: googleLogo, alt: "Google" },
-              // To show these partners, move them out of the comment into the array above:
-              // { src: strehheShpreseLogo.url, alt: "Strehë & Shpresë" },
-              // { src: bashkiaCerrikLogo.url, alt: "Bashkia Cërrik" },
-              // { src: bashkiaGramshLogo.url, alt: "Bashkia Gramsh" },
-              // { src: bashkiaTiraneLogo.url, alt: "Bashkia Tiranë" },
-              ...Array.from({ length: 7 }, () => null),
+              // Hidden: Google partner — uncomment to restore
+              // { src: googleLogo, alt: "Google" },
+              { src: strehheShpreseLogo.url, alt: "Strehë & Shpresë" },
+              { src: bashkiaCerrikLogo.url, alt: "Bashkia Cërrik" },
+              { src: bashkiaGramshLogo.url, alt: "Bashkia Gramsh" },
+              { src: bashkiaTiraneLogo.url, alt: "Bashkia Tiranë" },
+              ...Array.from({ length: 4 }, () => null),
             ].map((partner, i) => (
               <div
                 key={i}

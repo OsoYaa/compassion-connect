@@ -11,15 +11,15 @@ import brandonPortrait from "@/assets/unnamed.jpg";
 import brandonPortraitMobile from "@/assets/brandon-portrait-mobile.jpg";
 // import googleLogo from "@/assets/google transparent.png"; // hidden — Google partner removed
 // Partner logos
-import bashkiaTiraneLogo from "@/assets/partners/bashkia-tirane-njesite.png.asset.json";
-import bashkiaDurresLogo from "@/assets/partners/bashkia-durres.png.asset.json";
-import bashkiaElbasanLogo from "@/assets/partners/bashkia-elbasan.png.asset.json";
-import bashkiaKamezLogo from "@/assets/partners/bashkia-kamez.png.asset.json";
-import bashkiaCerrikLogo from "@/assets/partners/bashkia-cerrik-2.jpg.asset.json";
-import bashkiaGramshLogo from "@/assets/partners/bashkia-gramsh-2.png.asset.json";
-import bashkiaBelshLogo from "@/assets/partners/bashkia-belsh.png.asset.json";
-import strehheShpreseLogo from "@/assets/partners/strehe-shprese-2.jpg.asset.json";
-import eventi1Image from "@/assets/events/eventi-1-xheko.png.asset.json";
+import bashkiaTiraneLogo from "@/assets/partners/bashkia-tirane-njesite.png";
+import bashkiaDurresLogo from "@/assets/partners/bashkia-durres.png";
+import bashkiaElbasanLogo from "@/assets/partners/bashkia-elbasan.png";
+import bashkiaKamezLogo from "@/assets/partners/bashkia-kamez.png";
+import bashkiaCerrikLogo from "@/assets/partners/bashkia-cerrik-2.jpg";
+import bashkiaGramshLogo from "@/assets/partners/bashkia-gramsh-2.png";
+import bashkiaBelshLogo from "@/assets/partners/bashkia-belsh.png";
+import strehheShpreseLogo from "@/assets/partners/strehe-shprese-2.jpg";
+import eventi1Image from "@/assets/events/eventi-1-xheko.png";
 import { Toaster } from "@/components/ui/sonner";
 import { SiteHeader, SiteFooter, SOCIAL_LINKS } from "@/components/site-chrome";
 import { useT } from "@/lib/i18n";
@@ -239,7 +239,7 @@ function EventsSection() {
     date: t("events.featured.date"),
     time: t("events.featured.time"),
     location: t("events.featured.location"),
-    image: eventi1Image.url,
+    image: eventi1Image,
     isFeatured: true,
   };
 
@@ -663,14 +663,14 @@ function Index() {
           </div>
           <div className="mt-16 grid grid-cols-2 gap-12 sm:grid-cols-3 md:grid-cols-4 md:gap-16">
             {[
-              { src: bashkiaTiraneLogo.url, alt: "Bashkia Tiranë — Njësitë 1-14" },
-              { src: bashkiaDurresLogo.url, alt: "Bashkia Durrës" },
-              { src: bashkiaElbasanLogo.url, alt: "Bashkia Elbasan" },
-              { src: bashkiaKamezLogo.url, alt: "Bashkia Kamëz" },
-              { src: bashkiaCerrikLogo.url, alt: "Bashkia Cërrik" },
-              { src: bashkiaGramshLogo.url, alt: "Bashkia Gramsh" },
-              { src: bashkiaBelshLogo.url, alt: "Bashkia Belsh" },
-              { src: strehheShpreseLogo.url, alt: "Strehë & Shpresë — Shtëpia e të Moshuarve" },
+              { src: bashkiaTiraneLogo, alt: "Bashkia Tiranë — Njësitë 1-14" },
+              { src: bashkiaDurresLogo, alt: "Bashkia Durrës" },
+              { src: bashkiaElbasanLogo, alt: "Bashkia Elbasan" },
+              { src: bashkiaKamezLogo, alt: "Bashkia Kamëz" },
+              { src: bashkiaCerrikLogo, alt: "Bashkia Cërrik" },
+              { src: bashkiaGramshLogo, alt: "Bashkia Gramsh" },
+              { src: bashkiaBelshLogo, alt: "Bashkia Belsh" },
+              { src: strehheShpreseLogo, alt: "Strehë & Shpresë — Shtëpia e të Moshuarve" },
             ].map((partner, i) => (
               <div
                 key={i}

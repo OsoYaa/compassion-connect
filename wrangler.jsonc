@@ -1,11 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "compassion-connect",
+  "name": "tanstack-start-app",
   "compatibility_date": "2025-09-24",
   "compatibility_flags": ["nodejs_compat"],
   "main": "src/server.ts",
-  "alias": {
-    "tanstack-start-manifest:v": "./.vinxi/build/server/assets.json",
-    "tanstack-start-injected-head-scripts:v": "./.vinxi/build/server/assets.json"
-  }
 }

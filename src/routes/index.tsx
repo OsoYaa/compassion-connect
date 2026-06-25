@@ -40,8 +40,8 @@ const bankAccount = {
 
 // Replace IDs with real YouTube video IDs. First entry is the featured (main)
 // video, the rest are shown under "Previous videos" (capped at 10 older items).
-const HUMAN_STORY_VIDEOS: string[] = ["NpEaa2P7qZI", "NpEaa2P7qZI", "NpEaa2P7qZI", "NpEaa2P7qZI", "NpEaa2P7qZI"];
-const PODCAST_VIDEOS: string[] = ["NpEaa2P7qZI", "NpEaa2P7qZI", "NpEaa2P7qZI", "NpEaa2P7qZI", "NpEaa2P7qZI"];
+const HUMAN_STORY_VIDEOS: string[] = ["HxhpV7SoA2o"];
+const PODCAST_VIDEOS: string[] = [];
 const MAX_PREVIOUS_VIDEOS = 10;
 
 // Tiny shared atoms ----------------------------------------------------------
@@ -506,7 +506,7 @@ function Index() {
       </section>
 
 
-      {/* ============ MULTIMEDIA (hidden — uncomment to restore) ============
+      {/* ============ MULTIMEDIA ============ */}
       <section id="cases" className="bg-background py-28 sm:py-36 text-navy">
         <div className="mx-auto max-w-6xl px-6">
           <div className="flex flex-col items-center gap-5 text-center">
@@ -519,13 +519,14 @@ function Index() {
             </p>
           </div>
 
-          <div className="mt-16 grid gap-16 md:grid-cols-2">
+          <div className="mt-16 max-w-3xl mx-auto">
             <VideoCategory title={t("cases.cat1.title")} videos={HUMAN_STORY_VIDEOS} />
+            {/* Podcast section hidden — uncomment to restore
             <VideoCategory title={t("cases.cat2.title")} videos={PODCAST_VIDEOS} />
+            */}
           </div>
         </div>
       </section>
-      */}
 
       {/* ============ EVENTS ============ */}
       <EventsSection />

@@ -606,22 +606,19 @@ function Index() {
             <blockquote className="font-handwriting mt-6 text-2xl text-white/90 sm:text-3xl">
               {t("donate.tagline")}
             </blockquote>
-            {/* Hidden: "Dhuro në GoFundMe" button — uncomment to restore
             <a
-              href="https://gofundme.com"
+              href="https://whydonate.com/fundraising/brandon-forever-22-legacy"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center justify-center gap-2 bg-accent-red px-8 py-4 text-xs font-semibold uppercase tracking-[0.24em] text-white transition-all hover:-translate-y-0.5 hover:brightness-110"
             >
               <Heart className="h-4 w-4" fill="currentColor" /> {t("donate.gofundme")}
             </a>
-            */}
             <p className="font-handwriting mt-6 text-2xl text-white/90 sm:text-3xl">
               {t("donate.thanks")}
             </p>
           </div>
 
-          {/* Hidden: bank details panel — uncomment to restore
           <article className="mt-16 border border-white/15 bg-white/[0.04] p-8 sm:p-12">
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/85">{t("donate.bankName")}</p>
             <h3 className="mt-2 font-serif text-3xl font-semibold text-white">{bankAccount.bankName}</h3>
@@ -632,21 +629,28 @@ function Index() {
                 <dd className="mt-2 text-base text-white">{bankAccount.holder}</dd>
               </div>
               <div>
+                <dt className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/80">{t("donate.accountNumber")}</dt>
+                <dd className="mt-2 flex flex-wrap items-center gap-3">
+                  <code className="border border-white/20 bg-white/[0.06] px-3 py-1.5 font-mono text-sm tracking-wide text-white">
+                    {bankAccount.accountNumber}
+                  </code>
+                  <CopyValue value={bankAccount.accountNumber} />
+                </dd>
+              </div>
+              <div>
+                <dt className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/80">{t("donate.routing")}</dt>
+                <dd className="mt-2 font-mono text-base text-white">{bankAccount.routing}</dd>
+              </div>
+              <div>
                 <dt className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/80">{t("donate.swift")}</dt>
                 <dd className="mt-2 font-mono text-base text-white">{bankAccount.swift}</dd>
               </div>
               <div className="sm:col-span-2">
-                <dt className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/80">{t("donate.iban")}</dt>
-                <dd className="mt-2 flex flex-wrap items-center gap-3">
-                  <code className="border border-white/20 bg-white/[0.06] px-3 py-1.5 font-mono text-sm tracking-wide text-white">
-                    {bankAccount.iban}
-                  </code>
-                  <CopyIban iban={bankAccount.iban} />
-                </dd>
+                <dt className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/80">{t("donate.bankAddress")}</dt>
+                <dd className="mt-2 text-base text-white">{bankAccount.bankAddress}</dd>
               </div>
             </dl>
           </article>
-          */}
         </div>
       </section>
 

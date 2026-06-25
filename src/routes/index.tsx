@@ -67,11 +67,11 @@ function Rule({ light = false }: { light?: boolean }) {
   );
 }
 
-function CopyIban({ iban }: { iban: string }) {
+function CopyValue({ value }: { value: string }) {
   const [copied, setCopied] = useState(false);
   const { t } = useT();
   const onCopy = async () => {
-    await navigator.clipboard.writeText(iban.replace(/\s/g, ""));
+    await navigator.clipboard.writeText(value.replace(/\s/g, ""));
     setCopied(true);
     toast.success(t("donate.copy"));
     setTimeout(() => setCopied(false), 1800);
@@ -79,7 +79,7 @@ function CopyIban({ iban }: { iban: string }) {
   return (
     <button
       onClick={onCopy}
-      aria-label="Copy IBAN"
+      aria-label="Copy"
       className="inline-flex h-8 w-8 items-center justify-center rounded-sm border border-white/40 text-white transition-colors hover:border-white hover:bg-white/10"
     >
       {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}

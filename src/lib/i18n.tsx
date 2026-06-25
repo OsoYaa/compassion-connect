@@ -21,7 +21,7 @@ const en: Dict = {
   "hero.title.l1": "Uniting hearts",
   "hero.title.l2": "Inspiring change",
   "hero.title.l3": "<span class=\"text-gold\">A legacy that lives on...</span>",
-  "hero.subtitle": "<span class=\"font-bold text-[1.15em]\">\"Brandon Forever 22 Legacy\"</span> is a humanitarian-mission organization, based on human stories with emotional impact and measurable social aid.<br/><br/>We work so that <strong>Brandon</strong>'s story becomes a source of hope for a stronger, more humane and more compassionate community.",
+  "hero.subtitle": "<span class=\"font-bold text-[1.15em]\">\"Brandon Forever 22 Legacy\"</span> is an organization with a humanitarian mission, based on human stories with emotional impact and measurable social aid.<br/><br/>We work so that <strong>Brandon</strong>'s story becomes a source of hope for a stronger, more humane and more compassionate community.",
   "hero.donate": "DONATE NOW",
   "hero.learn": "LEARN MORE",
   "hero.partners": "OUR PARTNERS",

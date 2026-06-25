@@ -107,7 +107,7 @@ const en: Dict = {
   "donate.swift": "SWIFT / BIC",
   "donate.bankAddress": "Bank Address",
   "donate.copy": "Copied",
-  "donate.gofundme": "Donate on GoFundMe",
+  "donate.cta": "Donate now",
   "donate.thanks": "Thank you!",
 
   "volunteer.intro.p1": "Becoming a volunteer with Brandon Forever 22 Legacy is a unique opportunity to give your contribution to a shared movement of solidarity.",
@@ -281,7 +281,7 @@ const sq: Dict = {
   "donate.swift": "SWIFT / BIC",
   "donate.bankAddress": "Adresa e Bankës",
   "donate.copy": "U kopjua",
-  "donate.gofundme": "Dhuro në GoFundMe",
+  "donate.cta": "Dhuro tani",
   "donate.thanks": "Faleminderit!",
 
   "volunteer.intro.p1": "Të bëhesh vullnetar me Brandon Forever 22 Legacy është një mundësi unike për të dhënë kontributin tënd në një lëvizje të përbashkët solidariteti.",

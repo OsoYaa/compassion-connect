@@ -34,7 +34,7 @@ const bankAccount = {
   holder: "Manjola Kuqi",
   accountNumber: "4465499981",
   routing: "031201360",
-  swift: "NRTHUS33",
+  swift: "NRTHUS33 / NRTHUS33XXX",
   bankAddress: "32 Chestnut St., Lewiston, ME 04243, USA",
 };
 

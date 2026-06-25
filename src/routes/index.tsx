@@ -612,7 +612,7 @@ function Index() {
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center justify-center gap-2 bg-accent-red px-8 py-4 text-xs font-semibold uppercase tracking-[0.24em] text-white transition-all hover:-translate-y-0.5 hover:brightness-110"
             >
-              <Heart className="h-4 w-4" fill="currentColor" /> {t("donate.gofundme")}
+              <Heart className="h-4 w-4" fill="currentColor" /> {t("donate.cta")}
             </a>
             <p className="font-handwriting mt-6 text-2xl text-white/90 sm:text-3xl">
               {t("donate.thanks")}

@@ -29,7 +29,14 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const bankAccount = { bankName: "Bank Name", holder: "Account Holder", iban: "IBAN", swift: "SWIFT / BIC" };
+const bankAccount = {
+  bankName: "TD Bank, N.A.",
+  holder: "Manjola Kuqi",
+  accountNumber: "4465499981",
+  routing: "031201360",
+  swift: "NRTHUS33",
+  bankAddress: "32 Chestnut St., Lewiston, ME 04243, USA",
+};
 
 // Replace IDs with real YouTube video IDs. First entry is the featured (main)
 // video, the rest are shown under "Previous videos" (capped at 10 older items).

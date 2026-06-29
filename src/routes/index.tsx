@@ -469,7 +469,7 @@ function Index() {
               <VideoEmbed id="eOXhzgdP134" title={t("about.video1")} />
             </div>
             <div className="lg:pl-12">
-              <VideoEmbed id="Jtg6TMOwmr4" title={t("about.video2")} />
+              <VideoEmbed id="IfIJQdZb1Gc" title={t("about.video2")} />
             </div>
           </div>
         </div>

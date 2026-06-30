@@ -10,8 +10,8 @@ const TikTok = ({ className }: { className?: string }) => (
 );
 
 export const SOCIAL_LINKS = [
-  { Icon: Facebook, href: "https://www.facebook.com/BrandonForever22Legacy/", label: "Facebook" },
-  { Icon: Instagram, href: "https://www.instagram.com/brandon_forever22_legacy/", label: "Instagram" },
+  { Icon: Facebook, href: "https://www.facebook.com/profile.php?id=61591257732228", label: "Facebook" },
+  { Icon: Instagram, href: "https://www.instagram.com/brandonforever22legacy", label: "Instagram" },
   { Icon: TikTok, href: "https://www.tiktok.com/@brandon_forever22_legacy", label: "TikTok" },
   { Icon: Youtube, href: "https://www.youtube.com/@BrandonForever22Legacy", label: "YouTube" },
 ];

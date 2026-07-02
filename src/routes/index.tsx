@@ -241,6 +241,7 @@ function EventArticleCard({
 function EventsSection() {
   const { t } = useT();
   const [openArticle, setOpenArticle] = useState<EventArticle | null>(null);
+  const [showPastEvents, setShowPastEvents] = useState(false);
 
   const featured: EventArticle = {
     id: "featured",
@@ -281,11 +282,29 @@ function EventsSection() {
           <EventArticleCard article={featured} onOpen={() => setOpenArticle(featured)} />
         </div>
 
-        <div className="mt-20">
-          <h3 className="font-serif text-3xl font-semibold text-white mb-10">
+        <div className="mt-14 flex justify-center">
+          <button
+            type="button"
+            onClick={() => setShowPastEvents((s) => !s)}
+            aria-expanded={showPastEvents}
+            className="inline-flex items-center gap-2 border-b border-white/40 pb-1 text-xs font-semibold uppercase tracking-[0.22em] text-white transition-colors hover:border-white"
+          >
             {t("events.past.headline")}
-          </h3>
-          <EventArticleCard article={pastEvents[0]} onOpen={() => setOpenArticle(pastEvents[0])} />
+            <ChevronDown className={`h-3.5 w-3.5 transition-transform ${showPastEvents ? "rotate-180" : ""}`} />
+          </button>
+        </div>
+
+        <div
+          className={`grid transition-all duration-500 ease-out ${
+            showPastEvents ? "grid-rows-[1fr] opacity-100 mt-10" : "grid-rows-[0fr] opacity-0 mt-0"
+          }`}
+        >
+          <div className="overflow-hidden">
+            <h3 className="font-serif text-3xl font-semibold text-white mb-10">
+              {t("events.past.headline")}
+            </h3>
+            <EventArticleCard article={pastEvents[0]} onOpen={() => setOpenArticle(pastEvents[0])} />
+          </div>
         </div>
 
         {/* Hidden: "Shiko më shumë evente" button and placeholder grid — uncomment to restore

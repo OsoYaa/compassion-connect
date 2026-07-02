@@ -240,7 +240,6 @@ function EventArticleCard({
 
 function EventsSection() {
   const { t } = useT();
-  const [expanded, setExpanded] = useState(false);
   const [openArticle, setOpenArticle] = useState<EventArticle | null>(null);
 
   const featured: EventArticle = {

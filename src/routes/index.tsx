@@ -288,30 +288,15 @@ function EventsSection() {
           <EventArticleCard article={pastEvents[0]} onOpen={() => setOpenArticle(pastEvents[0])} />
         </div>
 
-        <div
-          className={`grid transition-all duration-500 ease-out ${
-            expanded ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-          }`}
-        >
-          <div className="overflow-hidden">
-            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {placeholders.map((a) => (
-                <EventArticleCard key={a.id} article={a} compact onOpen={() => setOpenArticle(a)} />
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Hidden: "Shiko më shumë evente" button — uncomment to restore
+        {/* Hidden: "Shiko më shumë evente" button and placeholder grid — uncomment to restore
         <div className="mt-10 flex justify-center">
           <button
             type="button"
-            onClick={() => setExpanded((e) => !e)}
-            aria-expanded={expanded}
+            aria-expanded={false}
             className="inline-flex items-center gap-2 border border-white/40 px-6 py-3 text-xs font-semibold uppercase tracking-[0.22em] text-white transition-colors hover:bg-white/10"
           >
-            {expanded ? t("events.seeLess") : t("events.seeMore")}
-            <ChevronDown className={`h-4 w-4 transition-transform ${expanded ? "rotate-180" : ""}`} />
+            {t("events.seeMore")}
+            <ChevronDown className="h-4 w-4" />
           </button>
         </div>
         */}

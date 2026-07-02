@@ -163,6 +163,7 @@ type EventArticle = {
   time?: string;
   location?: string;
   image?: string;
+  video?: string;
   isFeatured?: boolean;
 };
 
@@ -179,13 +180,15 @@ function EventArticleCard({
   if (compact) {
     return (
       <article className="flex flex-col border border-white/20 bg-white/[0.04]">
-        <div className="relative flex items-center justify-center bg-white/[0.06] overflow-hidden w-full max-w-[600px]">
-          {article.image ? (
-            <img src={article.image} alt={article.title} className="w-full h-auto object-contain" />
-          ) : (
-            <ImageIcon className="h-10 w-10 text-white/70" strokeWidth={1.25} />
-          )}
-        </div>
+      <div className="relative flex items-center justify-center bg-white/[0.06] overflow-hidden w-full max-w-[600px]">
+        {article.video ? (
+          <VideoEmbed id={article.video} title={article.title} />
+        ) : article.image ? (
+          <img src={article.image} alt={article.title} className="w-full h-auto object-contain" />
+        ) : (
+          <ImageIcon className="h-10 w-10 text-white/70" strokeWidth={1.25} />
+        )}
+      </div>
         <div className="flex flex-1 flex-col gap-3 p-6">
           <h3 className="font-serif text-xl font-semibold leading-snug text-white">{article.title}</h3>
           <p className="line-clamp-3 text-sm leading-relaxed text-white/85">{article.excerpt}</p>
@@ -203,7 +206,9 @@ function EventArticleCard({
   return (
     <article className="grid items-start border border-white/20 md:grid-cols-[minmax(0,48%)_minmax(0,1fr)] lg:grid-cols-[minmax(0,46%)_minmax(0,1fr)]">
       <div className="relative flex items-center justify-center overflow-hidden w-full self-start bg-white/[0.03]">
-        {article.image ? (
+        {article.video ? (
+          <VideoEmbed id={article.video} title={article.title} />
+        ) : article.image ? (
           <img src={article.image} alt={article.title} className="w-full h-auto object-contain" />
         ) : (
           <ImageIcon className="h-12 w-12 text-white/70" strokeWidth={1.25} />
@@ -243,20 +248,22 @@ function EventsSection() {
     title: t("events.featured.title"),
     excerpt: t("events.featured.desc"),
     body: t("events.featured.body"),
-    date: t("events.featured.date"),
-    time: t("events.featured.time"),
-    location: t("events.featured.location"),
-    image: eventi1Image,
+    video: "5JKC13sjftE",
     isFeatured: true,
   };
 
-  // Placeholder older articles — replace with real ones later.
-  const placeholders: EventArticle[] = Array.from({ length: 4 }, (_, i) => ({
-    id: `placeholder-${i}`,
-    title: t("events.placeholder.title"),
-    excerpt: t("events.placeholder.excerpt"),
-    body: t("events.placeholder.body"),
-  }));
+  const pastEvents: EventArticle[] = [
+    {
+      id: "past-1",
+      title: t("events.past.title"),
+      excerpt: t("events.past.desc"),
+      body: t("events.past.body"),
+      date: t("events.past.date"),
+      time: t("events.past.time"),
+      location: t("events.past.location"),
+      image: eventi1Image,
+    },
+  ];
 
   return (
     <section id="events" className="bg-teal py-28 sm:py-36 text-white">
@@ -273,6 +280,13 @@ function EventsSection() {
 
         <div className="mt-20">
           <EventArticleCard article={featured} onOpen={() => setOpenArticle(featured)} />
+        </div>
+
+        <div className="mt-20">
+          <h3 className="font-serif text-3xl font-semibold text-white mb-10">
+            {t("events.past.headline")}
+          </h3>
+          <EventArticleCard article={pastEvents[0]} onOpen={() => setOpenArticle(pastEvents[0])} />
         </div>
 
         <div
@@ -310,15 +324,17 @@ function EventsSection() {
                 {openArticle?.title}
               </DialogTitle>
             </DialogHeader>
-            <div className="relative w-full max-w-[600px] overflow-hidden mx-auto">
-              {openArticle?.image ? (
-                <img src={openArticle.image} alt={openArticle.title} className="w-full h-auto object-contain" />
-              ) : (
-                <div className="flex h-full w-full items-center justify-center text-navy/50">
-                  <ImageIcon className="h-12 w-12" strokeWidth={1.25} />
-                </div>
-              )}
-            </div>
+          <div className="relative w-full max-w-[600px] overflow-hidden mx-auto">
+            {openArticle?.video ? (
+              <VideoEmbed id={openArticle.video} title={openArticle.title} />
+            ) : openArticle?.image ? (
+              <img src={openArticle.image} alt={openArticle.title} className="w-full h-auto object-contain" />
+            ) : (
+              <div className="flex h-full w-full items-center justify-center text-navy/50">
+                <ImageIcon className="h-12 w-12" strokeWidth={1.25} />
+              </div>
+            )}
+          </div>
             <p className="mt-2 whitespace-pre-line text-base leading-relaxed text-foreground">
               {openArticle?.body}
             </p>

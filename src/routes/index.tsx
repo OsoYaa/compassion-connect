@@ -310,7 +310,11 @@ function EventsSection() {
             <h3 className="font-serif text-3xl font-semibold text-white mb-10">
               {t("events.past.headline")}
             </h3>
-            <EventArticleCard article={pastEvents[0]} onOpen={() => setOpenArticle(pastEvents[0])} />
+            <div className="flex flex-col gap-10">
+              {pastEvents.map((article) => (
+                <EventArticleCard key={article.id} article={article} onOpen={() => setOpenArticle(article)} />
+              ))}
+            </div>
           </div>
         </div>
 

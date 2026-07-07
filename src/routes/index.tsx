@@ -248,11 +248,18 @@ function EventsSection() {
     title: t("events.featured.title"),
     excerpt: t("events.featured.desc"),
     body: t("events.featured.body"),
-    video: "5JKC13sjftE",
+    video: "a8pwGwoSdmk",
     isFeatured: true,
   };
 
   const pastEvents: EventArticle[] = [
+    {
+      id: "past-2",
+      title: t("events.past2.title"),
+      excerpt: t("events.past2.desc"),
+      body: t("events.past2.body"),
+      video: "5JKC13sjftE",
+    },
     {
       id: "past-1",
       title: t("events.past.title"),

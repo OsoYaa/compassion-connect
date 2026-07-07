@@ -37,7 +37,25 @@ const en: Dict = {
   "events.readMore": "Read article",
   "events.close": "Close",
   "events.past.body": "On June 25, 2026, the organization 'Brandon Forever 22 Legacy' held its founding meeting. This meeting marked a historic day and the first step of a shared journey to realize a grand and hopeful vision.\n\nThese are the foundations of a legacy that will live through concrete deeds, commitment, and the unconditional love of the community.\n\n'Brandon Forever 22 Legacy' is an organization with a deep humanitarian mission, built on human stories.\n\nThis organization is not merely an institution; it was born from life itself.\n\nIt is the extraordinary story of two parents who lost their only son, Brandon, at the age of 22. Facing fierce waves and the deepest pain, they did not let themselves drown. Instead, they chose to build a lifeboat — for themselves and for anyone else in need.\n\nBrandon's memory lives where there is hope, help, and human solidarity. It is the legacy that continues...\n\nThe founding meeting on June 25, which was held at 19:00 at the 'Xheko Imperial' premises, marked the beginning of this legacy and invited all those who believe in the power of solidarity to become part of this humanitarian mission.",
-  "events.featured.body": "The \"Brandon Forever 22 Legacy\" Center has officially marked its founding, through a special ceremony that brought together volunteers, partners, and supporters in a shared mission to make a difference.\n\nThe event began with the atmosphere of the center's anthem, followed by the speech of the organization's founder, Mrs. Manjola Kuqi. Through a touching account of Brandon's story, Mrs. Kuqi shared with the attendees the vision and reasons that led to the creation of this organization, which aims to be a shelter of support and inspiration.\n\nThe detailed presentation of the organization by Mr. Kino Buxheli served as a guide for all those who wish to become part of the change, while the speech of the Executive Director, Mr. Alban Karabashi, emphasized the importance of cooperation and structuring of volunteer initiatives to maximize impact in the community.\n\nOne of the most culminating moments of the evening was the \"Light Ceremony,\" where all attendees lit their candles symbolizing the light of the \"Brandon\" mission, illuminating the hall as a sign of hope and commitment.\n\nThen, the first volunteers took the stage to give their solemn oath, a public commitment to serve Brandon's cause. The ceremony was followed by the distribution of certificates of appreciation by Mrs. Kuqi and Mr. Karabashi, as a sign of gratitude for their work and will.\n\n\"Brandon Forever 22 Legacy\" is now a reality. A story that has just begun, and that seeks everyone's support to write new chapters of success and solidarity.",
+  "events.featured.body": `On June 26, 2026, in Petrelë, the "Brandon Forever 22 Legacy" Center organized the event "Sofra – The Legacy Continues", an evening dedicated to the Day of Ashura, the preservation of spiritual heritage, and strengthening bonds with the community.
+
+The activity brought together representatives of institutions, religious leaders, residents of the area, guests, and friends of the center, in an atmosphere of respect, tradition, and unity, on the land where the Teqe of the Dervishes once stood.
+
+The evening opened with the moderator's welcoming speech, who emphasized the importance of preserving cultural and spiritual heritage, as well as the mission of the "Brandon Forever 22 Legacy" Center to pass this heritage on to younger generations.
+
+Then, the founder of the center, Manjola Kuqi, shared with those present her message about the importance of preserving family roots, history, and the values that unite the community, emphasizing that heritage is a responsibility that must be kept alive from generation to generation. "Roots unite us, memory guides us," she said during her speech.
+
+Next, Sheikh Ali Pazari explained the spiritual meaning of the Day of Ashura, while the representative of the Petrelë Administrative Unit welcomed this initiative, appreciating its contribution to promoting the traditions and cultural identity of the area.
+
+One of the most special moments of the activity was the ceremony near the Tyrbe, where the Halveti tariqa ritual took place, followed by a minute of silence in honor of the keepers of the spiritual heritage of the Teqe and in memory of Sheikh Mahmut, Sheikh Mehmet, and Brandon.
+
+Another symbolic moment was the planting of a cypress tree, as a sign of life, continuity, and heritage passed down to generations, conveying the message of responsibility for preserving history and building the future.
+
+The activity continued with the traditional sofra, where those present shared the ceremonial dinner together.
+
+In conclusion, the symbolic ceremony of distributing Ashura took place, which was shared as a symbol of peace, goodness, solidarity, and unity, conveying the message that spiritual and human values remain the foundation of a strong society.
+
+With the event "Sofra – The Legacy Continues", the "Brandon Forever 22 Legacy" Center reaffirmed its commitment to promoting humanity, preserving cultural and spiritual heritage, and strengthening ties between generations, turning this gathering into a celebration of values, memory, and unity.`,
   "events.placeholder.title": "Article title placeholder",
   "events.placeholder.excerpt": "A short excerpt about the article will appear here.",
   "events.placeholder.body": "The full article body will appear here. Replace with the real story and details.",
@@ -50,8 +68,21 @@ const en: Dict = {
   "events.past.date": "June 25",
   "events.past.time": "19:00",
   "events.past.location": "Xheko Imperial, Floor 1",
-  "events.featured.title": "The Journey of the \"Brandon Forever 22 Legacy\" Center Begins: A Mission of Hope and Humanity",
-  "events.featured.desc": "A shared mission to make a difference.",
+  "events.past2.title": "The Journey of the \"Brandon Forever 22 Legacy\" Center Begins: A Mission of Hope and Humanity",
+  "events.past2.desc": "A shared mission to make a difference.",
+  "events.past2.body": `The "Brandon Forever 22 Legacy" Center has officially marked its founding, through a special ceremony that brought together volunteers, partners, and supporters in a shared mission to make a difference.
+
+The event began with the atmosphere of the center's anthem, followed by the speech of the organization's founder, Mrs. Manjola Kuqi. Through a touching account of Brandon's story, Mrs. Kuqi shared with the attendees the vision and reasons that led to the creation of this organization, which aims to be a shelter of support and inspiration.
+
+The detailed presentation of the organization by Mr. Kino Buxheli served as a guide for all those who wish to become part of the change, while the speech of the Executive Director, Mr. Alban Karabashi, emphasized the importance of cooperation and structuring of volunteer initiatives to maximize impact in the community.
+
+One of the most culminating moments of the evening was the "Light Ceremony," where all attendees lit their candles symbolizing the light of the "Brandon" mission, illuminating the hall as a sign of hope and commitment.
+
+Then, the first volunteers took the stage to give their solemn oath, a public commitment to serve Brandon's cause. The ceremony was followed by the distribution of certificates of appreciation by Mrs. Kuqi and Mr. Karabashi, as a sign of gratitude for their work and will.
+
+"Brandon Forever 22 Legacy" is now a reality. A story that has just begun, and that seeks everyone's support to write new chapters of success and solidarity.`,
+  "events.featured.title": `The "Brandon Forever 22 Legacy" Center organizes the event "Sofra – The Legacy Continues"`,
+  "events.featured.desc": "An evening dedicated to the Day of Ashura, the preservation of spiritual heritage, and strengthening community bonds.",
   "events.e1.title": "Event title",
   "events.e1.desc": "Short event description placeholder.",
   "events.e1.date": "Date",
@@ -64,6 +95,7 @@ const en: Dict = {
   "events.e3.desc": "Short event description placeholder.",
   "events.e3.date": "Date",
   "events.e3.location": "Location",
+
 
   "about.kicker": "Who We Are",
   "about.headline": "Who are we?",
@@ -215,7 +247,25 @@ const sq: Dict = {
   "events.readMore": "Lexo artikullin",
   "events.close": "Mbyll",
   "events.past.body": "Më datë 25 qershor 2026, organizata 'Brandon Forever 22 Legacy' zhvilloi takimin e saj themelues. Ky takim shënoi një ditë historike dhe hapin e parë të një rrugëtimi të përbashkët për të jetësuar një vizion të madh e plot shpresë.\n\nKëto janë themelet e një trashëgimie që do të jetojë përmes veprave konkrete, përkushtimit dhe dashurisë së pakushtëzuar të komunitetit.\n\n'Brandon Forever 22 Legacy' është një organizatë me mision të thellë humanitar, e ndërtuar mbi histori njerëzore.\n\nKjo organizatë nuk është thjesht një institucion; ajo lindi nga vetë jeta.\n\nËshtë historia e jashtëzakonshme e dy prindërve që humbën djalin e tyre të vetëm, Brandon, në moshën 22-vjeçare. Përballë dallgëve të egra dhe dhimbjes më të thellë, ata nuk e lanë veten të mbyten. Përkundrazi, ata zgjodhën të ndërtojnë një varkë shpëtimi - për vete dhe për këdo tjetër që ka nevojë.\n\nKujtimi i Brandon jeton aty ku ka shpresë, ndihmë dhe solidaritet njerëzor. Është trashëgimia që vazhdon...\n\nTakimi themelues i 25 qershorit, i cili u zhvillua në orën 19:00 në ambientet e 'Xheko Imperial', shënoi fillimin e kësaj trashëgimie dhe ftoi të gjithë ata që besojnë në fuqinë e solidaritetit të bëhen pjesë e këtij misioni humanitar.",
-  "events.featured.body": "Qendra \"Brandon Forever 22 Legacy\" ka shënuar themelimin e saj zyrtar, përmes një ceremonie të veçantë që bashkoi vullnetarë, partnerë dhe mbështetës në një mision të përbashkët për të bërë ndryshimin.\n\nEventi, nisi me atmosferën e himnit të qendrës, për t’u pasuar nga fjala e themelueses së organizatës, znj. Manjola Kuqi. Përmes një rrëfimi prekës mbi historinë e Brandonit, znj. Kuqi ndau me të pranishmit vizionin dhe arsyet që çuan në krijimin e kësaj organizate, e cila synon të jetë një strehë mbështetjeje dhe frymëzimi.\n\nPrezantimi i detajuar i organizatës nga z. Kino Buxheli shërbeu si një udhërrëfyes për të gjithë ata që dëshirojnë të bëhen pjesë e ndryshimit, ndërsa fjalimi i Drejtorit Ekzekutiv, z. Alban Karabashi, theksoi rëndësinë e bashkëpunimit dhe strukturimit të nismave vullnetare për të maksimizuar ndikimin në komunitet.\n\nNjë nga momentet më kulmore të mbrëmjes ishte \"Ceremonia e Dritës\", ku të gjithë të pranishmit, ndezën qirinjtë e tyre që simbolizojnë dritën e misionit “Brandon”, duke ndriçuar sallën në shenjë shprese dhe përkushtimi.\n\nMë pas, vullnetarët e parë, u ngjitën në skenë për të dhënë betimin e tyre solemn, një angazhim publik për t'i shërbyer kauzës së Brandonit. Ceremonia u pasua nga shpërndarja e certifikatave të mirënjohjes nga znj. Kuqi dhe z. Karabashi, si shenjë falënderimi për punën dhe vullnetin e tyre.\n\n\"Brandon Forever 22 Legacy\" tashmë është një realitet. Një histori që sapo ka nisur, dhe që kërkon mbështetjen e gjithsecilit për të shkruar kapituj të rinj suksesi dhe solidariteti.",
+  "events.featured.body": `Më 26 qershor 2026, në Petrelë, Qendra "Brandon Forever 22 Legacy" organizoi aktivitetin "Sofra – Trashëgimia Vazhdon", një mbrëmje kushtuar Ditës së Ashures, ruajtjes së trashëgimisë shpirtërore dhe forcimit të lidhjeve me komunitetin.
+
+Aktiviteti mblodhi së bashku përfaqësues të institucioneve, drejtues fetarë, banorë të zonës, të ftuar dhe miq të qendrës, në një atmosferë respekti, tradite dhe bashkimi, në tokën ku më herët ka funksionuar Teqja e Kuqve.
+
+Mbrëmja u hap me fjalën përshëndetëse të moderatores, e cila theksoi rëndësinë e ruajtjes së trashëgimisë kulturore dhe shpirtërore, si dhe misionin e Qendrës "Brandon Forever 22 Legacy" për ta përcjellë këtë trashëgimi tek brezat e rinj.
+
+Më pas, themeluesja e qendrës, Manjola Kuqi, ndau me të pranishmit mesazhin e saj për rëndësinë e ruajtjes së rrënjëve familjare, të historisë dhe të vlerave që bashkojnë komunitetin, duke theksuar se trashëgimia është një përgjegjësi që duhet mbajtur gjallë brez pas brezi. “Rrënjët na bashkojnë, kujtesa na udhëheq” -u shpreh ajo gjatë fjalës së saj.
+
+Në vijim, Sheh Ali Pazari shpjegoi domethënien shpirtërore të Ditës së Ashures, ndërsa përfaqësuesi i Njësisë Administrative Petrelë, përshëndeti këtë nismë, duke vlerësuar kontributin e saj në promovimin e traditave dhe identitetit kulturor të zonës.
+
+Një nga momentet më të veçanta të aktivitetit ishte ceremonia pranë Tyrbes, ku u zhvillua riti i tarikatit Halveti, i pasuar nga një minutë heshtje në nder të ruajtësve të trashëgimisë shpirtërore të Teqesë si dhe në kujtim të Sheh Mahmutit, Sheh Mehmetit dhe Brandonit.
+
+Një tjetër moment simbolik ishte mbjellja e një peme selvi, si shenjë e jetës, vazhdimësisë dhe trashëgimisë që u përcillet brezave, duke përçuar mesazhin e përgjegjësisë për ruajtjen e historisë dhe ndërtimin e së ardhmes.
+
+Aktiviteti vijoi me sofrën tradicionale, ku të pranishmit ndanë së bashku darkën ceremoniale.
+
+Në përmbyllje u zhvillua ceremonia simbolike e ndarjes së Ashures, e cila u shpërnda si simbol i paqes, mirësisë, solidaritetit dhe bashkimit, duke përcjellë mesazhin se vlerat shpirtërore dhe njerëzore mbeten themeli i një shoqërie të fortë.
+
+Me aktivitetin "Sofra – Trashëgimia Vazhdon", Qendra "Brandon Forever 22 Legacy" rikonfirmoi angazhimin e saj për promovimin e humanizmit, ruajtjen e trashëgimisë kulturore e shpirtërore dhe forcimin e lidhjeve mes brezave, duke e kthyer këtë organizim në një festë të vlerave, kujtesës dhe unitetit.`,
   "events.placeholder.title": "Titulli i artikullit",
   "events.placeholder.excerpt": "Një përmbledhje e shkurtër e artikullit do të shfaqet këtu.",
   "events.placeholder.body": "Trupi i plotë i artikullit do të shfaqet këtu. Zëvendësojeni me historinë reale dhe detajet.",
@@ -228,8 +278,21 @@ const sq: Dict = {
   "events.past.date": "25 Qershor",
   "events.past.time": "19:00",
   "events.past.location": "Xheko Imperial, Kati 1",
-  "events.featured.title": "Nis rrugëtimi i qendrës \"Brandon Forever 22 Legacy\": Një mision shprese dhe humanizmi",
-  "events.featured.desc": "Një mision i përbashkët për të bërë ndryshimin.",
+  "events.past2.title": "Nis rrugëtimi i qendrës \"Brandon Forever 22 Legacy\": Një mision shprese dhe humanizmi",
+  "events.past2.desc": "Një mision i përbashkët për të bërë ndryshimin.",
+  "events.past2.body": `Qendra "Brandon Forever 22 Legacy" ka shënuar themelimin e saj zyrtar, përmes një ceremonie të veçantë që bashkoi vullnetarë, partnerë dhe mbështetës në një mision të përbashkët për të bërë ndryshimin.
+
+Eventi, nisi me atmosferën e himnit të qendrës, për t’u pasuar nga fjala e themelueses së organizatës, znj. Manjola Kuqi. Përmes një rrëfimi prekës mbi historinë e Brandonit, znj. Kuqi ndau me të pranishmit vizionin dhe arsyet që çuan në krijimin e kësaj organizate, e cila synon të jetë një strehë mbështetjeje dhe frymëzimi.
+
+Prezantimi i detajuar i organizatës nga z. Kino Buxheli shërbeu si një udhërrëfyes për të gjithë ata që dëshirojnë të bëhen pjesë e ndryshimit, ndërsa fjalimi i Drejtorit Ekzekutiv, z. Alban Karabashi, theksoi rëndësinë e bashkëpunimit dhe strukturimit të nismave vullnetare për të maksimizuar ndikimin në komunitet.
+
+Një nga momentet më kulmore të mbrëmjes ishte "Ceremonia e Dritës", ku të gjithë të pranishmit, ndezën qirinjtë e tyre që simbolizojnë dritën e misionit “Brandon”, duke ndriçuar sallën në shenjë shprese dhe përkushtimi.
+
+Më pas, vullnetarët e parë, u ngjitën në skenë për të dhënë betimin e tyre solemn, një angazhim publik për t'i shërbyer kauzës së Brandonit. Ceremonia u pasua nga shpërndarja e certifikatave të mirënjohjes nga znj. Kuqi dhe z. Karabashi, si shenjë falënderimi për punën dhe vullnetin e tyre.
+
+"Brandon Forever 22 Legacy" tashmë është një realitet. Një histori që sapo ka nisur, dhe që kërkon mbështetjen e gjithsecilit për të shkruar kapituj të rinj suksesi dhe solidariteti.`,
+  "events.featured.title": `Qendra "Brandon Forever 22 Legacy" organizon aktivitetin "Sofra – Trashëgimia Vazhdon"`,
+  "events.featured.desc": "Një mbrëmje kushtuar Ditës së Ashures, ruajtjes së trashëgimisë shpirtërore dhe forcimit të lidhjeve me komunitetin.",
   "events.e1.title": "Titulli i eventit",
   "events.e1.desc": "Përshkrim i shkurtër i eventit.",
   "events.e1.date": "Data",
@@ -242,6 +305,7 @@ const sq: Dict = {
   "events.e3.desc": "Përshkrim i shkurtër i eventit.",
   "events.e3.date": "Data",
   "events.e3.location": "Vendndodhja",
+
 
   "about.kicker": "Kush Jemi",
   "about.headline": "Kush jemi ne?",

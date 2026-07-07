@@ -248,11 +248,18 @@ function EventsSection() {
     title: t("events.featured.title"),
     excerpt: t("events.featured.desc"),
     body: t("events.featured.body"),
-    video: "5JKC13sjftE",
+    video: "a8pwGwoSdmk",
     isFeatured: true,
   };
 
   const pastEvents: EventArticle[] = [
+    {
+      id: "past-2",
+      title: t("events.past2.title"),
+      excerpt: t("events.past2.desc"),
+      body: t("events.past2.body"),
+      video: "5JKC13sjftE",
+    },
     {
       id: "past-1",
       title: t("events.past.title"),
@@ -303,7 +310,11 @@ function EventsSection() {
             <h3 className="font-serif text-3xl font-semibold text-white mb-10">
               {t("events.past.headline")}
             </h3>
-            <EventArticleCard article={pastEvents[0]} onOpen={() => setOpenArticle(pastEvents[0])} />
+            <div className="flex flex-col gap-10">
+              {pastEvents.map((article) => (
+                <EventArticleCard key={article.id} article={article} onOpen={() => setOpenArticle(article)} />
+              ))}
+            </div>
           </div>
         </div>
 

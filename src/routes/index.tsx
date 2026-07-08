@@ -638,7 +638,7 @@ function Index() {
               {t("donate.tagline")}
             </blockquote>
             <a
-              href="https://gofund.me/025d4e2c4"
+              href="https://whydonate.com/fundraising/brandon-forever-22-legacy"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center justify-center gap-2 bg-accent-red px-8 py-4 text-xs font-semibold uppercase tracking-[0.24em] text-white transition-all hover:-translate-y-0.5 hover:brightness-110"

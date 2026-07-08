@@ -111,7 +111,7 @@ export function SiteHeader() {
           </button>
 
           <a
-            href="https://gofund.me/025d4e2c4"
+            href="https://whydonate.com/fundraising/brandon-forever-22-legacy"
             target="_blank"
             rel="noopener noreferrer"
             className="ml-1 inline-flex items-center gap-1.5 rounded-md bg-accent-red px-3 py-2 text-xs font-semibold uppercase tracking-wider text-white transition-all hover:brightness-110 sm:px-4"

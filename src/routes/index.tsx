@@ -362,6 +362,16 @@ function EventsSection() {
 function Index() {
   const { t } = useT();
 
+  const scrollToDonate = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const el = document.getElementById("donate");
+    if (el) {
+      const offset = 80;
+      const top = el.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  };
+
   return (
     <main className="min-h-screen bg-background text-foreground">
       <Toaster position="top-center" />
@@ -421,9 +431,8 @@ function Index() {
             {/* Three primary actions */}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center md:justify-start">
               <a
-                href="https://whydonate.com/fundraising/brandon-forever-22-legacy"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#donate"
+                onClick={scrollToDonate}
                 className="inline-flex min-w-[12rem] items-center justify-center gap-2 bg-accent-red px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.22em] text-white transition-all hover:-translate-y-0.5 hover:brightness-110 whitespace-nowrap"
               >
                 <Heart className="h-4 w-4" fill="currentColor" /> {t("hero.donate")}
@@ -501,7 +510,7 @@ function Index() {
               <VideoEmbed id="eOXhzgdP134" title={t("about.video1")} />
             </div>
             <div className="lg:pl-12">
-              <VideoEmbed id="IfIJQdZb1Gc" title={t("about.video2")} />
+              <VideoEmbed id="9Bl95Rk5imw" title={t("about.video2")} />
             </div>
           </div>
         </div>

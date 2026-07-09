@@ -51,6 +51,19 @@ export function SiteHeader() {
     setMenuOpen(false);
   };
 
+  const handleDonateClick = (e: React.MouseEvent) => {
+    if (onHome) {
+      e.preventDefault();
+      const el = document.getElementById("donate");
+      if (el) {
+        const offset = 80;
+        const top = el.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+    }
+    setMenuOpen(false);
+  };
+
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
@@ -111,9 +124,8 @@ export function SiteHeader() {
           </button>
 
           <a
-            href="https://whydonate.com/fundraising/brandon-forever-22-legacy"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#donate"
+            onClick={handleDonateClick}
             className="ml-1 inline-flex items-center gap-1.5 rounded-md bg-accent-red px-3 py-2 text-xs font-semibold uppercase tracking-wider text-white transition-all hover:brightness-110 sm:px-4"
           >
             <Heart className="h-3.5 w-3.5" fill="currentColor" />

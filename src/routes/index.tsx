@@ -362,6 +362,16 @@ function EventsSection() {
 function Index() {
   const { t } = useT();
 
+  const scrollToDonate = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const el = document.getElementById("donate");
+    if (el) {
+      const offset = 80;
+      const top = el.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  };
+
   return (
     <main className="min-h-screen bg-background text-foreground">
       <Toaster position="top-center" />

@@ -431,9 +431,8 @@ function Index() {
             {/* Three primary actions */}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center md:justify-start">
               <a
-                href="https://whydonate.com/fundraising/brandon-forever-22-legacy"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#donate"
+                onClick={scrollToDonate}
                 className="inline-flex min-w-[12rem] items-center justify-center gap-2 bg-accent-red px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.22em] text-white transition-all hover:-translate-y-0.5 hover:brightness-110 whitespace-nowrap"
               >
                 <Heart className="h-4 w-4" fill="currentColor" /> {t("hero.donate")}

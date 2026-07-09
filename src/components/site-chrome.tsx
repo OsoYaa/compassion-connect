@@ -51,6 +51,19 @@ export function SiteHeader() {
     setMenuOpen(false);
   };
 
+  const handleDonateClick = (e: React.MouseEvent) => {
+    if (onHome) {
+      e.preventDefault();
+      const el = document.getElementById("donate");
+      if (el) {
+        const offset = 80;
+        const top = el.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+    }
+    setMenuOpen(false);
+  };
+
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">

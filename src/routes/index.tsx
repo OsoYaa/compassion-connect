@@ -562,6 +562,16 @@ function Index() {
 
           <div className="mt-16 max-w-3xl mx-auto">
             <VideoCategory title={t("cases.cat1.title")} videos={HUMAN_STORY_VIDEOS} />
+            <div className="mt-6 flex justify-start">
+              <a
+                href="https://gofund.me/ddc222b6a"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-accent-red px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-white transition-all hover:-translate-y-0.5 hover:brightness-110"
+              >
+                <Heart className="h-4 w-4" fill="currentColor" /> {t("donate.cta")}
+              </a>
+            </div>
             {/* Podcast section hidden — uncomment to restore
             <VideoCategory title={t("cases.cat2.title")} videos={PODCAST_VIDEOS} />
             */}

@@ -40,8 +40,8 @@ const bankAccount = {
 
 // Replace IDs with real YouTube video IDs. First entry is the featured (main)
 // video, the rest are shown under "Previous videos" (capped at 10 older items).
-const HUMAN_STORY_VIDEOS: string[] = ["HxhpV7SoA2o"];
-const PODCAST_VIDEOS: string[] = [];
+const HUMAN_STORY_VIDEOS: string[] = ["jNMgjGGndbE", "HxhpV7SoA2o"];
+const PODCAST_VIDEOS: string[] = ["7-GreWzI9Eo"];
 const MAX_PREVIOUS_VIDEOS = 10;
 
 // Tiny shared atoms ----------------------------------------------------------
@@ -562,9 +562,9 @@ function Index() {
 
           <div className="mt-16 max-w-3xl mx-auto">
             <VideoCategory title={t("cases.cat1.title")} videos={HUMAN_STORY_VIDEOS} />
-            {/* Podcast section hidden — uncomment to restore
-            <VideoCategory title={t("cases.cat2.title")} videos={PODCAST_VIDEOS} />
-            */}
+            <div className="mt-16">
+              <VideoCategory title={t("cases.cat2.title")} videos={PODCAST_VIDEOS} />
+            </div>
           </div>
         </div>
       </section>
@@ -649,7 +649,7 @@ function Index() {
               {t("donate.tagline")}
             </blockquote>
             <a
-              href="https://gofund.me/ddc222b6a"
+              href="https://gofund.me/52da71e50"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center justify-center gap-2 bg-accent-red px-8 py-4 text-xs font-semibold uppercase tracking-[0.24em] text-white transition-all hover:-translate-y-0.5 hover:brightness-110"

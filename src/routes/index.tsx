@@ -562,9 +562,9 @@ function Index() {
 
           <div className="mt-16 max-w-3xl mx-auto">
             <VideoCategory title={t("cases.cat1.title")} videos={HUMAN_STORY_VIDEOS} />
-            {/* Podcast section hidden — uncomment to restore
-            <VideoCategory title={t("cases.cat2.title")} videos={PODCAST_VIDEOS} />
-            */}
+            <div className="mt-16">
+              <VideoCategory title={t("cases.cat2.title")} videos={PODCAST_VIDEOS} />
+            </div>
           </div>
         </div>
       </section>

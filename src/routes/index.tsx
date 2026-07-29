@@ -727,6 +727,13 @@ function Index() {
               { src: bashkiaGramshLogo, alt: "Bashkia Gramsh" },
               { src: bashkiaBelshLogo, alt: "Bashkia Belsh" },
               { src: strehheShpreseLogo, alt: "Strehë & Shpresë — Shtëpia e të Moshuarve" },
+              // Hidden partners — unhide when approved
+              // { src: miellTiranaLogo, alt: "Miell Tirana" },
+              // { src: agnaGroupLogo, alt: "Agna Group" },
+              // { src: dekaLogo, alt: "Deka" },
+              // { src: eurolabLogo, alt: "Eurolab Internacional" },
+              // { src: olimLogo, alt: "Olim" },
+              // { src: teutaLogo, alt: "Teuta" },
             ].map((partner, i) => (
               <div
                 key={i}

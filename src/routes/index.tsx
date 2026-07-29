@@ -19,6 +19,13 @@ import bashkiaCerrikLogo from "@/assets/partners/bashkia-cerrik-2.jpg";
 import bashkiaGramshLogo from "@/assets/partners/bashkia-gramsh-2.png";
 import bashkiaBelshLogo from "@/assets/partners/bashkia-belsh.png";
 import strehheShpreseLogo from "@/assets/partners/strehe-shprese-2.jpg";
+// Hidden partner logos — keep until further notice
+// import miellTiranaLogo from "@/assets/partners/miell-tirana.png";
+// import agnaGroupLogo from "@/assets/partners/agna-group.png";
+// import dekaLogo from "@/assets/partners/deka.png";
+// import eurolabLogo from "@/assets/partners/eurolab.jpg";
+// import olimLogo from "@/assets/partners/olim.png";
+// import teutaLogo from "@/assets/partners/teuta.png";
 import eventi1Image from "@/assets/events/eventi-1-xheko.png";
 import { Toaster } from "@/components/ui/sonner";
 import { SiteHeader, SiteFooter, SOCIAL_LINKS } from "@/components/site-chrome";
@@ -720,6 +727,13 @@ function Index() {
               { src: bashkiaGramshLogo, alt: "Bashkia Gramsh" },
               { src: bashkiaBelshLogo, alt: "Bashkia Belsh" },
               { src: strehheShpreseLogo, alt: "Strehë & Shpresë — Shtëpia e të Moshuarve" },
+              // Hidden partners — unhide when approved
+              // { src: miellTiranaLogo, alt: "Miell Tirana" },
+              // { src: agnaGroupLogo, alt: "Agna Group" },
+              // { src: dekaLogo, alt: "Deka" },
+              // { src: eurolabLogo, alt: "Eurolab Internacional" },
+              // { src: olimLogo, alt: "Olim" },
+              // { src: teutaLogo, alt: "Teuta" },
             ].map((partner, i) => (
               <div
                 key={i}

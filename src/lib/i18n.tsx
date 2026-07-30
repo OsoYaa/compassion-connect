@@ -37,25 +37,11 @@ const en: Dict = {
   "events.readMore": "Read article",
   "events.close": "Close",
   "events.past.body": "On June 25, 2026, the organization 'Brandon Forever 22 Legacy' held its founding meeting. This meeting marked a historic day and the first step of a shared journey to realize a grand and hopeful vision.\n\nThese are the foundations of a legacy that will live through concrete deeds, commitment, and the unconditional love of the community.\n\n'Brandon Forever 22 Legacy' is an organization with a deep humanitarian mission, built on human stories.\n\nThis organization is not merely an institution; it was born from life itself.\n\nIt is the extraordinary story of two parents who lost their only son, Brandon, at the age of 22. Facing fierce waves and the deepest pain, they did not let themselves drown. Instead, they chose to build a lifeboat — for themselves and for anyone else in need.\n\nBrandon's memory lives where there is hope, help, and human solidarity. It is the legacy that continues...\n\nThe founding meeting on June 25, which was held at 19:00 at the 'Xheko Imperial' premises, marked the beginning of this legacy and invited all those who believe in the power of solidarity to become part of this humanitarian mission.",
-  "events.featured.body": `On June 26, 2026, in Petrelë, the "Brandon Forever 22 Legacy" Center organized the event "Sofra – The Legacy Continues", an evening dedicated to the Day of Ashura, the preservation of spiritual heritage, and strengthening bonds with the community.
+  "events.featured.body": `As part of the initiative "From Love, Change Is Born", the organization "Brandon Forever 22 Legacy", in collaboration with some of the country's most prominent companies, brought support and hope to families in need.
 
-The activity brought together representatives of institutions, religious leaders, residents of the area, guests, and friends of the center, in an atmosphere of respect, tradition, and unity, on the land where the Teqe of the Dervishes once stood.
+Volunteers from the organization visited 11 families across the regions of Lezhë, Durrës, Tirana, and Elbasan, distributing food packages and, above all, offering love, care, and solidarity.
 
-The evening opened with the moderator's welcoming speech, who emphasized the importance of preserving cultural and spiritual heritage, as well as the mission of the "Brandon Forever 22 Legacy" Center to pass this heritage on to younger generations.
-
-Then, the founder of the center, Manjola Kuqi, shared with those present her message about the importance of preserving family roots, history, and the values that unite the community, emphasizing that heritage is a responsibility that must be kept alive from generation to generation. "Roots unite us, memory guides us," she said during her speech.
-
-Next, Sheikh Ali Pazari explained the spiritual meaning of the Day of Ashura, while the representative of the Petrelë Administrative Unit welcomed this initiative, appreciating its contribution to promoting the traditions and cultural identity of the area.
-
-One of the most special moments of the activity was the ceremony near the Tyrbe, where the Halveti tariqa ritual took place, followed by a minute of silence in honor of the keepers of the spiritual heritage of the Teqe and in memory of Sheikh Mahmut, Sheikh Mehmet, and Brandon.
-
-Another symbolic moment was the planting of a cypress tree, as a sign of life, continuity, and heritage passed down to generations, conveying the message of responsibility for preserving history and building the future.
-
-The activity continued with the traditional sofra, where those present shared the ceremonial dinner together.
-
-In conclusion, the symbolic ceremony of distributing Ashura took place, which was shared as a symbol of peace, goodness, solidarity, and unity, conveying the message that spiritual and human values remain the foundation of a strong society.
-
-With the event "Sofra – The Legacy Continues", the "Brandon Forever 22 Legacy" Center reaffirmed its commitment to promoting humanity, preserving cultural and spiritual heritage, and strengthening ties between generations, turning this gathering into a celebration of values, memory, and unity.`,
+Special thanks go to our valued partners Teuta, Eurolab, Deka and Olim, Miell Tirana, and Agna Group, whose support made this humanitarian mission possible.`,
   "events.placeholder.title": "Article title placeholder",
   "events.placeholder.excerpt": "A short excerpt about the article will appear here.",
   "events.placeholder.body": "The full article body will appear here. Replace with the real story and details.",

@@ -254,25 +254,11 @@ const sq: Dict = {
   "events.readMore": "Lexo artikullin",
   "events.close": "Mbyll",
   "events.past.body": "Më datë 25 qershor 2026, organizata 'Brandon Forever 22 Legacy' zhvilloi takimin e saj themelues. Ky takim shënoi një ditë historike dhe hapin e parë të një rrugëtimi të përbashkët për të jetësuar një vizion të madh e plot shpresë.\n\nKëto janë themelet e një trashëgimie që do të jetojë përmes veprave konkrete, përkushtimit dhe dashurisë së pakushtëzuar të komunitetit.\n\n'Brandon Forever 22 Legacy' është një organizatë me mision të thellë humanitar, e ndërtuar mbi histori njerëzore.\n\nKjo organizatë nuk është thjesht një institucion; ajo lindi nga vetë jeta.\n\nËshtë historia e jashtëzakonshme e dy prindërve që humbën djalin e tyre të vetëm, Brandon, në moshën 22-vjeçare. Përballë dallgëve të egra dhe dhimbjes më të thellë, ata nuk e lanë veten të mbyten. Përkundrazi, ata zgjodhën të ndërtojnë një varkë shpëtimi - për vete dhe për këdo tjetër që ka nevojë.\n\nKujtimi i Brandon jeton aty ku ka shpresë, ndihmë dhe solidaritet njerëzor. Është trashëgimia që vazhdon...\n\nTakimi themelues i 25 qershorit, i cili u zhvillua në orën 19:00 në ambientet e 'Xheko Imperial', shënoi fillimin e kësaj trashëgimie dhe ftoi të gjithë ata që besojnë në fuqinë e solidaritetit të bëhen pjesë e këtij misioni humanitar.",
-  "events.featured.body": `Më 26 qershor 2026, në Petrelë, Qendra "Brandon Forever 22 Legacy" organizoi aktivitetin "Sofra – Trashëgimia Vazhdon", një mbrëmje kushtuar Ditës së Ashures, ruajtjes së trashëgimisë shpirtërore dhe forcimit të lidhjeve me komunitetin.
+  "events.featured.body": `Në kuadër të aktivitetit "Nga Dashuria, Lind Ndryshimi", Organizata “Brandon Forever 22 Legacy”, në bashkëpunim me disa nga kompanitë më prestigjioze në vend, solli mbështetje dhe shpresë për familjet në nevojë.
 
-Aktiviteti mblodhi së bashku përfaqësues të institucioneve, drejtues fetarë, banorë të zonës, të ftuar dhe miq të qendrës, në një atmosferë respekti, tradite dhe bashkimi, në tokën ku më herët ka funksionuar Teqja e Kuqve.
+Vullnetarët e organizatës vizituan 11 familje në qarqet Lezhë, Durrës, Tiranë dhe Elbasan, duke shpërndarë pako ushqimore, por mbi të gjitha duke dhuruar dashuri, kujdes dhe solidaritet.
 
-Mbrëmja u hap me fjalën përshëndetëse të moderatores, e cila theksoi rëndësinë e ruajtjes së trashëgimisë kulturore dhe shpirtërore, si dhe misionin e Qendrës "Brandon Forever 22 Legacy" për ta përcjellë këtë trashëgimi tek brezat e rinj.
-
-Më pas, themeluesja e qendrës, Manjola Kuqi, ndau me të pranishmit mesazhin e saj për rëndësinë e ruajtjes së rrënjëve familjare, të historisë dhe të vlerave që bashkojnë komunitetin, duke theksuar se trashëgimia është një përgjegjësi që duhet mbajtur gjallë brez pas brezi. “Rrënjët na bashkojnë, kujtesa na udhëheq” -u shpreh ajo gjatë fjalës së saj.
-
-Në vijim, Sheh Ali Pazari shpjegoi domethënien shpirtërore të Ditës së Ashures, ndërsa përfaqësuesi i Njësisë Administrative Petrelë, përshëndeti këtë nismë, duke vlerësuar kontributin e saj në promovimin e traditave dhe identitetit kulturor të zonës.
-
-Një nga momentet më të veçanta të aktivitetit ishte ceremonia pranë Tyrbes, ku u zhvillua riti i tarikatit Halveti, i pasuar nga një minutë heshtje në nder të ruajtësve të trashëgimisë shpirtërore të Teqesë si dhe në kujtim të Sheh Mahmutit, Sheh Mehmetit dhe Brandonit.
-
-Një tjetër moment simbolik ishte mbjellja e një peme selvi, si shenjë e jetës, vazhdimësisë dhe trashëgimisë që u përcillet brezave, duke përçuar mesazhin e përgjegjësisë për ruajtjen e historisë dhe ndërtimin e së ardhmes.
-
-Aktiviteti vijoi me sofrën tradicionale, ku të pranishmit ndanë së bashku darkën ceremoniale.
-
-Në përmbyllje u zhvillua ceremonia simbolike e ndarjes së Ashures, e cila u shpërnda si simbol i paqes, mirësisë, solidaritetit dhe bashkimit, duke përcjellë mesazhin se vlerat shpirtërore dhe njerëzore mbeten themeli i një shoqërie të fortë.
-
-Me aktivitetin "Sofra – Trashëgimia Vazhdon", Qendra "Brandon Forever 22 Legacy" rikonfirmoi angazhimin e saj për promovimin e humanizmit, ruajtjen e trashëgimisë kulturore e shpirtërore dhe forcimin e lidhjeve mes brezave, duke e kthyer këtë organizim në një festë të vlerave, kujtesës dhe unitetit.`,
+Mirënjohje të veçantë për partnerët tanë të çmuar Teuta, Eurolab, Deka dhe Olim, Miell Tirana dhe Agna Group, të cilët me mbështetjen e tyre bënë të mundur realizimin e këtij misioni humanitar.`,
   "events.placeholder.title": "Titulli i artikullit",
   "events.placeholder.excerpt": "Një përmbledhje e shkurtër e artikullit do të shfaqet këtu.",
   "events.placeholder.body": "Trupi i plotë i artikullit do të shfaqet këtu. Zëvendësojeni me historinë reale dhe detajet.",

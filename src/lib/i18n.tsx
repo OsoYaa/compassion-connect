@@ -284,8 +284,8 @@ Një nga momentet më kulmore të mbrëmjes ishte "Ceremonia e Dritës", ku të 
 Më pas, vullnetarët e parë, u ngjitën në skenë për të dhënë betimin e tyre solemn, një angazhim publik për t'i shërbyer kauzës së Brandonit. Ceremonia u pasua nga shpërndarja e certifikatave të mirënjohjes nga znj. Kuqi dhe z. Karabashi, si shenjë falënderimi për punën dhe vullnetin e tyre.
 
 "Brandon Forever 22 Legacy" tashmë është një realitet. Një histori që sapo ka nisur, dhe që kërkon mbështetjen e gjithsecilit për të shkruar kapituj të rinj suksesi dhe solidariteti.`,
-  "events.featured.title": `Qendra "Brandon Forever 22 Legacy" organizon aktivitetin "Sofra – Trashëgimia Vazhdon"`,
-  "events.featured.desc": "Një mbrëmje kushtuar Ditës së Ashures, ruajtjes së trashëgimisë shpirtërore dhe forcimit të lidhjeve me komunitetin.",
+  "events.featured.title": "Nga dashuria, lind ndryshimi",
+  "events.featured.desc": "Në kuadër të aktivitetit \"Nga Dashuria, Lind Ndryshimi\", Organizata \"Brandon Forever 22 Legacy\", në bashkëpunim me disa nga kompanitë më prestigjioze në vend, solli mbështetje dhe shpresë për familjet në nevojë.",
   "events.e1.title": "Titulli i eventit",
   "events.e1.desc": "Përshkrim i shkurtër i eventit.",
   "events.e1.date": "Data",

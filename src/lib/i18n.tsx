@@ -284,6 +284,27 @@ Një nga momentet më kulmore të mbrëmjes ishte "Ceremonia e Dritës", ku të 
 Më pas, vullnetarët e parë, u ngjitën në skenë për të dhënë betimin e tyre solemn, një angazhim publik për t'i shërbyer kauzës së Brandonit. Ceremonia u pasua nga shpërndarja e certifikatave të mirënjohjes nga znj. Kuqi dhe z. Karabashi, si shenjë falënderimi për punën dhe vullnetin e tyre.
 
 "Brandon Forever 22 Legacy" tashmë është një realitet. Një histori që sapo ka nisur, dhe që kërkon mbështetjen e gjithsecilit për të shkruar kapituj të rinj suksesi dhe solidariteti.`,
+  "events.past3.title": `Qendra "Brandon Forever 22 Legacy" organizon aktivitetin "Sofra – Trashëgimia Vazhdon"`,
+  "events.past3.desc": "Një mbrëmje kushtuar Ditës së Ashures, ruajtjes së trashëgimisë shpirtërore dhe forcimit të lidhjeve me komunitetin.",
+  "events.past3.body": `Më 26 qershor 2026, në Petrelë, Qendra "Brandon Forever 22 Legacy" organizoi aktivitetin "Sofra – Trashëgimia Vazhdon", një mbrëmje kushtuar Ditës së Ashures, ruajtjes së trashëgimisë shpirtërore dhe forcimit të lidhjeve me komunitetin.
+
+Aktiviteti mblodhi së bashku përfaqësues të institucioneve, drejtues fetarë, banorë të zonës, të ftuar dhe miq të qendrës, në një atmosferë respekti, tradite dhe bashkimi, në tokën ku më herët ka funksionuar Teqja e Kuqve.
+
+Mbrëmja u hap me fjalën përshëndetëse të moderatores, e cila theksoi rëndësinë e ruajtjes së trashëgimisë kulturore dhe shpirtërore, si dhe misionin e Qendrës "Brandon Forever 22 Legacy" për ta përcjellë këtë trashëgimi tek brezat e rinj.
+
+Më pas, themeluesja e qendrës, Manjola Kuqi, ndau me të pranishmit mesazhin e saj për rëndësinë e ruajtjes së rrënjëve familjare, të historisë dhe të vlerave që bashkojnë komunitetin, duke theksuar se trashëgimia është një përgjegjësi që duhet mbajtur gjallë brez pas brezi. “Rrënjët na bashkojnë, kujtesa na udhëheq” -u shpreh ajo gjatë fjalës së saj.
+
+Në vijim, Sheh Ali Pazari shpjegoi domethënien shpirtërore të Ditës së Ashures, ndërsa përfaqësuesi i Njësisë Administrative Petrelë, përshëndeti këtë nismë, duke vlerësuar kontributin e saj në promovimin e traditave dhe identitetit kulturor të zonës.
+
+Një nga momentet më të veçanta të aktivitetit ishte ceremonia pranë Tyrbes, ku u zhvillua riti i tarikatit Halveti, i pasuar nga një minutë heshtje në nder të ruajtësve të trashëgimisë shpirtërore të Teqesë si dhe në kujtim të Sheh Mahmutit, Sheh Mehmetit dhe Brandonit.
+
+Një tjetër moment simbolik ishte mbjellja e një peme selvi, si shenjë e jetës, vazhdimësisë dhe trashëgimisë që u përcillet brezave, duke përçuar mesazhin e përgjegjësisë për ruajtjen e historisë dhe ndërtimin e së ardhmes.
+
+Aktiviteti vijoi me sofrën tradicionale, ku të pranishmit ndanë së bashku darkën ceremoniale.
+
+Në përmbyllje u zhvillua ceremonia simbolike e ndarjes së Ashures, e cila u shpërnda si simbol i paqes, mirësisë, solidaritetit dhe bashkimit, duke përcjellë mesazhin se vlerat shpirtërore dhe njerëzore mbeten themeli i një shoqërie të fortë.
+
+Me aktivitetin "Sofra – Trashëgimia Vazhdon", Qendra "Brandon Forever 22 Legacy" rikonfirmoi angazhimin e saj për promovimin e humanizmit, ruajtjen e trashëgimisë kulturore e shpirtërore dhe forcimin e lidhjeve mes brezave, duke e kthyer këtë organizim në një festë të vlerave, kujtesës dhe unitetit.`,
   "events.featured.title": "Nga dashuria, lind ndryshimi",
   "events.featured.desc": "Në kuadër të aktivitetit \"Nga Dashuria, Lind Ndryshimi\", Organizata \"Brandon Forever 22 Legacy\", në bashkëpunim me disa nga kompanitë më prestigjioze në vend, solli mbështetje dhe shpresë për familjet në nevojë.",
   "events.e1.title": "Titulli i eventit",

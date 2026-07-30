@@ -735,12 +735,12 @@ function Index() {
               { src: bashkiaBelshLogo, alt: "Bashkia Belsh" },
               { src: strehheShpreseLogo, alt: "Strehë & Shpresë — Shtëpia e të Moshuarve" },
               // Hidden partners — unhide when approved
+              { src: teutaLogo, alt: "Teuta" },
+              { src: eurolabLogo, alt: "Eurolab Internacional" },
+              { src: dekaLogo, alt: "Deka" },
+              { src: olimLogo, alt: "Olim" },
               { src: miellTiranaLogo, alt: "Miell Tirana" },
               { src: agnaGroupLogo, alt: "Agna Group" },
-              { src: dekaLogo, alt: "Deka" },
-              { src: eurolabLogo, alt: "Eurolab Internacional" },
-              { src: olimLogo, alt: "Olim" },
-              { src: teutaLogo, alt: "Teuta" },
             ].map((partner, i) => (
               <div
                 key={i}

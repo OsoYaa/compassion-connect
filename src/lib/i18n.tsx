@@ -67,6 +67,27 @@ One of the most culminating moments of the evening was the "Light Ceremony," whe
 Then, the first volunteers took the stage to give their solemn oath, a public commitment to serve Brandon's cause. The ceremony was followed by the distribution of certificates of appreciation by Mrs. Kuqi and Mr. Karabashi, as a sign of gratitude for their work and will.
 
 "Brandon Forever 22 Legacy" is now a reality. A story that has just begun, and that seeks everyone's support to write new chapters of success and solidarity.`,
+  "events.past3.title": `The "Brandon Forever 22 Legacy" Center organizes the event "Sofra – The Legacy Continues"`,
+  "events.past3.desc": "An evening dedicated to the Day of Ashura, the preservation of spiritual heritage, and strengthening community bonds.",
+  "events.past3.body": `On June 26, 2026, in Petrelë, the "Brandon Forever 22 Legacy" Center organized the event "Sofra – The Legacy Continues", an evening dedicated to the Day of Ashura, the preservation of spiritual heritage, and strengthening bonds with the community.
+
+The activity brought together representatives of institutions, religious leaders, residents of the area, guests, and friends of the center, in an atmosphere of respect, tradition, and unity, on the land where the Teqe of the Dervishes once stood.
+
+The evening opened with the moderator's welcoming speech, who emphasized the importance of preserving cultural and spiritual heritage, as well as the mission of the "Brandon Forever 22 Legacy" Center to pass this heritage on to younger generations.
+
+Then, the founder of the center, Manjola Kuqi, shared with those present her message about the importance of preserving family roots, history, and the values that unite the community, emphasizing that heritage is a responsibility that must be kept alive from generation to generation. "Roots unite us, memory guides us," she said during her speech.
+
+Next, Sheikh Ali Pazari explained the spiritual meaning of the Day of Ashura, while the representative of the Petrelë Administrative Unit welcomed this initiative, appreciating its contribution to promoting the traditions and cultural identity of the area.
+
+One of the most special moments of the activity was the ceremony near the Tyrbe, where the Halveti tariqa ritual took place, followed by a minute of silence in honor of the keepers of the spiritual heritage of the Teqe and in memory of Sheikh Mahmut, Sheikh Mehmet, and Brandon.
+
+Another symbolic moment was the planting of a cypress tree, as a sign of life, continuity, and heritage passed down to generations, conveying the message of responsibility for preserving history and building the future.
+
+The activity continued with the traditional sofra, where those present shared the ceremonial dinner together.
+
+In conclusion, the symbolic ceremony of distributing Ashura took place, which was shared as a symbol of peace, goodness, solidarity, and unity, conveying the message that spiritual and human values remain the foundation of a strong society.
+
+With the event "Sofra – The Legacy Continues", the "Brandon Forever 22 Legacy" Center reaffirmed its commitment to promoting humanity, preserving cultural and spiritual heritage, and strengthening ties between generations, turning this gathering into a celebration of values, memory, and unity.`,
   "events.featured.title": "From Love, Change Is Born",
   "events.featured.desc": "The organization \"Brandon Forever 22 Legacy\", in collaboration with some of the country's most prominent companies, brought support and hope to families in need.",
   "events.e1.title": "Event title",

@@ -81,8 +81,8 @@ One of the most culminating moments of the evening was the "Light Ceremony," whe
 Then, the first volunteers took the stage to give their solemn oath, a public commitment to serve Brandon's cause. The ceremony was followed by the distribution of certificates of appreciation by Mrs. Kuqi and Mr. Karabashi, as a sign of gratitude for their work and will.
 
 "Brandon Forever 22 Legacy" is now a reality. A story that has just begun, and that seeks everyone's support to write new chapters of success and solidarity.`,
-  "events.featured.title": `The "Brandon Forever 22 Legacy" Center organizes the event "Sofra – The Legacy Continues"`,
-  "events.featured.desc": "An evening dedicated to the Day of Ashura, the preservation of spiritual heritage, and strengthening community bonds.",
+  "events.featured.title": "From Love, Change Is Born",
+  "events.featured.desc": "The organization \"Brandon Forever 22 Legacy\", in collaboration with some of the country's most prominent companies, brought support and hope to families in need.",
   "events.e1.title": "Event title",
   "events.e1.desc": "Short event description placeholder.",
   "events.e1.date": "Date",

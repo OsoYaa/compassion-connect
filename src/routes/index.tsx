@@ -742,6 +742,7 @@ function Index() {
               { src: olimLogo, alt: "Olim" },
               { src: miellTiranaLogo, alt: "Miell Tirana" },
               { src: agnaGroupLogo, alt: "Agna Group" },
+              { src: lumturoLogo, alt: "Lumturo Dhimbjen" },
             ].map((partner, i) => (
               <div
                 key={i}

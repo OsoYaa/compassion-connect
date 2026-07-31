@@ -26,6 +26,7 @@ import dekaLogo from "@/assets/partners/deka.png";
 import eurolabLogo from "@/assets/partners/eurolab.jpg";
 import olimLogo from "@/assets/partners/olim.png";
 import teutaLogo from "@/assets/partners/teuta.png";
+import lumturoLogo from "@/assets/partners/lumturo.png";
 import eventi1Image from "@/assets/events/eventi-1-xheko.png";
 import { Toaster } from "@/components/ui/sonner";
 import { SiteHeader, SiteFooter, SOCIAL_LINKS } from "@/components/site-chrome";
@@ -741,6 +742,7 @@ function Index() {
               { src: olimLogo, alt: "Olim" },
               { src: miellTiranaLogo, alt: "Miell Tirana" },
               { src: agnaGroupLogo, alt: "Agna Group" },
+              { src: lumturoLogo, alt: "Lumturo Dhimbjen" },
             ].map((partner, i) => (
               <div
                 key={i}

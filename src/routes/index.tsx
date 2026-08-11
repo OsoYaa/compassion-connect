@@ -27,6 +27,7 @@ import eurolabLogo from "@/assets/partners/eurolab.jpg";
 import olimLogo from "@/assets/partners/olim.png";
 import teutaLogo from "@/assets/partners/teuta.png";
 import lumturoLogo from "@/assets/partners/lumturo.png";
+import elaPeraLogo from "@/assets/partners/ela-pera.png";
 import eventi1Image from "@/assets/events/eventi-1-xheko.png";
 import { Toaster } from "@/components/ui/sonner";
 import { SiteHeader, SiteFooter, SOCIAL_LINKS } from "@/components/site-chrome";
@@ -742,14 +743,15 @@ function Index() {
               { src: olimLogo, alt: "Olim" },
               { src: miellTiranaLogo, alt: "Miell Tirana" },
               { src: agnaGroupLogo, alt: "Agna Group" },
-              { src: lumturoLogo, alt: "Lumturo Dhimbjen" },
+              { src: lumturoLogo, alt: "Lumturo Dhimbjen", className: "h-32 sm:h-40" },
+              { src: elaPeraLogo, alt: "Ela Pera — makeup artist" },
             ].map((partner, i) => (
               <div
                 key={i}
                 className="flex items-center justify-center px-4 py-6 text-xs uppercase tracking-[0.2em] text-navy/60"
               >
                 {partner ? (
-                  <img src={partner.src} alt={partner.alt} className="h-28 w-auto object-contain sm:h-36" />
+                  <img src={partner.src} alt={partner.alt} className={`w-auto object-contain ${partner.className ?? "h-28 sm:h-36"}`} />
                 ) : (
                   t("partners.placeholder")
                 )}

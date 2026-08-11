@@ -743,14 +743,15 @@ function Index() {
               { src: olimLogo, alt: "Olim" },
               { src: miellTiranaLogo, alt: "Miell Tirana" },
               { src: agnaGroupLogo, alt: "Agna Group" },
-              { src: lumturoLogo, alt: "Lumturo Dhimbjen" },
+              { src: lumturoLogo, alt: "Lumturo Dhimbjen", className: "h-32 sm:h-40" },
+              { src: elaPeraLogo, alt: "Ela Pera — makeup artist" },
             ].map((partner, i) => (
               <div
                 key={i}
                 className="flex items-center justify-center px-4 py-6 text-xs uppercase tracking-[0.2em] text-navy/60"
               >
                 {partner ? (
-                  <img src={partner.src} alt={partner.alt} className="h-28 w-auto object-contain sm:h-36" />
+                  <img src={partner.src} alt={partner.alt} className={`w-auto object-contain ${partner.className ?? "h-28 sm:h-36"}`} />
                 ) : (
                   t("partners.placeholder")
                 )}

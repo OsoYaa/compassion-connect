@@ -747,6 +747,7 @@ function Index() {
               { src: lumturoLogo, alt: "Lumturo Dhimbjen", className: "h-32 sm:h-40" },
               { src: elaPeraLogo, alt: "Ela Pera — makeup artist" },
               { src: prolifeLogo, alt: "ProLife Fizioterapi" },
+            ].map((partner, i) => (
               <div
                 key={i}
                 className="flex items-center justify-center px-4 py-6 text-xs uppercase tracking-[0.2em] text-navy/60"

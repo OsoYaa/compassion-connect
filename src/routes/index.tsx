@@ -29,6 +29,7 @@ import teutaLogo from "@/assets/partners/teuta.png";
 import lumturoLogo from "@/assets/partners/lumturo.png";
 import elaPeraLogo from "@/assets/partners/ela-pera.png";
 import prolifeLogo from "@/assets/partners/prolife.png";
+import eventi1Image from "@/assets/events/eventi-1-xheko.png";
 import { Toaster } from "@/components/ui/sonner";
 import { SiteHeader, SiteFooter, SOCIAL_LINKS } from "@/components/site-chrome";
 import { useT } from "@/lib/i18n";

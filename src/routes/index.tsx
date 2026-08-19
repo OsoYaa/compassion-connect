@@ -28,6 +28,7 @@ import olimLogo from "@/assets/partners/olim.png";
 import teutaLogo from "@/assets/partners/teuta.png";
 import lumturoLogo from "@/assets/partners/lumturo.png";
 import elaPeraLogo from "@/assets/partners/ela-pera.png";
+import prolifeLogo from "@/assets/partners/prolife.png";
 import eventi1Image from "@/assets/events/eventi-1-xheko.png";
 import { Toaster } from "@/components/ui/sonner";
 import { SiteHeader, SiteFooter, SOCIAL_LINKS } from "@/components/site-chrome";
@@ -745,6 +746,7 @@ function Index() {
               { src: agnaGroupLogo, alt: "Agna Group" },
               { src: lumturoLogo, alt: "Lumturo Dhimbjen", className: "h-32 sm:h-40" },
               { src: elaPeraLogo, alt: "Ela Pera — makeup artist" },
+              { src: prolifeLogo, alt: "ProLife Fizioterapi" },
             ].map((partner, i) => (
               <div
                 key={i}

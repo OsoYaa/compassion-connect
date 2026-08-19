@@ -10,7 +10,7 @@ import logo from "@/assets/logo.png";
 import brandonPortrait from "@/assets/unnamed.jpg";
 import brandonPortraitMobile from "@/assets/brandon-portrait-mobile.jpg";
 // import googleLogo from "@/assets/google transparent.png"; // hidden — Google partner removed
-// Partner logos
+/* Hidden partner logos — keep until further notice
 import bashkiaTiraneLogo from "@/assets/partners/bashkia-tirane-njesite.png";
 import bashkiaDurresLogo from "@/assets/partners/bashkia-durres.png";
 import bashkiaElbasanLogo from "@/assets/partners/bashkia-elbasan.png";
@@ -19,7 +19,6 @@ import bashkiaCerrikLogo from "@/assets/partners/bashkia-cerrik-2.jpg";
 import bashkiaGramshLogo from "@/assets/partners/bashkia-gramsh-2.png";
 import bashkiaBelshLogo from "@/assets/partners/bashkia-belsh.png";
 import strehheShpreseLogo from "@/assets/partners/strehe-shprese-2.jpg";
-// Hidden partner logos — keep until further notice
 import miellTiranaLogo from "@/assets/partners/miell-tirana.png";
 import agnaGroupLogo from "@/assets/partners/agna-group.png";
 import dekaLogo from "@/assets/partners/deka.png";
@@ -29,6 +28,7 @@ import teutaLogo from "@/assets/partners/teuta.png";
 import lumturoLogo from "@/assets/partners/lumturo.png";
 import elaPeraLogo from "@/assets/partners/ela-pera.png";
 import prolifeLogo from "@/assets/partners/prolife.png";
+*/
 import eventi1Image from "@/assets/events/eventi-1-xheko.png";
 import { Toaster } from "@/components/ui/sonner";
 import { SiteHeader, SiteFooter, SOCIAL_LINKS } from "@/components/site-chrome";
@@ -39,6 +39,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+/* Hidden bank account details — keep until further notice
 const bankAccount = {
   bankName: "TD Bank, N.A.",
   holder: "Manjola Kuqi",
@@ -47,6 +48,7 @@ const bankAccount = {
   swift: "NRTHUS33 / NRTHUS33XXX",
   bankAddress: "32 Chestnut St., Lewiston, ME 04243, USA",
 };
+*/
 
 // Replace IDs with real YouTube video IDs. First entry is the featured (main)
 // video, the rest are shown under "Previous videos" (capped at 10 older items).
@@ -678,6 +680,7 @@ function Index() {
             </p>
           </div>
 
+          {/* Hidden: bank account details — uncomment to restore
           <article className="mt-16 border border-white/15 bg-white/[0.04] p-8 sm:p-12">
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/85">{t("donate.bankName")}</p>
             <h3 className="mt-2 font-serif text-3xl font-semibold text-white">{bankAccount.bankName}</h3>
@@ -710,6 +713,7 @@ function Index() {
               </div>
             </dl>
           </article>
+          */}
         </div>
       </section>
 
@@ -717,7 +721,7 @@ function Index() {
         <div className="h-px w-full bg-border" />
       </div>
 
-      {/* ============ OUR PARTNERS ============ */}
+      {/* Hidden: Partners section — uncomment to restore
       <section id="partners" className="bg-white py-28 sm:py-36 text-navy">
 
         <div className="mx-auto max-w-6xl px-6">
@@ -737,7 +741,6 @@ function Index() {
               { src: bashkiaGramshLogo, alt: "Bashkia Gramsh" },
               { src: bashkiaBelshLogo, alt: "Bashkia Belsh" },
               { src: strehheShpreseLogo, alt: "Strehë & Shpresë — Shtëpia e të Moshuarve" },
-              // Hidden partners — unhide when approved
               { src: teutaLogo, alt: "Teuta" },
               { src: eurolabLogo, alt: "Eurolab Internacional" },
               { src: dekaLogo, alt: "Deka" },
@@ -762,6 +765,7 @@ function Index() {
           </div>
         </div>
       </section>
+      */}
 
       <SiteFooter />
     </main>

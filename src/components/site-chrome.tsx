@@ -21,7 +21,7 @@ const SECTION_LINKS: { id: string; tKey: string }[] = [
   { id: "about", tKey: "nav.about" },
   { id: "cases", tKey: "nav.cases" },
   { id: "events", tKey: "nav.events" },
-  { id: "partners", tKey: "nav.partners" },
+  // { id: "partners", tKey: "nav.partners" }, // hidden — Partners section removed
   { id: "contact", tKey: "nav.contact" },
 ];
 

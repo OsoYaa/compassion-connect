@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   Copy, Check, ArrowRight, Mic, BookHeart, HandHeart,
-  GraduationCap, Phone, Mail, Heart, ImageIcon,
+  GraduationCap, Mail, Heart, ImageIcon,
   ChevronDown, Sparkles, Telescope, Crosshair,
 } from "lucide-react";
 import { toast } from "sonner";
@@ -603,13 +603,6 @@ function Index() {
           </div>
 
           <div className="mt-16 grid gap-10 sm:grid-cols-2">
-            <div className="flex items-start gap-4 border-l border-border pl-5">
-              <Phone className="h-5 w-5 text-navy" strokeWidth={1.5} />
-              <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">{t("contact.phoneLabel")}</p>
-                <a href="tel:+355698028222" className="mt-2 block text-base text-navy hover:text-navy/80">+355 69 802 8222</a>
-              </div>
-            </div>
             <div className="flex items-start gap-4 border-l border-border pl-5">
               <Mail className="h-5 w-5 text-navy" strokeWidth={1.5} />
               <div>

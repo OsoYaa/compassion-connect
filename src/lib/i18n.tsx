@@ -174,7 +174,6 @@ With the event "Sofra – The Legacy Continues", the "Brandon Forever 22 Legacy"
 
   "contact.headline": "Become a Volunteer",
   "contact.intro": "We are here to listen, collaborate and move forward together. If you would like to be part of our mission, share a story, or propose a project, contact us:",
-  "contact.phoneLabel": "Phone",
   "contact.emailLabel": "Email",
   "contact.socialLabel": "Follow us",
   "contact.cta": "Become a Volunteer",
@@ -215,7 +214,6 @@ With the event "Sofra – The Legacy Continues", the "Brandon Forever 22 Legacy"
   "footer.org": "Brandon Forever 22 Legacy",
   "footer.address": "Rruga Sulejman Delvina, Tiranë - Shqipëri",
   "footer.addressLabel": "Address",
-  "footer.phoneLabel": "Phone",
   "footer.emailLabel": "Email",
 
   "scroll.aria": "Scroll to content",
@@ -391,7 +389,6 @@ Me aktivitetin "Sofra – Trashëgimia Vazhdon", Qendra "Brandon Forever 22 Lega
 
   "contact.headline": "Bëhu vullnetar",
   "contact.intro": "Nëse dëshironi të bëheni pjesë e misionit tonë, të ndani një histori, apo të propozoni një projekt, jemi këtu për të dëgjuar, bashkëpunuar dhe ecur përpara së bashku. Na kontaktoni:",
-  "contact.phoneLabel": "Telefon",
   "contact.emailLabel": "Email",
   "contact.socialLabel": "Na ndiqni",
   "contact.cta": "Bëhu vullnetar",
@@ -432,7 +429,6 @@ Me aktivitetin "Sofra – Trashëgimia Vazhdon", Qendra "Brandon Forever 22 Lega
   "footer.org": "Brandon Forever 22 Legacy",
   "footer.address": "Rruga Sulejman Delvina, Tiranë - Shqipëri",
   "footer.addressLabel": "Adresa",
-  "footer.phoneLabel": "Telefon",
   "footer.emailLabel": "Email",
 
   "scroll.aria": "Lëviz te përmbajtja",

@@ -52,7 +52,7 @@ const bankAccount = {
 
 // Replace IDs with real YouTube video IDs. First entry is the featured (main)
 // video, the rest are shown under "Previous videos" (capped at 10 older items).
-const HUMAN_STORY_VIDEOS: string[] = ["DMFmsbiPFsU", "-1v7SPViK_0", "s2zVf8c4Nik", "jNMgjGGndbE", "HxhpV7SoA2o"];
+const HUMAN_STORY_VIDEOS: string[] = ["12-AFz_8OJ0", "DMFmsbiPFsU", "-1v7SPViK_0", "s2zVf8c4Nik", "jNMgjGGndbE", "HxhpV7SoA2o"];
 const PODCAST_VIDEOS: string[] = ["6uy3lZ7gcTI", "8NPLYlv4Spo", "i7Z6dcLKQfk", "7-GreWzI9Eo"];
 const MAX_PREVIOUS_VIDEOS = 10;
 

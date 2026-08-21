@@ -52,7 +52,7 @@ const bankAccount = {
 
 // Replace IDs with real YouTube video IDs. First entry is the featured (main)
 // video, the rest are shown under "Previous videos" (capped at 10 older items).
-const HUMAN_STORY_VIDEOS: string[] = ["12-AFz_8OJ0", "DMFmsbiPFsU", "-1v7SPViK_0", "s2zVf8c4Nik", "jNMgjGGndbE", "HxhpV7SoA2o"];
+const HUMAN_STORY_VIDEOS: string[] = ["aKl86ZBM4qA", "12-AFz_8OJ0", "DMFmsbiPFsU", "-1v7SPViK_0", "s2zVf8c4Nik", "jNMgjGGndbE", "HxhpV7SoA2o"];
 const PODCAST_VIDEOS: string[] = ["6uy3lZ7gcTI", "8NPLYlv4Spo", "i7Z6dcLKQfk", "7-GreWzI9Eo"];
 const MAX_PREVIOUS_VIDEOS = 10;
 
@@ -661,7 +661,7 @@ function Index() {
               {t("donate.tagline")}
             </blockquote>
             <a
-              href="https://www.gofundme.com/f/help-the-sinani-sisters-hope-with-longterm-care-housing"
+              href="https://www.gofundme.com/f/help-denis-his-mother-medical-equipments-longterm-care"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center justify-center gap-2 bg-accent-red px-8 py-4 text-xs font-semibold uppercase tracking-[0.24em] text-white transition-all hover:-translate-y-0.5 hover:brightness-110"

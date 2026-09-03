@@ -54,8 +54,8 @@ jobs:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         run: |
           if [ -z "$RESEND_API_KEY" ]; then
-            echo "RESEND_API_KEY repository secret not set - skipping secret sync."
-            exit 0
+            echo "Error: RESEND_API_KEY repository secret is required for the contact form."
+            exit 1
           fi
           printf '%s' "$RESEND_API_KEY" | npx wrangler@latest secret put RESEND_API_KEY --name compassion-connect
 

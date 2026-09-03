@@ -30,9 +30,13 @@ export const Route = createFileRoute("/api/public/send-contact")({
   server: {
     handlers: {
       POST: async ({ request }) => {
-        const RESEND_SEND_API_KEY = process.env.RESEND_SEND_API_KEY;
+        const RESEND_SEND_API_KEY =
+          process.env.RESEND_API_KEY ?? process.env.RESEND_SEND_API_KEY;
         if (!RESEND_SEND_API_KEY) {
-          return new Response("RESEND_SEND_API_KEY is not configured", { status: 500 });
+          return new Response(
+            JSON.stringify({ error: "Email sending is not configured (missing RESEND_API_KEY)." }),
+            { status: 500, headers: { "Content-Type": "application/json" } },
+          );
         }
 
         let body: unknown;

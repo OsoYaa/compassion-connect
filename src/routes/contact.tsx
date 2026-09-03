@@ -96,11 +96,23 @@ function ContactPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ subject, rows, replyTo }),
       });
-      if (!res.ok) throw new Error("Send failed");
+      if (!res.ok) {
+        let detail = "";
+        try {
+          const data = (await res.json()) as { error?: unknown };
+          if (typeof data.error === "string") detail = data.error;
+        } catch {
+          detail = "";
+        }
+        throw new Error(detail || "Send failed");
+      }
       toast.success(t("form.thanks"));
       form.reset();
-    } catch {
-      toast.error("Could not send. Please try again.");
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : "";
+      toast.error(
+        msg && msg !== "Send failed" ? msg : "Could not send. Please try again.",
+      );
     }
   };
 

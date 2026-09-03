@@ -30,21 +30,14 @@ export const Route = createFileRoute("/api/public/send-contact")({
   server: {
     handlers: {
       POST: async ({ request }) => {
-        // Cloudflare Workers expose secrets as bindings; process.env is a fallback.
-        let cfEnv: Record<string, string | undefined> = {};
-        try {
-          const mod = (await import(/* @vite-ignore */ "cloudflare:workers")) as {
-            env?: Record<string, string | undefined>;
-          };
-          cfEnv = mod.env ?? {};
-        } catch {
-          cfEnv = {};
-        }
+        // Secrets arrive via process.env on the server runtime; some runtimes
+        // also expose them on globalThis bindings.
+        const globalEnv = globalThis as unknown as Record<string, string | undefined>;
         const resendApiKey =
-          cfEnv["RESEND_API_KEY"] ??
-          cfEnv["RESEND_SEND_API_KEY"] ??
           process.env.RESEND_API_KEY ??
-          process.env.RESEND_SEND_API_KEY;
+          process.env.RESEND_SEND_API_KEY ??
+          globalEnv["RESEND_API_KEY"] ??
+          globalEnv["RESEND_SEND_API_KEY"];
         if (!resendApiKey) {
           return new Response(
             JSON.stringify({ error: "Email sending is not configured (missing RESEND_API_KEY)." }),

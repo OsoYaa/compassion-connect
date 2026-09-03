@@ -84,7 +84,7 @@ export const Route = createFileRoute("/api/public/send-contact")({
             Authorization: `Bearer ${resendApiKey}`,
           },
           body: JSON.stringify({
-            from: "Forever Brandon Legacy <onboarding@resend.dev>",
+            from: "Volunteer application form <onboarding@resend.dev>",
             to: [RECIPIENT],
             subject,
             html,

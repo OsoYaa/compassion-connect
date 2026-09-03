@@ -58,5 +58,3 @@ jobs:
             exit 1
           fi
           printf '%s' "$RESEND_API_KEY" | npx wrangler@latest secret put RESEND_API_KEY --name compassion-connect
-
-

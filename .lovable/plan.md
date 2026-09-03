@@ -1,43 +1,30 @@
-# Fix the volunteer form on the Cloudflare site
+# Fix the volunteer/contact form on the Cloudflare site
 
-## What the Resend API key is
+The form works in the Lovable preview but fails on the Cloudflare-hosted site because the email key lives in Lovable's secret store, and Cloudflare's Worker has no copy of it. The endpoint then returns a 500 and no email is sent.
 
-Resend (resend.com) is the email service your forms use to deliver submissions to
-brandonforever22legacy@gmail.com. The "Resend API key" is the access token from a Resend
-account — created at resend.com > API Keys > Create API Key, and it looks like `re_...`.
-It is stored as a secret named `RESEND_SEND_API_KEY`; nobody (including me) can read the
-value back after it is saved, only replace it.
+You have now saved the key as `RESEND_API_KEY`, while the endpoint currently looks for a differently named variable. Both issues get fixed together.
 
-## What's happening
+## What will change
 
-The form posts to `/api/public/send-contact`, which sends the email through Resend using
-`RESEND_SEND_API_KEY`. That secret is not present in this project's secret store, and nothing in
-the deploy workflow or Worker config supplies it to Cloudflare either. Without it the endpoint
-returns an error and the form shows "Could not send. Please try again."
+1. The email endpoint will read the key from `RESEND_API_KEY` (with the old name still accepted as a fallback, so nothing breaks).
+2. If the key is missing, the form will show a clear message instead of a silent failure.
 
-## What I need from you
+## What you need to do (one-time, on Cloudflare)
 
-Either:
+The Worker needs the same key. Two options:
 
-1. The Resend API key value — I'll open a secure form for you to paste it (I never see it), and
-   also wire the deploy workflow so it reaches the Cloudflare Worker on every deploy.
-2. Or confirmation that you'd rather use the built-in Lovable email service or the Resend
-   connector, so no manual key is needed.
+- Cloudflare dashboard: Workers & Pages → `compassion-connect` → Settings → Variables and Secrets → add a **Secret** named `RESEND_API_KEY` with your Resend key as the value. Then re-deploy (or just save — secrets apply immediately).
+- Or via GitHub: add repository secret `RESEND_API_KEY`, and I extend the deploy workflow to push it to the Worker automatically on every deploy (`wrangler secret put`). This keeps future deploys self-sufficient.
 
-If you already added the key directly in the Cloudflare dashboard, tell me and I'll instead focus
-on verifying delivery and the sender address.
-
-## What I'll change in the code
-
-- Add a step to the deploy workflow that pushes `RESEND_SEND_API_KEY` to the Worker
-  (via `wrangler secret put`, reading it from a GitHub repository secret) so the live site has it.
-- Improve the failure path in `src/routes/contact.tsx`: read the endpoint's error response and show
-  a specific message instead of a generic retry message.
-- Log the underlying error server-side in `src/routes/api/public/send-contact.ts` so Cloudflare
-  Worker logs reveal why a send failed.
+Tell me which route you prefer; option 2 requires you to add the GitHub secret, and I do the wiring.
 
 ## Note on the sender address
 
-The endpoint currently sends from `onboarding@resend.dev`, which Resend allows only for tests to
-your own account address. For reliable delivery, a domain should be verified in Resend and the
-`from` address switched to it. Say the word and I'll include that change.
+The form currently sends from `onboarding@resend.dev`. Resend only reliably delivers that sender to the Resend account owner's own verified email. If submissions to `brandonforever22legacy@gmail.com` still don't arrive after the key is in place, the fix is to verify a domain in Resend and send from it. I can flag this once we test.
+
+## Technical details
+
+- `src/routes/api/public/send-contact.ts`: `process.env.RESEND_API_KEY ?? process.env.RESEND_SEND_API_KEY`.
+- Optional workflow step in `.github/workflows/deploy.yml` after build:
+  `echo "$RESEND_API_KEY" | npx wrangler secret put RESEND_API_KEY --name compassion-connect`.
+- No changes to `wrangler.json` (secrets are not declared there).

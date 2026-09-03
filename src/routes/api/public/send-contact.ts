@@ -30,7 +30,14 @@ export const Route = createFileRoute("/api/public/send-contact")({
   server: {
     handlers: {
       POST: async ({ request }) => {
-        const resendApiKey = process.env.RESEND_API_KEY ?? process.env.RESEND_SEND_API_KEY;
+        // Secrets arrive via process.env on the server runtime; some runtimes
+        // also expose them on globalThis bindings.
+        const globalEnv = globalThis as unknown as Record<string, string | undefined>;
+        const resendApiKey =
+          process.env.RESEND_API_KEY ??
+          process.env.RESEND_SEND_API_KEY ??
+          globalEnv["RESEND_API_KEY"] ??
+          globalEnv["RESEND_SEND_API_KEY"];
         if (!resendApiKey) {
           return new Response(
             JSON.stringify({ error: "Email sending is not configured (missing RESEND_API_KEY)." }),

@@ -462,12 +462,14 @@ function Index() {
               >
                 {t("hero.learn")}
               </a>
+              {/* Hidden: "Our Partners" hero button — Partners section is hidden
               <a
                 href="#partners"
                 className="inline-flex min-w-[12rem] items-center justify-center gap-2 border border-white/80 bg-transparent px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.22em] text-white transition-colors hover:bg-white hover:text-navy whitespace-nowrap"
               >
                 {t("hero.partners")}
               </a>
+              */}
             </div>
 
             <p className="mt-10 font-serif text-lg italic tracking-[0.04em] text-white/90 sm:text-xl md:text-2xl">

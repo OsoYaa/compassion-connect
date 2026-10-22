@@ -88,7 +88,7 @@ function DonatePage() {
           </dl>
         </div>
         {/* Organizata/Adresa blocks moved: the address now sits under the account name. */}
-        <p className="mt-10 font-handwriting text-3xl text-gold">{t("donate.thanks")}</p>
+        <p className="mt-10 font-handwriting text-3xl text-gold-deep">{t("donate.thanks")}</p>
       </main>
       <SiteFooter />
     </div>

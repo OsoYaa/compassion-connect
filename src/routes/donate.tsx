@@ -59,7 +59,7 @@ function DonatePage() {
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
       <main className="mx-auto max-w-4xl px-5 pb-20 pt-28 sm:px-8 sm:pt-32">
-        <div className="flex items-center gap-2 text-sm font-medium text-primary">
+        <div className="flex items-center gap-2 text-sm font-medium text-destructive">
           <Heart className="h-4 w-4" aria-hidden="true" />
           <span>Brandon Forever 22 Legacy</span>
         </div>
@@ -88,7 +88,7 @@ function DonatePage() {
           </dl>
         </div>
         {/* Organizata/Adresa blocks moved: the address now sits under the account name. */}
-        <p className="mt-10 font-handwriting text-3xl text-primary">{t("donate.thanks")}</p>
+        <p className="mt-10 font-handwriting text-3xl text-gold-deep">{t("donate.thanks")}</p>
       </main>
       <SiteFooter />
     </div>

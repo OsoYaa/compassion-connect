@@ -74,6 +74,7 @@ function DonatePage() {
             <div>
               <dt className="text-sm text-muted-foreground">{albanian ? "Emri i llogarisë" : "Account name"}</dt>
               <dd className="mt-2 font-semibold">{donationDetails.accountName}</dd>
+              <dd className="mt-1 text-sm leading-relaxed text-muted-foreground">{albanian ? "Adresa" : "Address"}: {donationDetails.organizationAddress}</dd>
             </div>
             <div>
               <dt className="text-sm text-muted-foreground">SWIFT / BIC</dt>
@@ -86,11 +87,7 @@ function DonatePage() {
             </div>
           </dl>
         </div>
-        <div className="mt-9 border-t border-border pt-7">
-          <p className="text-sm text-muted-foreground">{albanian ? "Organizata" : "Organization"}</p>
-          <p className="mt-2 font-semibold">{donationDetails.organization}</p>
-          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{albanian ? "Adresa" : "Address"}: {donationDetails.organizationAddress}</p>
-        </div>
+        {/* Organizata/Adresa blocks moved: the address now sits under the account name. */}
         <p className="mt-10 font-handwriting text-3xl text-primary">{t("donate.thanks")}</p>
       </main>
       <SiteFooter />

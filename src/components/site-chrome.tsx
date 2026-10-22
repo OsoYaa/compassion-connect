@@ -2,6 +2,7 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { Facebook, Instagram, Youtube, Languages, Home, Heart, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useT } from "@/lib/i18n";
+import { Button } from "@/components/ui/button";
 
 const TikTok = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
@@ -47,19 +48,6 @@ export function SiteHeader() {
       e.preventDefault();
       const el = document.getElementById(id);
       if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-    setMenuOpen(false);
-  };
-
-  const handleDonateClick = (e: React.MouseEvent) => {
-    if (onHome) {
-      e.preventDefault();
-      const el = document.getElementById("donate");
-      if (el) {
-        const offset = 80;
-        const top = el.getBoundingClientRect().top + window.scrollY - offset;
-        window.scrollTo({ top, behavior: "smooth" });
-      }
     }
     setMenuOpen(false);
   };
@@ -123,14 +111,12 @@ export function SiteHeader() {
             {t("nav.lang")}
           </button>
 
-          <a
-            href="#donate"
-            onClick={handleDonateClick}
-            className="ml-1 inline-flex items-center gap-1.5 rounded-md bg-accent-red px-3 py-2 text-xs font-semibold uppercase tracking-wider text-white transition-all hover:brightness-110 sm:px-4"
-          >
+          <Button asChild variant="destructive" className="ml-1 gap-1.5 px-3 text-xs font-semibold uppercase sm:px-4">
+          <Link to="/donate" onClick={() => setMenuOpen(false)} aria-label={t("nav.donate")}>
             <Heart className="h-3.5 w-3.5" fill="currentColor" />
             <span className="hidden xs:inline sm:inline">{t("nav.donate")}</span>
-          </a>
+          </Link>
+          </Button>
 
 
           {/* Mobile menu toggle */}

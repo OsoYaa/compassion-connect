@@ -64,7 +64,7 @@ function DonatePage() {
           <span>Brandon Forever 22 Legacy</span>
         </div>
         <h1 className="mt-5 font-serif text-4xl font-semibold sm:text-5xl">{albanian ? "Bëni një dhurim" : "Make a donation"}</h1>
-        <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">{albanian ? "Mbështesni misionin tonë humanitar përmes një transferte bankare." : "Support our humanitarian mission through a direct bank transfer."}</p>
+        <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">{albanian ? "Mbështesni misionin tonë humanitar." : "Support our humanitarian mission."}</p>
         <div className="mt-10 border-t border-border pt-8">
           <h2 className="font-serif text-2xl font-semibold">{albanian ? "Dhurime me transfertë bankare" : "Bank transfer donations"}</h2>
           <div className="mt-6 grid gap-5 sm:grid-cols-2">

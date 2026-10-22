@@ -34,8 +34,19 @@ import { Toaster } from "@/components/ui/sonner";
 import { SiteHeader, SiteFooter, SOCIAL_LINKS } from "@/components/site-chrome";
 import { useT } from "@/lib/i18n";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Brandon Forever 22 Legacy — A Legacy of Hope" },
+      { name: "description", content: "Discover the humanitarian mission, human stories, and community activities of Brandon Forever 22 Legacy." },
+      { property: "og:title", content: "Brandon Forever 22 Legacy — A Legacy of Hope" },
+      { property: "og:description", content: "Human stories, community support, and a humanitarian legacy that continues." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
+    ],
+  }),
   component: Index,
 });
 
@@ -381,16 +392,6 @@ function EventsSection() {
 function Index() {
   const { t } = useT();
 
-  const scrollToDonate = (e: React.MouseEvent) => {
-    e.preventDefault();
-    const el = document.getElementById("donate");
-    if (el) {
-      const offset = 80;
-      const top = el.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top, behavior: "smooth" });
-    }
-  };
-
   return (
     <main className="min-h-screen bg-background text-foreground">
       <Toaster position="top-center" />
@@ -449,13 +450,11 @@ function Index() {
 
             {/* Three primary actions */}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center md:justify-start">
-              <a
-                href="#donate"
-                onClick={scrollToDonate}
-                className="inline-flex min-w-[12rem] items-center justify-center gap-2 bg-accent-red px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.22em] text-white transition-all hover:-translate-y-0.5 hover:brightness-110 whitespace-nowrap"
-              >
+              <Button asChild variant="destructive" className="h-auto min-w-[12rem] rounded-none px-7 py-3.5 text-xs font-semibold uppercase">
+              <Link to="/donate">
                 <Heart className="h-4 w-4" fill="currentColor" /> {t("hero.donate")}
-              </a>
+              </Link>
+              </Button>
               <a
                 href="#about"
                 className="inline-flex min-w-[12rem] items-center justify-center gap-2 bg-teal px-7 py-3.5 text-xs font-semibold uppercase tracking-[0.22em] text-white transition-colors hover:bg-teal-deep whitespace-nowrap"
@@ -662,14 +661,11 @@ function Index() {
             <blockquote className="font-handwriting mt-6 text-2xl text-white/90 sm:text-3xl">
               {t("donate.tagline")}
             </blockquote>
-            <a
-              href="https://www.gofundme.com/f/lets-help-mother-marianthi"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center justify-center gap-2 bg-accent-red px-8 py-4 text-xs font-semibold uppercase tracking-[0.24em] text-white transition-all hover:-translate-y-0.5 hover:brightness-110"
-            >
+            <Button asChild variant="destructive" className="mt-6 h-auto rounded-none px-8 py-4 text-xs font-semibold uppercase">
+            <Link to="/donate">
               <Heart className="h-4 w-4" fill="currentColor" /> {t("donate.cta")}
-            </a>
+            </Link>
+            </Button>
             <p className="font-handwriting mt-6 text-2xl text-white/90 sm:text-3xl">
               {t("donate.thanks")}
             </p>

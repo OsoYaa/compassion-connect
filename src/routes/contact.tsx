@@ -12,6 +12,8 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Reach out for help or to volunteer." },
       { property: "og:title", content: "Contact — Forever Brandon Legacy" },
       { property: "og:description", content: "Reach out for help or to volunteer." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: ContactPage,

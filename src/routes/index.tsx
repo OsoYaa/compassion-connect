@@ -407,7 +407,7 @@ function Index() {
           <img
             src={logo}
             alt="Logo"
-            className="h-[16.3rem] w-auto object-contain sm:h-[19.2rem] md:h-46 lg:h-[13rem]"
+            className="h-[11.4rem] w-auto object-contain sm:h-[19.2rem] md:h-46 lg:h-[13rem]"
           />
         </Link>
 

@@ -401,7 +401,7 @@ function Index() {
       <section className="relative overflow-hidden bg-navy min-h-[max(calc(100svh+2rem),56rem)] px-4 pt-20 pb-12 sm:min-h-[max(calc(100svh+7rem),64rem)] sm:px-6 sm:pt-28 sm:pb-24">
         <Link
           to="/"
-          className="absolute left-1/2 top-12 z-20 flex -translate-x-1/2 items-center justify-center transition duration-300 hover:scale-[1.03] md:left-[4%] md:top-24 md:translate-x-0 md:translate-y-[10%]"
+          className="absolute left-1/2 top-[4.2rem] z-20 flex -translate-x-1/2 items-center justify-center transition duration-300 hover:scale-[1.03] md:left-[4%] md:top-24 md:translate-x-0 md:translate-y-[10%]"
           aria-label="Home"
         >
           <img
@@ -440,7 +440,7 @@ function Index() {
 
         <div className="relative z-10 mx-auto flex min-h-[calc(100vh-6rem)] w-full max-w-4xl flex-col justify-center md:mx-0 md:ml-[2%] md:max-w-[65%] md:justify-start md:pt-[13rem] lg:pt-[15rem] md:pr-8">
           <div className="animate-fade-up flex flex-col text-center md:text-left text-white">
-            <h1 className="mt-[14.5rem] font-serif text-3xl font-semibold leading-[1.05] tracking-tight text-white sm:mt-[17.5rem] sm:text-5xl md:mt-0 md:text-6xl">
+            <h1 className="mt-[11.6rem] font-serif text-3xl font-semibold leading-[1.05] tracking-tight text-white sm:mt-[17.5rem] sm:text-5xl md:mt-0 md:text-6xl">
               <span className="block whitespace-nowrap sm:whitespace-normal" dangerouslySetInnerHTML={{ __html: t("hero.title.l1") }} />
               <span className="block whitespace-nowrap sm:whitespace-normal" dangerouslySetInnerHTML={{ __html: t("hero.title.l2") }} />
               <span className="block" dangerouslySetInnerHTML={{ __html: t("hero.title.l3") }} />

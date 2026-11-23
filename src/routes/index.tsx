@@ -10,7 +10,6 @@ import logo from "@/assets/logo.png";
 import brandonPortrait from "@/assets/unnamed.jpg";
 import brandonPortraitMobile from "@/assets/brandon-portrait-mobile.jpg";
 // import googleLogo from "@/assets/google transparent.png"; // hidden — Google partner removed
-/* Hidden partner logos — keep until further notice
 import bashkiaTiraneLogo from "@/assets/partners/bashkia-tirane-njesite.png";
 import bashkiaDurresLogo from "@/assets/partners/bashkia-durres.png";
 import bashkiaElbasanLogo from "@/assets/partners/bashkia-elbasan.png";
@@ -28,7 +27,11 @@ import teutaLogo from "@/assets/partners/teuta.png";
 import lumturoLogo from "@/assets/partners/lumturo.png";
 import elaPeraLogo from "@/assets/partners/ela-pera.png";
 import prolifeLogo from "@/assets/partners/prolife.png";
-*/
+import belbaLogo from "@/assets/partners/belba.png";
+import dormeoLogo from "@/assets/partners/dormeo.png";
+import shtepiaNeKoderLogo from "@/assets/partners/shtepia-ne-koder.jpeg";
+import alfaPastrimLogo from "@/assets/partners/alfa-pastrim.jpeg";
+import bojraFationLogo from "@/assets/partners/bojra-fation.jpeg";
 import eventi1Image from "@/assets/events/eventi-1-xheko.png";
 import { Toaster } from "@/components/ui/sonner";
 import { SiteHeader, SiteFooter, SOCIAL_LINKS } from "@/components/site-chrome";
@@ -713,7 +716,6 @@ function Index() {
         <div className="h-px w-full bg-border" />
       </div>
 
-      {/* Hidden: Partners section — uncomment to restore
       <section id="partners" className="bg-white py-28 sm:py-36 text-navy">
 
         <div className="mx-auto max-w-6xl px-6">
@@ -742,6 +744,11 @@ function Index() {
               { src: lumturoLogo, alt: "Lumturo Dhimbjen", className: "h-32 sm:h-40" },
               { src: elaPeraLogo, alt: "Ela Pera — makeup artist" },
               { src: prolifeLogo, alt: "ProLife Fizioterapi" },
+              { src: belbaLogo, alt: "Elektroshtëpiake Belba" },
+              { src: dormeoLogo, alt: "Top Shop Dormeo" },
+              { src: shtepiaNeKoderLogo, alt: "Shtëpia në Kodër" },
+              { src: alfaPastrimLogo, alt: "Alfa Pastrim" },
+              { src: bojraFationLogo, alt: "Bojra Fation" },
             ].map((partner, i) => (
               <div
                 key={i}
@@ -757,7 +764,6 @@ function Index() {
           </div>
         </div>
       </section>
-      */}
 
       <SiteFooter />
     </main>

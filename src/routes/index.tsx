@@ -750,32 +750,45 @@ function Index() {
               { src: alfaPastrimLogo, alt: "Alfa Pastrim" },
               { src: bojraFationLogo, alt: "Bojra Fation" },
             ];
-            const half = Math.ceil(partners.length / 2);
-            const rows = [partners.slice(0, half), partners.slice(half)];
-            return (
-              <div className="partner-marquee mt-16 flex flex-col gap-6">
-                {rows.map((row, r) => (
-                  <div key={r} className="overflow-hidden">
-                    <div className={`partner-track flex w-max gap-6 ${r === 1 ? "partner-track-reverse" : ""}`}>
-                      {[...row, ...row].map((partner, i) => (
-                        <div
-                          key={i}
-                          aria-hidden={i >= row.length}
-                          className="flex h-28 w-44 shrink-0 items-center justify-center rounded-2xl border border-navy/10 bg-white p-4 shadow-sm sm:h-32 sm:w-52"
-                        >
-                          <img src={partner.src} alt={i >= row.length ? "" : partner.alt} loading="lazy" className="max-h-full max-w-full object-contain" />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            );
+            return <PartnerGrid partners={partners} />;
           })()}
         </div>
       </section>
 
       <SiteFooter />
     </main>
+  );
+}
+
+function PartnerGrid({ partners }: { partners: { src: string; alt: string }[] }) {
+  const { lang } = useT();
+  const [showAll, setShowAll] = useState(false);
+  const visible = showAll ? partners : partners.slice(0, 12);
+  return (
+    <div className="mt-16">
+      <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 sm:gap-4 lg:grid-cols-6">
+        {visible.map((partner) => (
+          <div
+            key={partner.alt}
+            title={partner.alt}
+            className="flex aspect-square items-center justify-center rounded-xl border border-navy/10 bg-white p-3 transition hover:-translate-y-0.5 hover:shadow-md sm:p-4"
+          >
+            <img src={partner.src} alt={partner.alt} loading="lazy" className="max-h-full max-w-full object-contain" />
+          </div>
+        ))}
+      </div>
+      {partners.length > 12 && (
+        <div className="mt-10 flex justify-center">
+          <button
+            onClick={() => setShowAll((v) => !v)}
+            className="rounded-full border border-navy/20 px-6 py-2.5 text-sm font-semibold text-navy transition-colors hover:border-primary hover:text-primary"
+          >
+            {showAll
+              ? lang === "sq" ? "Shfaq më pak" : "Show less"
+              : lang === "sq" ? `Shfaq të gjithë (${partners.length})` : `Show all (${partners.length})`}
+          </button>
+        </div>
+      )}
+    </div>
   );
 }

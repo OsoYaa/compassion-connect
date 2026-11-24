@@ -725,8 +725,8 @@ function Index() {
               {t("partners.headline")}
             </h2>
           </div>
-          <div className="mt-16 grid grid-cols-2 gap-12 sm:grid-cols-3 md:grid-cols-4 md:gap-16">
-            {[
+          {(() => {
+            const partners: { src: string; alt: string }[] = [
               { src: bashkiaTiraneLogo, alt: "Bashkia Tiranë — Njësitë 1-14" },
               { src: bashkiaDurresLogo, alt: "Bashkia Durrës" },
               { src: bashkiaElbasanLogo, alt: "Bashkia Elbasan" },
@@ -741,27 +741,37 @@ function Index() {
               { src: olimLogo, alt: "Olim" },
               { src: miellTiranaLogo, alt: "Miell Tirana" },
               { src: agnaGroupLogo, alt: "Agna Group" },
-              { src: lumturoLogo, alt: "Lumturo Dhimbjen", className: "h-32 sm:h-40" },
+              { src: lumturoLogo, alt: "Lumturo Dhimbjen" },
               { src: elaPeraLogo, alt: "Ela Pera — makeup artist" },
               { src: prolifeLogo, alt: "ProLife Fizioterapi" },
-              { src: belbaLogo, alt: "Elektroshtëpiake Belba" },
+              // { src: belbaLogo, alt: "Elektroshtëpiake Belba" }, // hidden for now
               { src: dormeoLogo, alt: "Top Shop Dormeo" },
               { src: shtepiaNeKoderLogo, alt: "Shtëpia në Kodër" },
               { src: alfaPastrimLogo, alt: "Alfa Pastrim" },
               { src: bojraFationLogo, alt: "Bojra Fation" },
-            ].map((partner, i) => (
-              <div
-                key={i}
-                className="flex items-center justify-center px-4 py-6 text-xs uppercase tracking-[0.2em] text-navy/60"
-              >
-                {partner ? (
-                  <img src={partner.src} alt={partner.alt} className={`w-auto object-contain ${partner.className ?? "h-28 sm:h-36"}`} />
-                ) : (
-                  t("partners.placeholder")
-                )}
+            ];
+            const half = Math.ceil(partners.length / 2);
+            const rows = [partners.slice(0, half), partners.slice(half)];
+            return (
+              <div className="partner-marquee mt-16 flex flex-col gap-6">
+                {rows.map((row, r) => (
+                  <div key={r} className="overflow-hidden">
+                    <div className={`partner-track flex w-max gap-6 ${r === 1 ? "partner-track-reverse" : ""}`}>
+                      {[...row, ...row].map((partner, i) => (
+                        <div
+                          key={i}
+                          aria-hidden={i >= row.length}
+                          className="flex h-28 w-44 shrink-0 items-center justify-center rounded-2xl border border-navy/10 bg-white p-4 shadow-sm sm:h-32 sm:w-52"
+                        >
+                          <img src={partner.src} alt={i >= row.length ? "" : partner.alt} loading="lazy" className="max-h-full max-w-full object-contain" />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            );
+          })()}
         </div>
       </section>
 

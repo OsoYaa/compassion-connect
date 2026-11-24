@@ -22,7 +22,6 @@ const SECTION_LINKS: { id: string; tKey: string }[] = [
   { id: "about", tKey: "nav.about" },
   { id: "cases", tKey: "nav.cases" },
   { id: "events", tKey: "nav.events" },
-  { id: "partners", tKey: "nav.partners" },
   { id: "contact", tKey: "nav.contact" },
 ];
 
@@ -110,6 +109,12 @@ export function SiteHeader() {
             <Languages className="h-3.5 w-3.5" />
             {t("nav.lang")}
           </button>
+
+          <Button asChild variant="outline" className="ml-1 px-3 text-xs font-semibold uppercase sm:px-4">
+            <a href="/#partners" onClick={(e) => handleSectionClick(e, "partners")}>
+              {t("nav.partners")}
+            </a>
+          </Button>
 
           <Button asChild variant="destructive" className="ml-1 gap-1.5 px-3 text-xs font-semibold uppercase sm:px-4">
           <Link to="/donate" onClick={() => setMenuOpen(false)} aria-label={t("nav.donate")}>

@@ -205,3 +205,9 @@
   letter-spacing: 0;
 }
 
+
+@keyframes partner-scroll { from { transform: translateX(0); } to { transform: translateX(calc(-50% - 0.5rem)); } }
+.partner-track { animation: partner-scroll 60s linear infinite; }
+.partner-marquee:hover .partner-track { animation-play-state: paused; }
+.partner-marquee { mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent); }
+@media (prefers-reduced-motion: reduce) { .partner-track { animation: none; } .partner-marquee { overflow-x: auto; } }
